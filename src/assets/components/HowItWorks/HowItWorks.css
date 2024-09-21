@@ -1,0 +1,26 @@
+.how-it-works {
+    padding: 2rem 1rem;
+    background-color: #333; /* Color de fondo suave */
+    text-align: center;
+  }
+  
+  .how-it-works h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .steps {
+    display: flex;
+    flex-direction: column; /* Colocar pasos en columna */
+    align-items: center;
+  }
+  
+  .step {
+    background-color: #fff; /* Fondo blanco para los pasos */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0; /* Margen vertical entre pasos */
+    width: 80%; /* Ajusta el ancho según necesites */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  

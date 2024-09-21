@@ -1,0 +1,21 @@
+.team {
+    padding: 2rem 1rem;
+    background-color: #f0f0f0; /* Color de fondo suave */
+    text-align: center;
+  }
+  
+  .team-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #fff; /* Fondo blanco para resaltar */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px; /* Ajusta según necesites */
+  }
+  

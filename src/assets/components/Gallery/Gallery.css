@@ -1,0 +1,23 @@
+.gallery {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 1.5rem;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 1rem; /* Espacio entre los elementos */
+}
+
+.gallery-item {
+  height: 150px; /* Ajusta según tus necesidades */
+  width: 200px; /* Ajusta el ancho según tus necesidades */
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}

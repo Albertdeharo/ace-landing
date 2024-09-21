@@ -1,8 +1,13 @@
+import OurStory from './../components/OurStory/OurStory';
+import MissionVision from './../components/MissionVision/MissionVision';
+import Team from './../components/Team/Team';
+
 const About = () => {
   return (
     <div>
-      <h1>Sobre ACE</h1>
-      <p>Información sobre el producto ACE</p>
+      <OurStory />
+      <MissionVision />
+      <Team />
     </div>
   );
 };

@@ -4,7 +4,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <h2>ACE</h2>
         <ul className="footer-links">
           <li><a href="#features">Características</a></li>
           <li><a href="#about">Sobre nosotros</a></li>

@@ -1,0 +1,36 @@
+.features {
+    padding: 2rem 1rem;
+    background-color: #333; /* Color de fondo suave */
+    text-align: center;
+  }
+  
+  .features h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .feature-item {
+    background-color: #fff; /* Fondo blanco para los elementos */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 250px; /* Ancho fijo, puedes ajustar según necesites */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .feature-item:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+  }
+  
+  .feature-icon {
+    font-size: 2rem; /* Tamaño del ícono */
+    margin-bottom: 0.5rem;
+  }
+  
