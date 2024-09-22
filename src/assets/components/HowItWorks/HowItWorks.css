@@ -1,26 +1,233 @@
 .how-it-works {
-    padding: 2rem 1rem;
-    background-color: #333; /* Color de fondo suave */
-    text-align: center;
+  padding: 2rem 1rem;
+  background-color: #333;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 1rem 0;
+}
+
+.step-number {
+  font-size: 15rem;
+  font-weight: bold;
+  color: #ffb900;
+  margin-right: 2rem;
+}
+
+.step-content {
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.step-icon {
+  max-width: 100px; /* Ajusta el tamaño según tus necesidades */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: contain; /* Asegura que la imagen no se deforme */
+  padding-bottom: 2rem;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra la imagen horizontalmente */
+}
+
+
+.step-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  font-size: 1rem;
+}
+
+.step-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.step-container.reverse .step-number {
+  margin-right: 0;
+  margin-left: 2rem;
+}
+
+
+:root {
+  --box-shadow-inset-1: inset 0 22px 56px -36px rgba(255, 255, 0, 0.5),
+                         inset 0 4px 5px -4px rgba(255, 255, 0, 1),
+                         inset 0 -31px 34px -32px rgba(255, 255, 0, 0.3),
+                         inset 0 39px 50px -34px rgba(255, 255, 0, 0.3),
+                         inset 0 2px 9px rgba(255, 255, 0, 0.3),
+                         inset 0 1px 10px rgba(255, 255, 0, 0.2);
+
+  --box-shadow-inset-hover-1: inset 0 19px 28px -18px rgba(255, 255, 0, 0.5),
+                               inset 0 4px 6px -3px rgba(255, 255, 0, 1),
+                               inset 0 -51px 44px -42px rgba(255, 255, 0, 0.3),
+                               inset 0 59px 60px -32px rgba(255, 255, 0, 0.3),
+                               inset 0 4px 16px rgba(255, 255, 0, 0.3),
+                               inset 0 2px 25px rgba(255, 255, 0, 0.23);
+
+  --box-shadow-inset-2: inset 0 22px 56px -36px rgba(0, 255, 255, 0.5),
+                         inset 0 4px 5px -4px rgba(0, 255, 255, 1),
+                         inset 0 -31px 34px -32px rgba(0, 255, 255, 0.3),
+                         inset 0 39px 50px -34px rgba(0, 255, 255, 0.3),
+                         inset 0 2px 9px rgba(0, 255, 255, 0.3),
+                         inset 0 1px 10px rgba(0, 255, 255, 0.2);
+
+  --box-shadow-inset-hover-2: inset 0 19px 28px -18px rgba(0, 255, 255, 0.5),
+                               inset 0 4px 6px -3px rgba(0, 255, 255, 1),
+                               inset 0 -51px 44px -42px rgba(0, 255, 255, 0.3),
+                               inset 0 59px 60px -32px rgba(0, 255, 255, 0.3),
+                               inset 0 4px 16px rgba(0, 255, 255, 0.3),
+                               inset 0 2px 25px rgba(0, 255, 255, 0.23);
+
+  --box-shadow-inset-3: inset 0 22px 56px -36px rgba(255, 0, 255, 0.5),
+                         inset 0 4px 5px -4px rgba(255, 0, 255, 1),
+                         inset 0 -31px 34px -32px rgba(255, 0, 255, 0.3),
+                         inset 0 39px 50px -34px rgba(255, 0, 255, 0.3),
+                         inset 0 2px 9px rgba(255, 0, 255, 0.3),
+                         inset 0 1px 10px rgba(255, 0, 255, 0.2);
+
+  --box-shadow-inset-hover-3: inset 0 19px 28px -18px rgba(255, 0, 255, 0.5),
+                               inset 0 4px 6px -3px rgba(255, 0, 255, 1),
+                               inset 0 -51px 44px -42px rgba(255, 0, 255, 0.3),
+                               inset 0 59px 60px -32px rgba(255, 0, 255, 0.3),
+                               inset 0 4px 16px rgba(255, 0, 255, 0.3),
+                               inset 0 2px 25px rgba(255, 0, 255, 0.23);
+}
+
+
+.neon,
+.neon__container {
+	display: grid;
+	align-items: center;
+}
+
+.neon {
+	padding: 2.5rem 0;
+}
+
+.neon__container {
+	grid-template-columns: repeat(auto-fit, minmax(312px, 1fr));
+	row-gap: 3.5rem;
+	column-gap: 2.5rem;
+}
+
+.neon__card {
+  background: rgba(255, 255, 255, 0.01);
+  color: #fff;
+  padding: 3.5rem 1.5rem 2rem;
+  border-radius: 3rem;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* Estilos para cada paso */
+.step-1 {
+  box-shadow: var(--box-shadow-inset-1);
+}
+
+.step-1:hover {
+  box-shadow: var(--box-shadow-inset-hover-1);
+}
+
+.step-2 {
+  box-shadow: var(--box-shadow-inset-2);
+}
+
+.step-2:hover {
+  box-shadow: var(--box-shadow-inset-hover-2);
+}
+
+.step-3 {
+  box-shadow: var(--box-shadow-inset-3);
+}
+
+.step-3:hover {
+  box-shadow: var(--box-shadow-inset-hover-3);
+}
+
+
+.neon__icon {
+	width: 120px;
+	fill: #fff;
+	margin-bottom: 0.25rem;
+}
+
+.neon__title {
+	margin-bottom: 1rem;
+}
+
+.neon__description {
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+
+
+.neon__card,
+.neon__icon,
+.neon__title,
+.neon__description {
+	transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .step-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .how-it-works h2 {
-    margin-bottom: 1.5rem;
+
+  .step-container.reverse .step-number,
+  .step-number {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
   }
-  
-  .steps {
+
+  .step-content {
     display: flex;
-    flex-direction: column; /* Colocar pasos en columna */
+    width: 100%;
+  }
+
+  .step-container {
+    width: 90%;
+  }
+
+  .step-container.reverse {
+    flex-direction: column;
     align-items: center;
   }
   
-  .step {
-    background-color: #fff; /* Fondo blanco para los pasos */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin: 1rem 0; /* Margen vertical entre pasos */
-    width: 80%; /* Ajusta el ancho según necesites */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
+@media screen and (max-width: 359px) {
+
+	.neon__card {
+		padding: 2rem 1rem 1.5rem;
+		border-radius: 2rem;
+	}
+	.neon__icon {
+		width: 80px;
+	}
+
+}
+

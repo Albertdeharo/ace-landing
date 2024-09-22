@@ -1,19 +1,26 @@
 import './HowItWorks.css';
-import { motion } from 'framer-motion'; // Importa motion de Framer Motion
-import { useInView } from 'react-intersection-observer'; // Para detectar cuando los elementos están en vista
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+import clean from '../../images/clean.png';
+import handGel from '../../images/hand-gel.png';
+import dry from '../../images/dry.png';
 
 const steps = [
   {
     title: 'Paso 1: Limpia la Pala',
-    description: 'Asegúrate de que la superficie de la pala esté limpia y seca antes de aplicar el spray.'
+    description: 'Asegúrate de que la superficie de la pala esté limpia y seca antes de aplicar el spray.',
+    img: clean
   },
   {
     title: 'Paso 2: Aplica el Spray',
-    description: 'Sostén el spray a unos 20 cm de la pala y aplica una capa uniforme sobre el grip.'
+    description: 'Sostén el spray a unos 20 cm de la pala y aplica una capa uniforme sobre el grip.',
+    img: handGel
   },
   {
     title: 'Paso 3: Deja Secar',
-    description: 'Deja que el spray se seque durante unos minutos antes de comenzar a jugar.'
+    description: 'Deja que el spray se seque durante unos minutos antes de comenzar a jugar.',
+    img: dry
   }
 ];
 
@@ -25,9 +32,11 @@ const HowItWorks = () => {
         {steps.map((step, index) => (
           <AnimatedStep
             key={index}
+            number={index + 1}
             title={step.title}
             description={step.description}
-            index={index}
+            img={step.img}
+            index={index} // Pasamos el índice para la clase
           />
         ))}
       </div>
@@ -35,22 +44,30 @@ const HowItWorks = () => {
   );
 };
 
-const AnimatedStep = ({ title, description, index }) => {
-  const { ref, inView, entry } = useInView({
-    threshold: 0.2, // Aparece cuando el 20% del elemento está en pantalla
-    triggerOnce: false, // Para que vuelva a animarse cuando salga y entre
+const AnimatedStep = ({ number, title, description, img, index }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: false,
   });
 
   return (
     <motion.div
-      ref={ref} // Referencia para la intersección
-      className="step"
-      initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }} // Aparece desde un lado
-      animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -100 : 100 }} // Animación de entrada y salida
-      transition={{ duration: 0.6, delay: index * 0.2 }} // Duración de la transición y retraso para cada paso
+      ref={ref}
+      className={`step-container ${index % 2 === 1 ? 'reverse' : ''}`}
+      initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+      animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+      transition={{ duration: 0.6, delay: index * 0.2 }}
     >
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <div className="step-number">
+        <span>{number}</span>
+      </div>
+      <div className="step-content">
+        <div className={`neon__card step-${index + 1}`}>
+          <img src={img} alt={`Icono de ${title}`} className="step-icon" />
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+      </div>
     </motion.div>
   );
 };
