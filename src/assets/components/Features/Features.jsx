@@ -1,37 +1,67 @@
+import { useEffect, useRef } from 'react';
 import './Features.css';
+import VanillaTilt from 'vanilla-tilt';
 
 const Features = () => {
-  const featuresList = [
+  const cards = [
     {
-      title: 'Mejora el Agarre',
-      description: 'Nuestra fórmula única aumenta el agarre de la pala, mejorando tu control y precisión.',
-      icon: '🖐️' // Puedes reemplazar con un ícono o imagen
+      number: '🖐️',
+      title: '',
+      price: 'Mejora el Agarre',
+      features: ['Nuestra fórmula única aumenta el agarre de la pala, mejorando tu control y precisión.']
     },
     {
-      title: 'Fácil Aplicación',
-      description: 'El spray se aplica de manera rápida y uniforme, ahorrando tiempo en tu rutina.',
-      icon: '⏱️' // Puedes reemplazar con un ícono o imagen
+      number: '⏱️',
+      title: '',
+      price: 'Fácil Aplicación',
+      features: ['El spray se aplica de manera rápida y uniforme, ahorrando tiempo en tu rutina.']
     },
     {
-      title: 'Durabilidad',
-      description: 'La protección dura varias horas de juego, asegurando un agarre constante.',
-      icon: '⏳' // Puedes reemplazar con un ícono o imagen
+      number: '⏳',
+      title: '',
+      price: 'Durabilidad',
+      features: ['La protección dura varias horas de juego, asegurando un agarre constante.']
     }
   ];
 
+  // Crear referencias individuales para cada card
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    // Aplicar VanillaTilt a cada tarjeta
+    cardRefs.current.forEach((ref) => {
+      if (ref) {
+        VanillaTilt.init(ref, {
+          max: 25,
+          speed: 400,
+          glare: true,
+          "max-glare": 0.3,
+        });
+      }
+    });
+  }, []);
+
   return (
-    <section className="features">
-      <h2>Características del Producto</h2>
-      <div className="features-list">
-        {featuresList.map((feature, index) => (
-          <div className="feature-item" key={index}>
-            <div className="feature-icon">{feature.icon}</div>
-            <h3>{feature.title}</h3>
-            <p>{feature.description}</p>
+    <div className="container">
+      {cards.map((card, index) => (
+        <div 
+          className="card" 
+          key={index} 
+          ref={(el) => (cardRefs.current[index] = el)}
+        >
+          <div className="content">
+            <h2>{card.number}</h2>
+            <h3>{card.title}</h3>
+            <div className="price">{card.price}</div>
+            <ul>
+              {card.features.map((feature, idx) => (
+                <li key={idx}>{feature}</li>
+              ))}
+            </ul>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      ))}
+    </div>
   );
 };
 

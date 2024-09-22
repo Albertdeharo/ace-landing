@@ -1,36 +1,83 @@
-.features {
-    padding: 2rem 1rem;
-    background-color: #333; /* Color de fondo suave */
-    text-align: center;
+.container {
+  padding: 2rem;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan en líneas nuevas */
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px; /* Añadir un margen inferior para cuando estén en columnas */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  cursor: default;
+}
+
+.content h2 {
+  font-size: 4rem;
+  color: white;
+}
+
+.content h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 2rem;
+  color: #ffb900;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+ul li {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #333;
+  background-color: #ffb900;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #ffa500;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center; /* Alinear los items en el centro */
+    gap: 20px; /* Reducir el espacio entre las tarjetas */
   }
-  
-  .features h2 {
-    margin-bottom: 1.5rem;
+
+  .card {
+    width: 100%; /* Hacer que las tarjetas ocupen todo el ancho disponible */
+    max-width: 400px; /* Limitar el ancho máximo en pantallas más pequeñas */
   }
-  
-  .features-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .feature-item {
-    background-color: #fff; /* Fondo blanco para los elementos */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin: 1rem;
-    width: 250px; /* Ancho fijo, puedes ajustar según necesites */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-  
-  .feature-item:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
-  }
-  
-  .feature-icon {
-    font-size: 2rem; /* Tamaño del ícono */
-    margin-bottom: 0.5rem;
-  }
-  
+}
