@@ -8,16 +8,35 @@
 }
 
 .gallery-grid {
-  display: flex;
+  display: flex; /* Cambiado a flex */
   flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  gap: 1rem; /* Espacio entre los elementos */
+  justify-content: center; /* Centra los elementos en el contenedor */
+  gap: 1rem; /* Espacio entre elementos */
 }
 
 .gallery-item {
   height: 150px; /* Ajusta según tus necesidades */
-  width: 200px; /* Ajusta el ancho según tus necesidades */
+  width: 200px; /* Ajusta según tus necesidades */
   background-size: cover;
   background-position: center;
   border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.gallery-item:hover {
+  cursor: pointer;
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra al pasar el ratón */
+}
+
+.ReactModal__Overlay,
+.ReactModal__Content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReactModal__Content {
+  background: #333 !important;
+  inset: auto !important;
 }
