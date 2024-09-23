@@ -58,9 +58,9 @@ const Navbar = () => {
           </button>
           {isDropdownOpen && (
             <ul className="dropdown-menu">
-              <li><button onClick={() => changeLanguage('en')}>English</button></li>
-              <li><button onClick={() => changeLanguage('es')}>Español</button></li>
-              <li><button onClick={() => changeLanguage('cat')}>Français</button></li>
+              <li><button onClick={() => changeLanguage('cat')}>{translate('language1')}</button></li>
+              <li><button onClick={() => changeLanguage('es')}>{translate('language2')}</button></li>
+              <li><button onClick={() => changeLanguage('en')}>{translate('language3')}</button></li>
             </ul>
           )}
         </li>

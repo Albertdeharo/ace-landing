@@ -1,7 +1,10 @@
 {
-    "home": "Accueil",
-    "about": "À propos",
-    "contact": "Contact",
-    "language": "Langue"
+    "home": "Inici",
+    "about": "Sobre nosaltres",
+    "contact": "Contacte",
+    "language": "Idioma",
+    "language1": "Català",
+    "language2": "Castellà",
+    "language3": "Anglès"
   }
   

@@ -2,5 +2,8 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact",
-    "language": "Language"
+    "language": "Language",
+    "language1": "Catalan",
+    "language2": "Spanish",
+    "language3": "English"
   }
