@@ -42,10 +42,10 @@ const Features = () => {
   }, []);
 
   return (
-    <div className="container">
+    <section className="features">
       {cards.map((card, index) => (
         <div 
-          className="card" 
+          className="card-features" 
           key={index} 
           ref={(el) => (cardRefs.current[index] = el)}
         >
@@ -61,7 +61,7 @@ const Features = () => {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 };
 

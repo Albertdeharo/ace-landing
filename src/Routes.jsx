@@ -7,7 +7,7 @@ import Footer from './assets/components/Footer/Footer';
 
 const AppRoutes = () => {
   return (
-    <Router>
+    <Router basename="/ace-landing">
       <Navbar />
       <div className="content">
         <Routes>
