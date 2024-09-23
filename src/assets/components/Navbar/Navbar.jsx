@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from './../../../TranslationContext'; // Cambia la ruta si es necesario
 import './Navbar.css';
 
+import flagCat from './../../../assets/svgs/catalonia.svg';
+import flagEs from './../../../assets/svgs/spain.svg';
+import flagEn from './../../../assets/svgs/united-kingdom.svg';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -58,9 +62,24 @@ const Navbar = () => {
           </button>
           {isDropdownOpen && (
             <ul className="dropdown-menu">
-              <li><button onClick={() => changeLanguage('cat')}>{translate('language1')}</button></li>
-              <li><button onClick={() => changeLanguage('es')}>{translate('language2')}</button></li>
-              <li><button onClick={() => changeLanguage('en')}>{translate('language3')}</button></li>
+              <li>
+                <button onClick={() => changeLanguage('cat')}>
+                  <img src={flagCat} alt="Catalan flag" className="flag-icon" />
+                  {translate('language1')}
+                </button>
+              </li>
+              <li>
+                <button onClick={() => changeLanguage('es')}>
+                  <img src={flagEs} alt="Spanish flag" className="flag-icon" />
+                  {translate('language2')}
+                </button>
+              </li>
+              <li>
+                <button onClick={() => changeLanguage('en')}>
+                  <img src={flagEn} alt="English flag" className="flag-icon" />
+                  {translate('language3')}
+                </button>
+              </li>
             </ul>
           )}
         </li>
