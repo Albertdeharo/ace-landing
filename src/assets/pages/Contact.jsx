@@ -1,29 +1,109 @@
-import ContactForm from './../components/ContactForm/ContactForm'; // Importa el nuevo componente
+import { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './Contact.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
-const Contact = () => {
+
+const ContactForm = () => {
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.send(
+      'service_svju4yf',
+      'template_5sfl9h8',
+      formState,
+      '8lN1MphoBhmFeeNu3'
+    )
+    .then((response) => {
+      alert('Mensaje enviado con éxito!');
+      setFormState({
+        name: '',
+        email: '',
+        message: ''
+      });
+    })
+    .catch((err) => {
+      console.error('Error al enviar el mensaje:', err);
+    });
+  };
+
   return (
-    <section className="contact">
-      <h2>Contacto</h2>
-      <ContactForm /> {/* Incluye el formulario aquí */}
-      <div className="contact-info">
-        <h3>Información de Contacto</h3>
-        <p>Email: contacto@ace.com</p>
-        <p>Teléfono: +123 456 789</p>
-        <h3>Nuestra Ubicación</h3>
-        {/* Aquí puedes agregar un mapa si lo deseas */}
-        <iframe
-          title="Mapa de Ubicación"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12091.896033183645!2d2.1589877491390833!3d41.38506335018858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2aaf378b6a7%3A0x5015c97b8e80c2c3!2sBarcelona!5e0!3m2!1sen!2ses!4v1615248430470!5m2!1sen!2ses"
-          width="600"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        />
+    <>
+      <div className="contact-container">
+        <div className="contact-left">
+          <h2>Get In Touch</h2>
+          <form onSubmit={handleSubmit} className="contact-form">
+            <div className="single-row">
+                <input 
+                  type="text" 
+                  name="name"
+                  placeholder="First Name"
+                  className="form-in"
+                  value={formState.name} 
+                  onChange={handleChange} 
+                  required
+                  autoComplete="off"
+                />
+            </div>
+            <div className="multiple-row">
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="Email"
+                className="form-in"
+                value={formState.email} 
+                onChange={handleChange} 
+                required
+                autoComplete="off"
+              />
+              <textarea 
+                name="message"
+                className="form-in"
+                placeholder="Your Message"
+                value={formState.message} 
+                onChange={handleChange} 
+                required
+                autoComplete="off"
+              />
+              <input type="submit" id="submit" />
+              <label htmlFor="submit">
+                <i className="fas fa-paper-plane"></i>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div className="contact-right">
+          <h2>Contact Informations</h2>
+          <div className="contact-info">
+            <p><i className="fas fa-phone-alt"></i> +977 9800000000 </p>
+            <p><i className="fas fa-envelope"></i> info@example.com </p>
+            <p><i className="fas fa-map-marker-alt"></i> Butwal, Nepal</p>
+          </div>
+
+          <div className="social-links">
+            <a href="#"><i className="fab fa-facebook"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-youtube"></i></a>
+          </div>
+        </div>
       </div>
-    </section>
+    </>
   );
 };
 
-export default Contact;
+export default ContactForm;

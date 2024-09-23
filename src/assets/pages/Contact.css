@@ -1,0 +1,141 @@
+.contact-container {
+    border-radius: 5%;
+    margin: 10%;
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
+    box-shadow: 9px 9px 18px #1b1b1b, -9px -9px 18px #2a2a2a;
+    background-color: #2e2e2e; /* Fondo oscuro */
+}
+
+/* Diseño del lado izquierdo */
+.contact-left {
+    width: 60%;
+    padding: 20px;
+    color: #d3d3d3; /* Texto claro para contraste */
+}
+
+.contact-form {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.single-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-in {
+    padding: 0.5em;
+    font-size: 14px;
+    width: 100%;
+    resize: vertical;
+    margin-top: 1em;
+    background: #3b3b3b; /* Fondo del input oscuro */
+    border: none;
+    box-shadow: inset 5px 5px 12px #232323, inset -5px -5px 12px #4a4a4a;
+    outline: none;
+    color: #d3d3d3; /* Texto claro */
+}
+
+.single-row + input {
+    margin: 0 10px;
+}
+
+.ml {
+    margin-left: 10px;
+}
+
+.mr {
+    margin-right: 10px;
+}
+
+.multiple-row {
+    position: relative;
+}
+
+#submit {
+    display: none;
+}
+
+#submit + label {
+    position: absolute;
+    font-size: 14px;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #00aaff;
+    border-radius: 100%;
+    color: #d3d3d3;
+    box-shadow: 6px 6px 12px #0f0f0f, -6px -6px 12px #4a4a4a;
+    cursor: pointer;
+}
+
+#submit + label:hover {
+    box-shadow: inset 6px 6px 12px #007acc, inset -6px -6px 12px #00ccff;
+}
+
+.contact-right {
+    border-radius: 5%;
+    padding: 20px;
+    width: 40%;
+    background: linear-gradient(#1a1a1a98, #1a1a1a98),
+        url('https://images.unsplash.com/photo-1597773026935-df49538167e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+    color: #d3d3d3;
+}
+
+textarea:-webkit-autofill,
+textarea {
+    min-height: 200px;
+    background: #3b3b3b;
+    color: #d3d3d3;
+}
+
+.contact-info, .social-links {
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+.contact-info p i {
+    margin-right: 20px;
+}
+
+.social-links a {
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #d3d3d3;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 770px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-right, .contact-left {
+        width: 100%;
+    }
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-transition-delay: 99999s;
+}
