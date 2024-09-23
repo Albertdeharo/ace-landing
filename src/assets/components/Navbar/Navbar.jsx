@@ -1,22 +1,33 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from './../../../TranslationContext'; // Cambia la ruta si es necesario
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { translate, setCurrentLanguage } = useTranslation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const handleResize = () => {
-    if (window.innerWidth <= 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
+    setIsMobile(window.innerWidth <= 768);
+    if (window.innerWidth > 768) {
       setIsOpen(false);
     }
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const changeLanguage = (lang) => {
+    setCurrentLanguage(lang);
+    setIsDropdownOpen(false);
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -32,17 +43,27 @@ const Navbar = () => {
       <div className="logo">
         <h1>ACE</h1>
       </div>
-      {isMobile && (
-        <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </div>
-      )}
-      <ul className={`nav-links ${isMobile && isOpen ? 'open' : ''}`}>
-        <li><Link to="/" onClick={() => isMobile && toggleMenu()}>Home</Link></li>
-        <li><Link to="/about" onClick={() => isMobile && toggleMenu()}>About</Link></li>
-        <li><Link to="/contact" onClick={() => isMobile && toggleMenu()}>Contact</Link></li>
+      <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+      <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
+        <li><Link to="/" onClick={toggleMenu}>{translate('home')}</Link></li>
+        <li><Link to="/about" onClick={toggleMenu}>{translate('about')}</Link></li>
+        <li><Link to="/contact" onClick={toggleMenu}>{translate('contact')}</Link></li>
+        <li className="dropdown">
+          <button onClick={toggleDropdown} className="dropdown-toggle">
+            {translate('language')}
+          </button>
+          {isDropdownOpen && (
+            <ul className="dropdown-menu">
+              <li><button onClick={() => changeLanguage('en')}>English</button></li>
+              <li><button onClick={() => changeLanguage('es')}>Español</button></li>
+              <li><button onClick={() => changeLanguage('cat')}>Français</button></li>
+            </ul>
+          )}
+        </li>
       </ul>
     </nav>
   );
