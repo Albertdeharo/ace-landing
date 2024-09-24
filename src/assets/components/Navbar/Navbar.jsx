@@ -1,27 +1,27 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useTranslation } from './../../../TranslationContext'; // Cambia la ruta si es necesario
+import { useTranslation } from './../../../TranslationContext';
 import './Navbar.css';
 
 import flagCat from './../../../assets/svgs/catalonia.svg';
 import flagEs from './../../../assets/svgs/spain.svg';
 import flagEn from './../../../assets/svgs/united-kingdom.svg';
+import { FaChevronDown } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const { translate, setCurrentLanguage } = useTranslation();
+  const { translate, currentLanguage, setCurrentLanguage } = useTranslation();
+  const [scrolled, setScrolled] = useState(false); // Nuevo estado para detectar el scroll
+
+  const flags = {
+    en: flagEn,
+    es: flagEs,
+    cat: flagCat,
+  };
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);
-    if (window.innerWidth > 768) {
-      setIsOpen(false);
-    }
   };
 
   const toggleDropdown = () => {
@@ -35,15 +35,23 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    handleResize();
-    window.addEventListener('resize', handleResize);
+    console.log("Current Language:", currentLanguage);
+  }, [currentLanguage]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // Cambia el valor según tus necesidades
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo">
         <h1>ACE</h1>
       </div>
@@ -53,37 +61,25 @@ const Navbar = () => {
         <span className="bar"></span>
       </div>
       <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        {/* Usamos NavLink para que se aplique una clase al link activo */}
         <li>
-          <NavLink 
-            exact to="/" 
-            activeClassName="active" 
-            onClick={toggleMenu}
-          >
+          <NavLink to="/" onClick={toggleMenu}>
             {translate('home')}
           </NavLink>
         </li>
         <li>
-          <NavLink 
-            to="/about" 
-            activeClassName="active" 
-            onClick={toggleMenu}
-          >
+          <NavLink to="/about" onClick={toggleMenu}>
             {translate('about')}
           </NavLink>
         </li>
         <li>
-          <NavLink 
-            to="/contact" 
-            activeClassName="active" 
-            onClick={toggleMenu}
-          >
+          <NavLink to="/contact" onClick={toggleMenu}>
             {translate('contact')}
           </NavLink>
         </li>
         <li className="dropdown">
           <button onClick={toggleDropdown} className="dropdown-toggle">
-            {translate('language')}
+            <img src={flags[currentLanguage]} alt="Selected language" className="flag-icon" />
+            <FaChevronDown className="dropdown-arrow" />
           </button>
           {isDropdownOpen && (
             <ul className="dropdown-menu">

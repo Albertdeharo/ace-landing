@@ -12,14 +12,14 @@ const translations = {
 const TranslationContext = createContext();
 
 export const TranslationProvider = ({ children }) => {
-  const [currentLanguage, setCurrentLanguage] = useState('en');
+  const [currentLanguage, setCurrentLanguage] = useState('es'); // Idioma por defecto en español
 
   const translate = (key) => {
     return translations[currentLanguage][key] || key;
   };
 
   return (
-    <TranslationContext.Provider value={{ translate, setCurrentLanguage }}>
+    <TranslationContext.Provider value={{ translate, currentLanguage, setCurrentLanguage }}>
       {children}
     </TranslationContext.Provider>
   );

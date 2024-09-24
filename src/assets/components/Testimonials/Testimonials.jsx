@@ -34,22 +34,22 @@ const Testimonials = () => {
   };
 
   return (
+    <>
     <section className="testimonials">
-      <h2>Testimonios</h2>
       <Slider {...settings}>
         {testimonialsData.map((item, index) => (
           <div className="testimonial-item" key={index}>
-            <div className="card-testimonial">
-              <div className="profileImage"></div>
-              <div className="textContainer">
-                <p className="name">{item.name}</p>
-                <p className="profile">{item.testimonial}</p>
-              </div>
-            </div>
+          <div className="notification">
+            <div className="notiglow"></div>
+            <div className="notiborderglow"></div>
+            <div className="notititle">{item.name}</div>
+            <div className="notibody">{item.testimonial}</div>
           </div>
+        </div>
         ))}
       </Slider>
     </section>
+    </>
   );
 };
 

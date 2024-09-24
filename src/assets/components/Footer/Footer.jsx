@@ -5,7 +5,6 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <ul className="footer-links">
-          <li><a href="#features">Características</a></li>
           <li><a href="#about">Sobre nosotros</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ul>

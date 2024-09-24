@@ -9,6 +9,6 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <TranslationProvider>
       <App />
-    </TranslationProvider>,
-  </StrictMode>,
+    </TranslationProvider>
+  </StrictMode>
 )

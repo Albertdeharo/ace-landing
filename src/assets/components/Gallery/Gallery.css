@@ -68,3 +68,9 @@
   transform: translateY(-20px); /* Mueve el modal hacia arriba al cerrar */
   opacity: 0; /* Oculta el modal */
 }
+
+@media (max-width: 768px) {
+  .ReactModalPortal img {
+    width: 100%;
+  }
+}

@@ -8,6 +8,11 @@
     background-color: #2e2e2e; /* Fondo oscuro */
 }
 
+.contact-container h2 {
+    font-size: clamp(24px, 5vw, 40px);
+}
+
+
 /* Diseño del lado izquierdo */
 .contact-left {
     width: 60%;
@@ -120,6 +125,7 @@ textarea {
 @media only screen and (max-width: 770px) {
     .contact-container {
         flex-direction: column;
+        margin-top: 100px;
     }
 
     .contact-right, .contact-left {

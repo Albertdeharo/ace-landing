@@ -9,7 +9,7 @@ const AppRoutes = () => {
   return (
     <Router basename="/ace-landing">
       <Navbar />
-      <div className="content">
+      <div className="page-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
