@@ -16,7 +16,7 @@
 }
 
 .navbar.scrolled {
-  background-color: rgba(51, 51, 51, 0.9); /* Fondo oscuro cuando se hace scroll */
+  background-color: rgb(255, 255, 255, 0.5); /* Fondo oscuro cuando se hace scroll */
 }
 
 body {
@@ -25,6 +25,10 @@ body {
 
 .navbar .logo h1 {
   color: #fff;
+}
+
+.navbar .logo img {
+  width: 40px;
 }
 
 /* Nav Links */

@@ -53,7 +53,9 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo">
-        <h1>ACE</h1>
+        <NavLink to="/">
+          <img src="src/assets/images/logoAce.png" alt="Banner" />
+        </NavLink>
       </div>
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span className="bar"></span>

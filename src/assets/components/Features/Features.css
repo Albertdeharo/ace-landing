@@ -3,7 +3,6 @@
   display: flex;
   gap: 30px;
   justify-content: space-evenly;
-  background: #212121;
   flex-wrap: wrap;
 }
 
