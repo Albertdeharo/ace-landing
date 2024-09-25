@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from './../../../TranslationContext';
 import './Navbar.css';
 
+import logo from './../../../assets/images/logoAce.png';
+
 import flagCat from './../../../assets/svgs/catalonia.svg';
 import flagEs from './../../../assets/svgs/spain.svg';
 import flagEn from './../../../assets/svgs/united-kingdom.svg';
@@ -54,7 +56,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo">
         <NavLink to="/">
-          <img src="src/assets/images/logoAce.png" alt="Banner" />
+          <img src={logo} alt="logo" />
         </NavLink>
       </div>
       <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>

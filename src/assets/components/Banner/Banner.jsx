@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import './Banner.css';
+import banner from './../../images/banner_01.png';
+
 
 const Banner = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -55,7 +57,8 @@ const Banner = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            <img src="src/assets/images/banner_01.png" alt="Banner" />
+            <img src={banner} alt="Banner" />
+
           </motion.div>
         </>
       ) : (
