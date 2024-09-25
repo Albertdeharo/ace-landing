@@ -87,7 +87,7 @@ const Banner = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              <img src="src/assets/images/banner_01.png" alt="Banner" />
+              <img src={banner} alt="Banner" />
             </motion.div>
           </div>
           <div className="banner-button">
