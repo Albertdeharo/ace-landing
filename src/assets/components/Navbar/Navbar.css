@@ -16,7 +16,7 @@
 }
 
 .navbar.scrolled {
-  background-color: rgb(255, 255, 255, 0.5); /* Fondo oscuro cuando se hace scroll */
+  background-color: rgb(0, 0 ,0); /* Fondo oscuro cuando se hace scroll */
 }
 
 body {

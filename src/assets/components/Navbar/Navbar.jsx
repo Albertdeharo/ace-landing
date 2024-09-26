@@ -37,10 +37,6 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    console.log("Current Language:", currentLanguage);
-  }, [currentLanguage]);
-
-  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50); // Cambia el valor según tus necesidades
     };

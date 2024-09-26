@@ -1,10 +1,40 @@
 .mission-vision {
-    padding: 2rem 1rem;
-    background-color: #fff; /* Fondo blanco para resaltar el texto */
-    text-align: center;
-  }
-  
-  .mission-vision h2 {
-    margin-bottom: 1rem;
-  }
-  
+  display: flex;
+  justify-content: center; /* Centra el contenido en el eje horizontal */
+  padding: 2rem 0; /* Espaciado alrededor */
+  background-color: #333; /* O el color que prefieras para el fondo */
+}
+
+.mission-vision h2{
+  padding: 2rem 0; /* Espaciado alrededor */
+  font-size: 40px;
+}
+
+
+.mission-vision-content {
+  display: flex;
+  align-items: stretch; /* Alinea los elementos para que ocupen toda la altura */
+  width: 100%; /* Asegura que el contenedor ocupe el ancho completo */
+}
+
+.text-content {
+  flex: 1; /* Permite que el texto ocupe el espacio disponible */
+  padding: 1rem; /* Espaciado alrededor del texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.image-content {
+  flex: 1; /* Permite que la imagen ocupe el espacio disponible */
+  overflow: hidden; /* Asegura que no haya desbordamiento */
+  border-radius: 10% 0 0 10%;
+}
+
+.image-content img {
+  width: 100%; /* Asegura que la imagen no desborde su contenedor */
+  height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio manteniendo su proporción */
+}

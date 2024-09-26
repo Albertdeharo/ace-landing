@@ -1,18 +1,18 @@
-import OurStory from './../components/OurStory/OurStory';
-import MissionVision from './../components/MissionVision/MissionVision';
-import Team from './../components/Team/Team';
+import OurStory from '../components/OurStory/OurStory';
+import MissionVision from '../components/MissionVision/MissionVision';
+import Team from '../components/Team/Team';
+import Testimonials from '../components/Testimonials/Testimonials';
+
 import './About.css';
 
-import { useTranslation } from './../../TranslationContext';
-
 const About = () => {
-  const { translate } = useTranslation();
 
   return (
     <div className='about-container'>
       <OurStory />
       <MissionVision />
       <Team />
+      <Testimonials />
     </div>
   );
 };
