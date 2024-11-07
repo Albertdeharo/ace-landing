@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './MainFeatures.css';
-import product from './../../images/banner_01.png';
+import product from './../../images/ENVASE.png';
 
 const MainFeatures = () => {
   const { ref, inView } = useInView({

@@ -2,9 +2,9 @@ import './HowItWorks.css';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-import clean from '../../images/clean.png';
-import handGel from '../../images/hand-gel.png';
-import dry from '../../images/dry.png';
+import clean from '../../images/icon-clean.png';
+import handGel from '../../images/icon-hand-gel.png';
+import dry from '../../images/icon-dry.png';
 
 const steps = [
   {

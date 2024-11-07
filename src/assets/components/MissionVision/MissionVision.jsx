@@ -1,5 +1,5 @@
 import './MissionVision.css';
-import missionImage from '../../images/randomImage1.jpg'; // Asegúrate de importar la imagen
+import missionImage from '../../images/FOTO_5.jpg'; // Asegúrate de importar la imagen
 
 const MissionVision = () => {
   return (

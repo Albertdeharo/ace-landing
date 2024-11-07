@@ -1,6 +1,6 @@
 .mainFeatures {
     position: relative;
-    height: 90vh;
+    height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,8 +13,8 @@
   .mainFeatures-mobile {
     height: 100%;
     display: flex;
-    flex-direction: column; /* Cambia a columna para la vista móvil */
-    align-items: center; /* Centra los elementos */
+    flex-direction: column;
+    align-items: center;
   }
   
   .mainFeatures-button{
@@ -41,6 +41,10 @@
     justify-content: center;
     position: relative;
   }
+
+  .mainFeatures-image img{
+    width: 150px;
+  }
   
   .mainFeatures-content {
     flex: 1;
@@ -51,20 +55,20 @@
   }
   
   .mainFeatures-content h1 {
-    font-size: clamp(2rem, 8vw, 4rem); /* Tamaño mínimo de 2rem, ajustable con vw, y un máximo de 4rem */
+    font-size: clamp(2rem, 8vw, 4rem);
     font-weight: 700;
     color: #fff;
     margin-bottom: 1rem;
   }
   
   .mainFeatures-content p {
-    font-size: clamp(1rem, 4vw, 2rem); /* Tamaño mínimo de 1rem, ajustable con vw, y un máximo de 2rem */
+    font-size: clamp(1rem, 4vw, 2rem);
     color: #ddd;
     margin-bottom: 2rem;
   }
   
   .mainFeatures-content a {
-    font-size: clamp(1rem, 3vw, 1.5rem); /* Tamaño mínimo de 1rem, ajustable con vw, y un máximo de 1.5rem */
+    font-size: clamp(1rem, 3vw, 1.5rem);
     padding: 1rem 2rem;
     background-color: orange;
     color: white;
@@ -77,26 +81,16 @@
     background-color: darkorange;
   }
   
-  .mainFeatures img {
-    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 1));
-    border-radius: 10px;
-    max-width: 100%;
-  }
-  
-  .mainFeatures img:hover {
-    transform: rotateY(10deg) rotateX(5deg) scale(1.05);
-  }
-  
-  /* Responsive adjustments for smaller screens */
+
   @media (max-width: 600px) {
     .mainFeatures {
-      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      flex-direction: column;
       padding: 0 2rem;
     }
   
     .mainFeatures-image {
-      margin-top: 2rem; /* Espacio entre la descripción y la imagen */
-      flex: none; /* No ocupa más espacio del necesario */
+      margin-top: 2rem;
+      flex: none;
     }
     .mainFeatures image {
       height: 300px;
