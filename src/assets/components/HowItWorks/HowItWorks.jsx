@@ -6,73 +6,61 @@ import clean from '../../images/icon-clean.png';
 import handGel from '../../images/icon-hand-gel.png';
 import dry from '../../images/icon-dry.png';
 
-const steps = [
-  {
-    title: 'Paso 1: Limpia la Pala',
-    description: 'Asegúrate de que la superficie de la pala esté limpia y seca antes de aplicar el spray.',
-    img: clean,
-  },
-  {
-    title: 'Paso 2: Aplica el Spray',
-    description: 'Sostén el spray a unos 20 cm de la pala y aplica una capa uniforme sobre el grip.',
-    img: handGel,
-  },
-  {
-    title: 'Paso 3: Deja Secar',
-    description: 'Deja que el spray se seque durante unos minutos antes de comenzar a jugar.',
-    img: dry,
-  },
-];
-
 const HowItWorks = () => {
-  return (
-    <section className="how-it-works">
-      <h2>¿Cómo Funciona?</h2>
-      <div className="steps">
-        {steps.map((step, index) => (
-          <AnimatedStep
-            key={index}
-            number={index + 1}
-            title={step.title}
-            description={step.description}
-            img={step.img}
-            index={index}
-          />
-        ))}
-      </div>
-    </section>
-  );
-};
-
-const AnimatedStep = ({ number, title, description, img, index }) => {
   const { ref, inView } = useInView({
     threshold: 0.2,
     triggerOnce: false,
   });
 
   return (
-    <motion.div
+    <motion.section
       ref={ref}
-      className={`step-container ${index % 2 === 1 ? 'reverse' : ''}`}
-      initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-      animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
+      className="how-it-works"
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.5 }}
     >
-      <div className="container">
-        <div className={`card ${index % 2 === 1 ? 'reverse-card' : 'normal-card'}`}>
-          <div className="box">
-            <div className="content">
-              <span className="heading">{number < 10 ? `${number}` : number}</span>
-              <img src={img} alt={`Icono de ${title}`} className="step-icon" />
-              <div className="text-content">
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <motion.div
+        className="how-it-works-header"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 1, ease: 'easeOut' }}
+      >
+        <h2>¿Cómo Funciona?</h2>
+      </motion.div>
+
+      <div className="how-it-works-content">
+        <motion.div
+          className="how-it-works-card"
+          initial={{ opacity: 0, x: -100 }}
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          <img src={clean} alt="Icono Limpia la Pala" />
+          <p>Asegúrate de que la superficie de la pala esté limpia y seca antes de aplicar el spray.</p>
+        </motion.div>
+
+        <motion.div
+          className="how-it-works-card"
+          initial={{ opacity: 0, y: 100 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <img src={handGel} alt="Icono Aplica el Spray" />
+          <p>Sostén el spray a unos 20 cm de la pala y aplica una capa uniforme sobre el grip.</p>
+        </motion.div>
+
+        <motion.div
+          className="how-it-works-card"
+          initial={{ opacity: 0, x: 100 }}
+          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+          transition={{ duration: 1, delay: 0.7 }}
+        >
+          <img src={dry} alt="Icono Deja Secar" />
+          <p>Deja que el spray se seque durante unos minutos antes de comenzar a jugar.</p>
+        </motion.div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 

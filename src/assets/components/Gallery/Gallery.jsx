@@ -8,12 +8,14 @@ import image4 from './../../images/4444.jpg';
 import image5 from './../../images/5555.jpg';
 import image6 from './../../images/6666.jpg';
 import image7 from './../../images/7777.jpg';
+import image8 from './../../images/7777.jpg';
+import image9 from './../../images/7777.jpg';
 
 const Gallery = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const images = [image1, image2, image3, image4, image5, image6, image7];
+  const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9];
 
   const openModal = (image) => {
     setSelectedImage(image);
@@ -27,7 +29,6 @@ const Gallery = () => {
 
   return (
     <section className="gallery">
-      <h2>Galería</h2>
       <div className="gallery-grid">
         {images.map((image, index) => (
           <div
@@ -43,15 +44,15 @@ const Gallery = () => {
         isOpen={modalIsOpen} 
         onRequestClose={closeModal} 
         ariaHideApp={false}
-        onClick={closeModal} // Cierra el modal al hacer clic en cualquier parte
-        style={{ overlay: { zIndex: 1000 } }} // Asegura que el modal esté por encima
+        onClick={closeModal}
+        style={{ overlay: { zIndex: 1000 } }}
       >
         {selectedImage && (
           <img 
             src={selectedImage} 
             alt="Modal" 
-            onClick={closeModal} // Cierra el modal al hacer clic en la imagen
-            style={{ cursor: 'pointer' }} // Cambia el cursor para indicar que es clickable
+            onClick={closeModal}
+            style={{ cursor: 'pointer' }}
           />
         )}
       </Modal>

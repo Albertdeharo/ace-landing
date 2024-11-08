@@ -1,6 +1,8 @@
 .gallery {
   padding: 2rem 1rem;
   text-align: center;
+  max-width: 900px;
+  margin: auto;
 }
 
 .gallery h2 {
@@ -8,69 +10,63 @@
 }
 
 .gallery-grid {
-  display: flex; /* Cambiado a flex */
-  flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea */
-  justify-content: center; /* Centra los elementos en el contenedor */
-  gap: 1rem; /* Espacio entre elementos */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
 .gallery-item {
-  height: 150px; /* Ajusta según tus necesidades */
-  width: 200px; /* Ajusta según tus necesidades */
+  cursor: pointer;
+  aspect-ratio: 16/9;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.gallery-grid:hover .gallery-item {
+  filter: grayscale(100%);
+  background-color: #ccc;
+  transition: filter 0.3s ease, background-color 0.3s ease;
 }
 
 .gallery-item:hover {
-  cursor: pointer;
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra al pasar el ratón */
+  filter: none !important;
+  background-color: transparent;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.ReactModal__Overlay,
-.ReactModal__Content {
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.8) !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 0.5s ease;
 }
 
 .ReactModal__Content {
-  background: #333 !important;
   border: none !important;
   inset: auto !important;
+  border-radius: 8px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.ReactModal__Content--after-open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ReactModal__Content--before-close {
+  transform: translateY(-20px);
+  opacity: 0;
 }
 
 .ReactModal__Content img {
   border-radius: 8px;
-}
-
-
-
-.ReactModal__Overlay {
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  transition: opacity 0.5s ease; /* Suaviza la opacidad */
-}
-
-.ReactModal__Content {
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Suaviza la transformación y la opacidad */
-  transform: translateY(-20px); /* Mueve el modal un poco hacia arriba al abrir */
-  opacity: 0; /* Inicialmente oculto */
-}
-
-.ReactModal__Content--after-open {
-  transform: translateY(0); /* Restablece la posición al abrir */
-  opacity: 1; /* Muestra el modal */
-}
-
-.ReactModal__Content--before-close {
-  transform: translateY(-20px); /* Mueve el modal hacia arriba al cerrar */
-  opacity: 0; /* Oculta el modal */
-}
-
-@media (max-width: 768px) {
-  .ReactModalPortal img {
-    width: 100%;
-  }
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
 }

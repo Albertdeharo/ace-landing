@@ -61,11 +61,15 @@ body {
 
 
 h1 {
-  font-family: 'Roboto-Regular';
+  font-family: 'Roboto-Black';
+}
+
+h3 {
+  font-family: 'Roboto-Black';
 }
 
 p {
-  font-family: 'Roboto-Medium';
+  font-family: 'Roboto-Regular';
 }
 
 
