@@ -64,21 +64,22 @@ const Banner = () => {
                   width: '100%',
                 }}
               >
-                <video
-                  className="video-background"
-                  src={item.video}
-                  autoPlay
-                  loop
-                  muted
-                  style={{
-                    objectFit: 'cover',
-                    width: '100%',
-                    height: '100%',
-                    position: 'absolute',
-                    top: 0,
-                    left: 0,
-                  }}
-                />
+              <video
+                className="video-background"
+                src={item.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{
+                  objectFit: 'cover',
+                  width: '100%',
+                  height: '100%',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                }}
+              />
                 {item.overlayImage && (
                   <img
                     src={item.overlayImage}
