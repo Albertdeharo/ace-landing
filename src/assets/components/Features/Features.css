@@ -1,17 +1,18 @@
-.features{
+.features {
   display: flex;
   max-width: 1200px;
   margin: auto;
   gap: 50px;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
 }
 
-.card-features{
+.card-features {
   text-align: center;
   flex: 1;
 }
 
-.card-features h3{
-  text-align: center;
-  flex: 1;
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
 }

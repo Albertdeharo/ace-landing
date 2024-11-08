@@ -3,9 +3,8 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
-  background-color: #1e1e1e;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  color: var(--color-gray);
 }
 
 .faq h2 {
@@ -18,13 +17,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 9px 9px 16px #141414, -9px -9px 16px #282828;
 }
 
 .faq-item {
   border-bottom: 1px solid #4a4a4a;
   width: 100%;
-  background-color: #333;
   padding: 2rem;
   cursor: pointer;
   margin:0;
@@ -34,15 +31,14 @@
 .faq-item h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: #f0f0f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .faq-item p {
   margin-top: 1.5rem;
-  color: #aaaaaa;
   max-height: 0;
   transition: max-height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
@@ -54,10 +50,6 @@
   opacity: 1;
 }
 
-.faq-item.active,
-.faq-item:hover {
-  box-shadow: inset 5px 5px 12px #232323, inset -5px -5px 12px #4a4a4a;
-}
 
 .icon {
   font-size: 1.2rem;
@@ -70,7 +62,6 @@
 
 .answer-content {
   margin-top: 1.5rem;
-  color: #aaaaaa;
   max-height: 0;
   transition: max-height 1s ease, opacity 1s ease;
   overflow: hidden;

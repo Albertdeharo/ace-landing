@@ -48,10 +48,14 @@ const FAQ = () => {
             className={`faq-item ${activeIndex === index ? 'active' : ''}`}
             key={index}
           >
-            <h3>
-              {item.question}
-              <span className="icon">{activeIndex === index ? '-' : '+'}</span>
-            </h3>
+              <h3>
+                <span>
+                {item.question}
+                </span>
+                
+                <span className="icon">{activeIndex === index ? '-' : '+'}</span>
+              </h3>
+             
             <div className="answer-content">
               {activeIndex === index && item.answer}
             </div>

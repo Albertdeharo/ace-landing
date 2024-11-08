@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import './Features.css';
 import foto1 from '../../images/FOTO_4.jpg';
 
@@ -39,6 +39,7 @@ const Features = () => {
                   backgroundImage: `url(${card.image})`,
                   backgroundSize: 'contain',
                   backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center',
                   aspectRatio: '16/9'
                 }}
                 ></div>

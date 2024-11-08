@@ -1,6 +1,7 @@
 .how-it-works {
   text-align: center;
   padding: 2rem;
+  overflow: hidden;
 }
 
 .how-it-works-header {
