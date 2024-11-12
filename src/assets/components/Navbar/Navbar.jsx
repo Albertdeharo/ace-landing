@@ -18,7 +18,10 @@ const Navbar = () => {
 
   const flags = { en: flagEn, es: flagEs, cat: flagCat };
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    document.body.classList.toggle('no-scroll', !isOpen);
+  };
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
@@ -50,7 +53,7 @@ const Navbar = () => {
           <img src={logoPhrase} alt="logo" />
         </NavLink>
       </div>
-      <div className="hamburger" onClick={toggleMenu}>
+      <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
@@ -70,7 +73,7 @@ const Navbar = () => {
           {isDropdownOpen && (
             <ul className="dropdown-menu">
               {Object.keys(flags)
-                .filter((lang) => lang !== currentLanguage) // Filtra el idioma actual
+                .filter((lang) => lang !== currentLanguage)
                 .map((lang) => (
                   <li key={lang}>
                     <button onClick={() => changeLanguage(lang)}>

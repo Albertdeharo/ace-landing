@@ -29,3 +29,7 @@
 .mb-4 {
     margin-bottom: 4rem;
 }
+
+.no-scroll {
+    overflow: hidden;
+  }
