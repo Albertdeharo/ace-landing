@@ -58,33 +58,47 @@ const Navbar = () => {
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
-      <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <li>
-          <NavLink to="/about" onClick={toggleMenu}>{translate('about')}</NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact" onClick={toggleMenu}>{translate('contact')}</NavLink>
-        </li>
-        <li className="dropdown" ref={dropdownRef}>
-          <button onClick={toggleDropdown} className="dropdown-toggle">
-            <img src={flags[currentLanguage]} alt="Selected language" className="flag-icon" />
-            <FaChevronDown className={`dropdown-arrow ${isDropdownOpen ? 'rotate' : ''}`} />
-          </button>
-          {isDropdownOpen && (
-            <ul className="dropdown-menu">
-              {Object.keys(flags)
-                .filter((lang) => lang !== currentLanguage)
-                .map((lang) => (
-                  <li key={lang}>
-                    <button onClick={() => changeLanguage(lang)}>
-                      <img src={flags[lang]} alt={`${lang} flag`} className="flag-icon" />
-                    </button>
-                  </li>
-                ))}
-            </ul>
-          )}
-        </li>
-      </ul>
+      <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+        <div className="logo">
+          <NavLink to="/">
+            <img src={logo} alt="logo" />
+          </NavLink>
+        </div>
+        <div className="menu-links">
+          <div className="menu-links__container">
+            <span>
+              <NavLink to="/about" onClick={toggleMenu}>{translate('about')}</NavLink>
+            </span>
+            <span>
+              <NavLink to="/contact" onClick={toggleMenu}>{translate('contact')}</NavLink>
+            </span>
+          </div>
+          <div className="dropdown" ref={dropdownRef}>
+            <button onClick={toggleDropdown} className="dropdown-toggle">
+              <img src={flags[currentLanguage]} alt="Selected language" className="flag-icon" />
+              <FaChevronDown className={`dropdown-arrow ${isDropdownOpen ? 'rotate' : ''}`} />
+            </button>
+            {isDropdownOpen && (
+              <ul className="dropdown-menu">
+                {Object.keys(flags)
+                  .filter((lang) => lang !== currentLanguage)
+                  .map((lang) => (
+                    <div key={lang}>
+                      <button onClick={() => changeLanguage(lang)}>
+                        <img src={flags[lang]} alt={`${lang} flag`} className="flag-icon" />
+                      </button>
+                    </div>
+                  ))}
+              </ul>
+            )}
+          </div>
+        </div>
+        <div className="logoPhrase">
+          <NavLink to="/">
+            <img src={logoPhrase} alt="logo" />
+          </NavLink>
+        </div>
+      </div>
     </nav>
   );
 };

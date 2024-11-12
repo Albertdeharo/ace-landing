@@ -12,7 +12,7 @@
 }
 
 .logo img {
-  width: 100px;
+  width: 200px;
 }
 
 .logoPhrase img {
@@ -47,21 +47,31 @@
 }
 
 .nav-links {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   height: 100vh;
   background-color: rgba(51, 51, 51, 1);
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   visibility: hidden;
   opacity: 0;
   transform: translateX(100%);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s;
   z-index: 9;
+}
+
+.nav-links.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.nav-links.close {
+  transform: translateX(100%);
 }
 
 .nav-links.open {
@@ -72,9 +82,50 @@
 
 .nav-links a {
   font-size: 1.5rem;
-  color: #fff;
   text-decoration: none;
-  margin-bottom: 1.5rem;
+  padding: 1rem;
+  color: var(--color-gray);
+}
+
+.menu-links__container a {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-gray);
+  padding-bottom: 4px;
+}
+
+.menu-links__container a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-red);
+  transition: width 0.3s ease;
+}
+
+.menu-links__container a:hover::after,
+.menu-links__container a.active::after {
+  width: 100%;
+}
+
+.menu-links {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  justify-content: space-between;
+}
+
+.menu-links__container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.menu-links span {
+  padding: 2rem;
 }
 
 .dropdown {
@@ -92,7 +143,7 @@
 }
 
 .dropdown-toggle img {
-  width: 20px;
+  width: 30px;
 }
 
 .dropdown-arrow {
@@ -114,5 +165,34 @@
 }
 
 .dropdown-menu img {
-  width: 20px;
+  width: 30px;
+}
+
+.dropdown-menu button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 2rem 0;
+}
+
+.nav-links.open .logo,
+.nav-links.open .logoPhrase {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .logoPhrase {
+    display: none;
+  }
 }
