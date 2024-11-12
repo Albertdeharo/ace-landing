@@ -21,6 +21,14 @@
   .page-content {
     flex: 1;
   }
+
+  .w50 {
+    width: 50%;
+  }
+
+  .text-center {
+    text-align: center;
+  }
   
   .custom-title {
     font-size: 8rem;
@@ -41,4 +49,12 @@
     .custom-title {
       font-size: 4rem;
     }
+  }
+
+  .custom-description {
+    line-height: 1.2;
+    padding: 2rem;
+    color: var(--color-gray);
+    font-family: Roboto-Regular;
+    font-size: 1.5rem;
   }

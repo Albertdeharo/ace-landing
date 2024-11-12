@@ -1,19 +1,61 @@
-.team {
-    padding: 2rem 1rem;
-  }
-  
-  .team-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .team-member {
-    margin: 1rem;
-    padding: 1rem;
-    background-color: #333; /* Fondo blanco para resaltar */
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 200px; /* Ajusta según necesites */
-  }
-  
+.our-team{
+  background: #f7f7f7;
+}
+.wrapper{
+  margin-top: 50px;
+}
+
+.wrapper h1{
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.team{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member{
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;  
+  position: relative;
+}
+
+.team .team_member h3{
+  color: var(--color-gray);
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role{
+  color: #ccc;
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.team .team_member .team_img{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
