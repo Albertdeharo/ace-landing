@@ -22,3 +22,23 @@
     flex: 1;
   }
   
+  .custom-title {
+    font-size: 8rem;
+    font-family: Roboto-Black;
+    text-align: center;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--color-gray), var(--color-red));
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @media (max-width: 1024px) {
+    .custom-title {
+      font-size: 6rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .custom-title {
+      font-size: 4rem;
+    }
+  }

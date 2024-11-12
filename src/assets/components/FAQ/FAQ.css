@@ -7,11 +7,6 @@
   color: var(--color-gray);
 }
 
-.faq h2 {
-  margin-bottom: 1.5rem;
-  color: #f0f0f0;
-}
-
 .faq-list {
   width: 60%;
   display: flex;

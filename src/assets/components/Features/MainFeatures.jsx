@@ -18,17 +18,15 @@ const MainFeatures = () => {
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
       transition={{ duration: 0.5 }}
     >
-      {/* Heading1 con efecto fadeIn */}
       <motion.div
         className="mainFeatures-header"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <h2 className="heading1">Ace Pro Grip</h2>
+        <h2 className="heading1 custom-title">Pro Grip</h2>
       </motion.div>
 
-      {/* Contenido en dos columnas */}
       <div className="mainFeatures-columns">
         <motion.div
           className="mainFeatures-content"
@@ -36,13 +34,19 @@ const MainFeatures = () => {
           animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <h2 className="heading2">
+          <motion.h2
+            className="heading2"
+            initial={{ opacity: 0, y: 20 }}  // Aquí agregamos el desplazamiento hacia abajo.
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}  // Movimiento hacia arriba y fade-in.
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
             Spray antideslizante de máximo rendimiento
-          </h2>
           <p className="mainFeatures-description">
             Es el aliado definitivo para jugadores que buscan un control total sobre su pala, incluso en condiciones muy exigentes. Su fórmula avanzada combate eficazmente el sudor y la humedad, generando una fricción óptima que asegura un agarre firme y estable durante todo el juego.
           </p>
+          </motion.h2>
         </motion.div>
+
 
         <motion.div
           className="mainFeatures-image"

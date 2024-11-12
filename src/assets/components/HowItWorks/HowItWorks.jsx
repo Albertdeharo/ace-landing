@@ -26,7 +26,7 @@ const HowItWorks = () => {
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 1, ease: 'easeOut' }}
       >
-        <h2>¿Cómo Funciona?</h2>
+        <h2 className='custom-title p1 w-auto'>¿Cómo funciona?</h2>
       </motion.div>
 
       <div className="how-it-works-content">
