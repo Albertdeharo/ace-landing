@@ -59,7 +59,7 @@ const Navbar = () => {
         <span className="bar"></span>
       </div>
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <div className="logo">
+        <div className="logo" onClick={toggleMenu}>
           <NavLink to="/">
             <img src={logo} alt="logo" />
           </NavLink>
@@ -93,7 +93,7 @@ const Navbar = () => {
             )}
           </div>
         </div>
-        <div className="logoPhrase">
+        <div className="logoPhrase" onClick={toggleMenu}>
           <NavLink to="/">
             <img src={logoPhrase} alt="logo" />
           </NavLink>
