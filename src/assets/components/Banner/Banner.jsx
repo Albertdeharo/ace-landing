@@ -12,6 +12,7 @@ const bannerData = [
   {
     video: videoBackground,
     overlayImage: spray,
+    text: 'FEEL GRIP TAKE CONTROL'
   },
   {
     image: fotoEffect1,
@@ -21,9 +22,6 @@ const bannerData = [
   },
   {
     image: fotoEffect2,
-  },
-  {
-    image: foto1,
   },
 ];
 
@@ -52,7 +50,7 @@ const Banner = () => {
                 style={{
                   backgroundImage: `url(${item.image})`,
                   backgroundSize: 'cover',
-                  height: '100vh',
+                  aspectRatio: '2/1',
                 }}
               ></div>
             ) : item.video ? (
@@ -60,7 +58,6 @@ const Banner = () => {
                 className="video-container"
                 style={{
                   position: 'relative',
-                  height: '100vh',
                   width: '100%',
                 }}
               >
@@ -74,28 +71,45 @@ const Banner = () => {
                 style={{
                   objectFit: 'cover',
                   width: '100%',
-                  height: '100%',
                   position: 'absolute',
                   top: 0,
                   left: 0,
                 }}
               />
-                {item.overlayImage && (
-                  <img
-                    src={item.overlayImage}
-                    alt="Imagen sobre el video"
-                    className="floating-image"
-                    style={{
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
-                      zIndex: 1,
-                      width: 'auto',
-                      height: '80%',
-                    }}
-                  />
-                )}
+                <div className="video__content">
+                  {item.text && (
+                      <div
+                      className="floating-text"
+                      style={{
+                        position: 'absolute',
+                        top: '70%',
+                        left: '30%',
+                        transform: 'translate(-50%, -50%)',
+                        zIndex: 1,
+                        height: '80%',
+                        fontSize: '5vw'
+                      }}
+                      >
+                        <span className='neon'>{item.text}</span>
+                      </div>
+                    )}
+                    {item.overlayImage && (
+                      <img
+                        src={item.overlayImage}
+                        alt="Imagen sobre el video"
+                        className="floating-image"
+                        style={{
+                          position: 'absolute',
+                          top: '50%',
+                          left: '60%',
+                          transform: 'translate(-50%, -50%)',
+                          zIndex: 1,
+                          width: 'auto',
+                          height: '80%',
+                        }}
+                      />
+                    )}
+                </div>
               </div>
             ) : null}
           </div>
