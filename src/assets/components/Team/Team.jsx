@@ -8,7 +8,7 @@ const teamMembers = [
 const Team = () => {
   return (
     <section className="our-team pt-2">
-      <h2 className='custom-title pb-2'>Nuestro Equipo</h2>
+      <h2 className='custom-title'>Nuestro Equipo</h2>
       <div className="wrapper">
         <div className="team team-list">
           {teamMembers.map((member, index) => (

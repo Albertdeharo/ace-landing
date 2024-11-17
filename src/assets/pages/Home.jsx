@@ -13,8 +13,8 @@ const Home = () => {
       <MainFeatures />
       <Features />
       <Parallax />
-      <HowItWorks />
       <Gallery />
+      <HowItWorks />
       <FAQ />
     </div>
   );

@@ -83,7 +83,7 @@ const Banner = () => {
                       style={{
                         position: 'absolute',
                         top: '70%',
-                        left: '30%',
+                        left: '20%',
                         transform: 'translate(-50%, -50%)',
                         zIndex: 1,
                         height: '80%',

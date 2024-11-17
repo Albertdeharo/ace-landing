@@ -50,10 +50,15 @@
     margin-bottom: 4rem;
 }
 
-.w-auto {
-    width: auto;
-}
-
 .no-scroll {
     overflow: hidden;
-  }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}

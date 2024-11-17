@@ -1,8 +1,12 @@
 .our-team{
   background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .wrapper{
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 
 .wrapper h1{
