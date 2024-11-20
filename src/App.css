@@ -25,7 +25,7 @@
     height: 100%;
   }
 
-  .custom-title {
+  .custom-main-title {
     position: relative;
     font-size: 5vw;
     font-family: Hype;
@@ -36,7 +36,7 @@
     background-clip: text;
   }
 
-  .custom-title::after{
+  .custom-main-title::after{
       content: "";
       position: absolute;
       bottom: -10px;
@@ -47,11 +47,24 @@
       border-radius: 0.9375rem;
   }
 
+  .custom-title {
+    font-size: 4vw;
+    font-family: Antonio-Light;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+  }
+
+
   @media (max-width: 768px) {
-    .custom-title {
+    .custom-main-title {
       font-size: 2rem;
     }
+    .custom-title {
+      font-size: 1.5rem;
+    }
   }
+
 
   .custom-parallax-title {
     font-size: 5vw;
