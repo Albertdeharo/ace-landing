@@ -28,7 +28,7 @@ body {
 
 .custom-main-title {
   position: relative;
-  font-size: 5vw;
+  font-size: clamp(3rem, 3vw, 6rem);
   font-family: Hype;
   text-align: center;
   color: transparent;
