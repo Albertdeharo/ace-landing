@@ -1,14 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import './reset.css'
-import { TranslationProvider } from './TranslationContext.jsx';
+console.log("MAIN.JSX EJECUTANDOSE");
 
-createRoot(document.getElementById('root')).render(
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+
+console.log("ANTES DE RENDER");
+
+const rootElement = document.getElementById("root");
+
+console.log("ROOT ELEMENT:", rootElement);
+
+createRoot(rootElement).render(
   <StrictMode>
-    <TranslationProvider>
-      <App />
-    </TranslationProvider>
+    <App />
   </StrictMode>
-)
+);
