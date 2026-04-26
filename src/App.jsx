@@ -1,4 +1,12 @@
+import "./App.css";
+import AppRoutes from "./Routes";
+
 function App() {
-  return <div style={{ color: "white", fontSize: "30px" }}>FUNCIONA APP</div>;
+  return (
+    <>
+      <AppRoutes />
+    </>
+  );
 }
+
 export default App;
