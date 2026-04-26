@@ -1,13 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './assets/pages/Home';
-import About from './assets/pages/About';
-import Contact from './assets/pages/Contact';
-import Navbar from './assets/components/Navbar/Navbar';
-import Footer from './assets/components/Footer/Footer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./assets/pages/Home";
+import About from "./assets/pages/About";
+import Contact from "./assets/pages/Contact";
+import Navbar from "./assets/components/Navbar/Navbar";
+import Footer from "./assets/components/Footer/Footer";
 
 const AppRoutes = () => {
   return (
-    <Router basename="/ace-landing">
+    <Router>
       <Navbar />
       <div className="page-content">
         <Routes>
