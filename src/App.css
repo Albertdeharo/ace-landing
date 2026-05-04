@@ -1,3 +1,23 @@
+/* =========================================
+   VARIABLES GLOBALES (PALETA DE COLORES)
+   ========================================= */
+   :root {
+    /* Marca */
+    --color-red: #e7185f;
+    --color-red-hover: #c4144e; 
+    
+    /* Grises y Neutros */
+    --color-dark: #111111; 
+    --color-gray-dark: #222222; 
+    --color-gray-light: #666666;
+    --color-gray: #878786;
+    --color-bg-light: #f9f9f9; 
+    --color-white: #ffffff;
+  }
+  
+  /* =========================================
+     LAYOUT BASE
+     ========================================= */
   * {
     margin: 0;
     padding: 0;
@@ -13,9 +33,6 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    --color-red: #e7185f;
-    --color-gray: #878786;
-    --color-white: #ffffff;
   }
   
   .page-content {
@@ -24,64 +41,58 @@
     flex-direction: column;
     height: 100%;
   }
-
+  
+  /* =========================================
+     TITULARES GLOBALES
+     ========================================= */
   .custom-main-title {
     position: relative;
-    font-size: 5vw;
-    font-family: Hype;
+    font-size: clamp(2.5rem, 5vw, 4.5rem); 
+    font-family: 'Hype', sans-serif;
     text-align: center;
     color: transparent;
     background-image: linear-gradient(to right, var(--color-gray), var(--color-red));
     -webkit-background-clip: text;
     background-clip: text;
+    padding-bottom: 1rem;
   }
-
-  .custom-main-title::after{
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(to right, var(--color-gray), var(--color-red));
-      border-radius: 0.9375rem;
+  
+  .custom-main-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-gray), var(--color-red));
+    border-radius: 0.9375rem;
   }
-
+  
   .custom-title {
-    font-size: 4vw;
-    font-family: Antonio-Light;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: 'Antonio-Light', sans-serif;
     text-align: center;
     font-weight: bold;
-    color: #000;
+    color: var(--color-dark);
   }
-
-
-  @media (max-width: 768px) {
-    .custom-main-title {
-      font-size: 2rem;
-    }
-    .custom-title {
-      font-size: 1.5rem;
-    }
-  }
-
-
+  
   .custom-parallax-title {
-    font-size: 5vw;
-    font-family: Hype;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-family: 'Hype', sans-serif;
     text-align: center;
   }
-
+  
   .custom-subtitle {
-    font-size: 5vw;
-    font-family: Antonio-light;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-family: 'Antonio-Light', sans-serif;
     text-align: center;
-    color: #333;
+    color: var(--color-gray-dark);
   }
-
+  
   .custom-description {
     padding: 2rem;
     color: var(--color-gray);
-    font-family: Roboto-Regular;
-    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
   }

@@ -1,66 +1,88 @@
 import './HowItWorks.css';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from './../../../TranslationContext'; // Ajusta la ruta a tu contexto
 
 import clean from '../../images/icon-clean.png';
 import handGel from '../../images/icon-hand-gel.png';
 import dry from '../../images/icon-dry.png';
 
 const HowItWorks = () => {
+  const { translate } = useTranslation();
   const { ref, inView } = useInView({
     threshold: 0.2,
-    triggerOnce: false,
+    triggerOnce: true, // Mejor true para que la animación solo ocurra una vez al hacer scroll
   });
 
+  const steps = [
+    {
+      id: 1,
+      icon: clean,
+      title: translate('hiw_step1_title'),
+      desc: translate('hiw_step1_desc'),
+    },
+    {
+      id: 2,
+      icon: handGel,
+      title: translate('hiw_step2_title'),
+      desc: translate('hiw_step2_desc'),
+    },
+    {
+      id: 3,
+      icon: dry,
+      title: translate('hiw_step3_title'),
+      desc: translate('hiw_step3_desc'),
+    }
+  ];
+
+  // Variantes de animación
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.3 }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
   return (
-    <motion.section
-      ref={ref}
-      className="how-it-works"
-      initial={{ opacity: 0 }}
-      animate={inView ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <section ref={ref} className="how-it-works">
       <motion.div
-        className="how-it-works-header flex-center"
+        className="how-it-works-header"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 1, ease: 'easeOut' }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-        <h2 className='custom-title p1'>Cómo funciona?</h2>
+        <h2 className='custom-title'>{translate('hiw_title')}</h2>
       </motion.div>
 
-      <div className="how-it-works-content">
-        <motion.div
-          className="how-it-works-card"
-          initial={{ opacity: 0, x: -100 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-          transition={{ duration: 1, delay: 0.3 }}
-        >
-          <img src={clean} alt="Icono Limpia la Pala" />
-          <p>Asegúrate de que la superficie de la pala esté limpia y seca antes de aplicar el spray.</p>
-        </motion.div>
+      <motion.div 
+        className="how-it-works-content"
+        variants={containerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+      >
+        {/* Línea conectora de fondo (solo visible en escritorio mediante CSS) */}
+        <div className="how-it-works-line"></div>
 
-        <motion.div
-          className="how-it-works-card"
-          initial={{ opacity: 0, y: 100 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          <img src={handGel} alt="Icono Aplica el Spray" />
-          <p>Sostén el spray a unos 20 cm de la pala y aplica una capa uniforme sobre el grip.</p>
-        </motion.div>
-
-        <motion.div
-          className="how-it-works-card"
-          initial={{ opacity: 0, x: 100 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
-          transition={{ duration: 1, delay: 0.7 }}
-        >
-          <img src={dry} alt="Icono Deja Secar" />
-          <p>Deja que el spray se seque durante unos minutos antes de comenzar a jugar.</p>
-        </motion.div>
-      </div>
-    </motion.section>
+        {steps.map((step) => (
+          <motion.div key={step.id} className="how-it-works-card" variants={cardVariants}>
+            <div className="step-badge">0{step.id}</div>
+            
+            <div className="icon-wrapper">
+              <img src={step.icon} alt={step.title} />
+            </div>
+            
+            <h3 className="step-title">{step.title}</h3>
+            <p className="step-desc">{step.desc}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
   );
 };
 

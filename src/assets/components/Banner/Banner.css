@@ -1,102 +1,24 @@
-.banner {
-    position: relative;
-  }
-  
-  .custom-dots {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex !important;
-    gap: 10px;
-    z-index: 8;
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .custom-dots li {
-    margin: 0;
-  }
-  
-  .custom-dots li button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: background-color 0.3s ease;
-    text-indent: -9999px;
-  }
-  
-  .custom-dots li.slick-active button {
-    background-color: var(--color-red);
-  }
-  
-  .custom-dots li button:hover {
-    background-color: var(--color-red);
-    cursor: pointer;
-  }
- 
-  .video-container {
-    position: relative;
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+   .banner {
     width: 100%;
-    aspect-ratio: 2/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
     overflow: hidden;
-  }
-
-  .neon {
-    font-family: Hype;
-    white-space: pre-line;
-    display: inline-block;
-    width: 1px;
-    color: #fff;
-    text-shadow:
-      0 0 5px #fff,
-      0 0 10px #fff,
-      0 0 20px #fff,
-      0 0 40px rgb(13, 103, 177),
-      0 0 80px rgb(13, 103, 177),
-      0 0 90px rgb(13, 103, 177),
-      0 0 100px rgb(13, 103, 177),
-      0 0 150px rgb(13, 103, 177);
+    padding: 2rem 1rem;
   }
   
-  @keyframes floatingInCircle {
-    0% {
-      transform: translate(-50%, -50%) translateX(30px) translateY(0);
-    }
-    10% {
-      transform: translate(-50%, -50%) translateX(21px) translateY(21px);
-    }
-    20% {
-      transform: translate(-50%, -50%) translateX(0) translateY(30px);
-    }
-    30% {
-      transform: translate(-50%, -50%) translateX(-21px) translateY(21px);
-    }
-    40% {
-      transform: translate(-50%, -50%) translateX(-30px) translateY(0);
-    }
-    50% {
-      transform: translate(-50%, -50%) translateX(-21px) translateY(-21px);
-    }
-    60% {
-      transform: translate(-50%, -50%) translateX(0) translateY(-30px);
-    }
-    70% {
-      transform: translate(-50%, -50%) translateX(21px) translateY(-21px);
-    }
-    80% {
-      transform: translate(-50%, -50%) translateX(30px) translateY(0);
-    }
-    90% {
-      transform: translate(-50%, -50%) translateX(21px) translateY(21px);
-    }
-    100% {
-      transform: translate(-50%, -50%) translateX(30px) translateY(0); /* Regreso al inicio */
-    }
+  /* =========================================
+     IMAGEN
+     ========================================= */
+  .banner__image {
+    width: 100%;
+    max-width: 900px;
+    max-height: 80vh;
+    height: auto;
+    display: block;
+    object-fit: contain;
   }
-  
-  .floating-image {
-    animation: floatingInCircle 22s infinite linear;
-  }
-  

@@ -1,38 +1,20 @@
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaChevronDown } from 'react-icons/fa';
+import { useTranslation } from './../../../TranslationContext'; // Ajusta la ruta a tu contexto
 import './FAQ.css';
-
-const faqData = [
-  {
-    question: '¿Cuánto dura el efecto del spray?',
-    answer: (
-      <>
-        <h4>Título de la Respuesta</h4>
-        <p>El efecto del spray puede durar varias horas, dependiendo de las condiciones de uso.</p>
-      </>
-    ),
-  },
-  {
-    question: '¿Es seguro para la piel?',
-    answer: (
-      <>
-        <h4>Seguridad del Producto</h4>
-        <p>Sí, el spray está formulado para ser seguro y no irritante para la piel.</p>
-      </>
-    ),
-  },
-  {
-    question: '¿Puedo usarlo en cualquier tipo de pala?',
-    answer: (
-      <>
-        <h4>Compatibilidad</h4>
-        <p>Sí, es adecuado para la mayoría de las palas de padel y tenis.</p>
-      </>
-    ),
-  },
-];
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const { translate } = useTranslation();
+
+  // Cargamos los datos desde las traducciones
+  const faqData = [
+    { question: translate('faq_q1'), answer: translate('faq_a1') },
+    { question: translate('faq_q2'), answer: translate('faq_a2') },
+    { question: translate('faq_q3'), answer: translate('faq_a3') },
+    { question: translate('faq_q4'), answer: translate('faq_a4') },
+  ];
 
   const toggleAnswer = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -40,27 +22,51 @@ const FAQ = () => {
 
   return (
     <section className="faq">
-      <h2 className='custom-title p1'>Preguntas Frecuentes</h2>
+      <div className="faq-header">
+        <h2 className="custom-title">{translate('faq_title')}</h2>
+      </div>
+      
       <div className="faq-list">
-        {faqData.map((item, index) => (
-          <div
-            onClick={() => toggleAnswer(index)}
-            className={`faq-item ${activeIndex === index ? 'active' : ''}`}
-            key={index}
-          >
-              <h3>
-                <span>
-                {item.question}
-                </span>
-                
-                <span className="icon">{activeIndex === index ? '-' : '+'}</span>
-              </h3>
-             
-            <div className="answer-content">
-              {activeIndex === index && item.answer}
+        {faqData.map((item, index) => {
+          const isActive = activeIndex === index;
+
+          return (
+            <div
+              className={`faq-item ${isActive ? 'active' : ''}`}
+              key={index}
+            >
+              <div 
+                className="faq-question" 
+                onClick={() => toggleAnswer(index)}
+              >
+                <h3>{item.question}</h3>
+                <motion.div
+                  animate={{ rotate: isActive ? 180 : 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="faq-icon-wrapper"
+                >
+                  <FaChevronDown className="faq-icon" />
+                </motion.div>
+              </div>
+
+              <AnimatePresence initial={false}>
+                {isActive && (
+                  <motion.div
+                    className="faq-answer-container"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    <div className="faq-answer-content">
+                      <p>{item.answer}</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

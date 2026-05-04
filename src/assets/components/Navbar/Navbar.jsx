@@ -43,36 +43,46 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">
+      {/* 1. Izquierda: Logo Principal */}
+      <div className="navbar__left">
         <NavLink to="/">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="Ace Logo" className="brand-logo" />
         </NavLink>
       </div>
-      <div className="logoPhrase">
+
+      {/* 2. Centro: Frase */}
+      <div className="navbar__center">
         <NavLink to="/">
-          <img src={logoPhrase} alt="logo" />
+          <img src={logoPhrase} alt="Ace Phrase" className="brand-phrase" />
         </NavLink>
       </div>
-      <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </div>
-      <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-        <div className="logo" onClick={toggleMenu}>
-          <NavLink to="/">
-            <img src={logo} alt="logo" />
-          </NavLink>
+
+      {/* 3. Derecha: Hamburguesa (Móvil) + Enlaces (Desktop) */}
+      <div className="navbar__right">
+        
+        {/* Hamburguesa */}
+        <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
         </div>
-        <div className="menu-links">
-          <div className="menu-links__container">
-            <span>
-              <NavLink to="/about" onClick={toggleMenu}>{translate('about')}</NavLink>
-            </span>
-            <span>
-              <NavLink to="/contact" onClick={toggleMenu}>{translate('contact')}</NavLink>
-            </span>
+
+        {/* Contenedor de enlaces (En desktop están en línea, en móvil son un overlay a pantalla completa) */}
+        <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+          
+          {/* Logo extra que solo se ve cuando el menú móvil está abierto a pantalla completa */}
+          <div className="mobile-only logo-mobile" onClick={toggleMenu}>
+            <NavLink to="/">
+              <img src={logo} alt="Ace Logo" className="brand-logo" />
+            </NavLink>
           </div>
+
+          <div className="menu-links__container">
+            <NavLink to="/contact" onClick={toggleMenu} className="nav-item">
+              {translate('contact')}
+            </NavLink>
+          </div>
+
           <div className="dropdown" ref={dropdownRef}>
             <button onClick={toggleDropdown} className="dropdown-toggle">
               <img src={flags[currentLanguage]} alt="Selected language" className="flag-icon" />
@@ -83,20 +93,15 @@ const Navbar = () => {
                 {Object.keys(flags)
                   .filter((lang) => lang !== currentLanguage)
                   .map((lang) => (
-                    <div key={lang}>
+                    <li key={lang}>
                       <button onClick={() => changeLanguage(lang)}>
                         <img src={flags[lang]} alt={`${lang} flag`} className="flag-icon" />
                       </button>
-                    </div>
+                    </li>
                   ))}
               </ul>
             )}
           </div>
-        </div>
-        <div className="logoPhrase" onClick={toggleMenu}>
-          <NavLink to="/">
-            <img src={logoPhrase} alt="logo" />
-          </NavLink>
         </div>
       </div>
     </nav>

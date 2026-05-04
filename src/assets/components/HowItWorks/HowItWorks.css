@@ -1,36 +1,139 @@
-.how-it-works {
-  text-align: center;
-  padding: 2rem;
-  overflow: hidden;
-}
-
-.how-it-works-header {
-  margin-bottom: 2rem;
-}
-
-.how-it-works-content {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.how-it-works-card {
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  max-width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.how-it-works-card img {
-  width: 50px;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 768px) {
-  .how-it-works-content {
-    flex-direction: column;
-    align-items: center;
+/* =========================================
+   CONTENEDOR PRINCIPAL
+   ========================================= */
+   .how-it-works {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: var(--color-bg-light); /* Un fondo ligerísimamente gris para destacar la sección */
+    overflow: hidden;
   }
-}
+  
+  .how-it-works-header {
+    margin-bottom: 5rem;
+  }
+  
+  .how-it-works-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* --- Línea Conectora de los pasos --- */
+  .how-it-works-line {
+    position: absolute;
+    top: 60px; /* Alineada con los iconos */
+    left: 15%;
+    width: 70%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-red) 20%, var(--color-red) 80%, transparent);
+    opacity: 0.3;
+    z-index: 0;
+  }
+  
+  /* =========================================
+     TARJETAS DE LOS PASOS
+     ========================================= */
+  .how-it-works-card {
+    background: var(--color-white);
+    border-radius: 16px;
+    padding: 2.5rem 1.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1; /* Por encima de la línea */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.02);
+  }
+  
+  .how-it-works-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(231, 24, 95, 0.15); /* Sombra roja sutil al hover */
+  }
+  
+  /* --- Badge Numérico (01, 02, 03) --- */
+  .step-badge {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-family: 'Hype', sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(231, 24, 95, 0.3);
+  }
+  
+  /* --- Icono --- */
+  .icon-wrapper {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1.5rem auto;
+    background-color: var(--color-bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.03);
+  }
+  
+  .how-it-works-card img {
+    width: 45px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .how-it-works-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* --- Textos --- */
+  .step-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-gray-dark);
+    margin-bottom: 1rem;
+  }
+  
+  .step-desc {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-gray);
+    margin: 0;
+  }
+  
+  /* =========================================
+     TABLET Y MÓVIL
+     ========================================= */
+  @media (max-width: 992px) {
+    .how-it-works-content {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      gap: 4rem;
+    }
+  
+    .how-it-works-line {
+      /* En móvil la línea la ponemos vertical */
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3px;
+      height: 90%;
+      background: linear-gradient(180deg, transparent, var(--color-red) 20%, var(--color-red) 80%, transparent);
+    }
+  
+    .step-badge {
+      /* Centramos el badge arriba en móvil */
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
