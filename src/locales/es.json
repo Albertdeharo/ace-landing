@@ -36,5 +36,17 @@
   "faq_q3": "¿Deja residuos pegajosos?",
   "faq_a3": "No. A diferencia de las resinas tradicionales, ACE PRO GRIP se seca en segundos dejando una capa de fricción limpia. Tus manos no se quedarán pegajosas tras el partido.",
   "faq_q4": "¿Cuántas aplicaciones tiene un bote?",
-  "faq_a4": "Un envase estándar rinde para unos 40-50 partidos, dependiendo de la cantidad que apliques cada vez. ¡Un poco rinde mucho!"
+  "faq_a4": "Un envase estándar rinde para unos 40-50 partidos, dependiendo de la cantidad que apliques cada vez. ¡Un poco rinde mucho!",
+  "contact_page_title": "Contacto",
+  "contact_page_subtitle": "Tienes dudas sobre ACE PRO GRIP, quieres ser distribuidor o simplemente quieres saludar? Rellena el formulario y te contestaremos lo antes posible.",
+  "form_name": "Nombre",
+  "form_name_ph": "Tu nombre completo",
+  "form_email": "Email",
+  "form_email_ph": "tu@email.com",
+  "form_message": "Mensaje",
+  "form_message_ph": "¿En qué podemos ayudarte?",
+  "form_send": "Enviar mensaje",
+  "form_sending": "Enviando...",
+  "form_success": "¡Mensaje enviado con éxito! Te responderemos pronto.",
+  "form_error": "Hubo un error al enviar el mensaje. Por favor, inténtalo de nuevo."
 }

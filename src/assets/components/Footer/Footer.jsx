@@ -51,7 +51,7 @@ const Footer = () => {
         <div className="footer__social">
           <h4 className="footer__title">{translate('follow_us')}</h4>
           <div className="footer__social-icons">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://www.instagram.com/aceprogrip/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram />
             </a>
           </div>

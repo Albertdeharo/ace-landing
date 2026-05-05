@@ -36,5 +36,17 @@
   "faq_q3": "Deixa residus enganxosos?",
   "faq_a3": "No. A diferència de les resines tradicionals, ACE PRO GRIP s'asseca en segons deixant una capa de fricció neta. Les teves mans no quedaran enganxoses després del partit.",
   "faq_q4": "Quantes aplicacions té un pot?",
-  "faq_a4": "Un envàs estàndard rendeix per a uns 40-50 partits, depenent de la quantitat que apliquis cada vegada. Una mica rendeix molt!"
+  "faq_a4": "Un envàs estàndard rendeix per a uns 40-50 partits, depenent de la quantitat que apliquis cada vegada. Una mica rendeix molt!",
+  "contact_page_title": "Contacte",
+  "contact_page_subtitle": "Tens dubtes sobre ACE PRO GRIP, vols ser distribuïdor o simplement vols saludar? Omple el formulari i et contestarem el més aviat possible.",
+  "form_name": "Nom",
+  "form_name_ph": "El teu nom complet",
+  "form_email": "Email",
+  "form_email_ph": "tu@email.com",
+  "form_message": "Missatge",
+  "form_message_ph": "En què et podem ajudar?",
+  "form_send": "Enviar missatge",
+  "form_sending": "Enviant...",
+  "form_success": "Missatge enviat amb èxit! Et respondrem aviat.",
+  "form_error": "Hi ha hagut un error en enviar el missatge. Si us plau, torna-ho a intentar."
 }
