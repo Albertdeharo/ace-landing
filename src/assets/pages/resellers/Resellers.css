@@ -27,16 +27,8 @@
   font-size: 4rem;
   margin-bottom: 0;
   letter-spacing: 2px;
+  color: #111111;
   text-transform: uppercase;
-
-  /* TRUCO HYPE COLOR NEGRO */
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: 0 0 0 #111111 !important;
-
-  /* FIX ANTI-RECORTE */
-  padding: 0.1em 0.2em;
-  line-height: 1.2;
 }
 
 .hero-title span {

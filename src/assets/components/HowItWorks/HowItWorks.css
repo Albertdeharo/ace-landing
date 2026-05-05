@@ -52,25 +52,21 @@
   }
   
   .step-badge {
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--color-red);
-  font-family: 'Hype', sans-serif;
-  font-size: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(231, 24, 95, 0.3);
-
-  /* TRUCO HYPE COLOR BLANCO */
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-  text-shadow: 0 0 0 var(--color-white, #ffffff) !important;
-}
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-red);
+    color: var(--color-white);
+    font-family: 'Hype', sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(231, 24, 95, 0.3);
+  }
   
   .icon-wrapper {
     width: 90px;
