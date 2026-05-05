@@ -14,6 +14,7 @@ const FAQ = () => {
     { question: translate('faq_q3'), answer: translate('faq_a3') },
     { question: translate('faq_q4'), answer: translate('faq_a4') },
     { question: translate('faq_q5'), answer: translate('faq_a5') },
+    { question: translate('faq_q6'), answer: translate('faq_a6') },
   ];
 
   const toggleAnswer = (index) => {

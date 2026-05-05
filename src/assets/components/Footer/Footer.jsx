@@ -29,6 +29,7 @@ const Footer = () => {
           <h4 className="footer__title">{translate('quick_links') || 'Explora'}</h4>
           <ul>
             <li><Link to="/">{translate('home') || 'Inicio'}</Link></li>
+            <li><Link to="/resellers">{translate('nav_resellers') || 'Resellers'}</Link></li>
             <li><Link to="/distribuidores">{translate('nav_distributors') || 'Distribuidores'}</Link></li>
             <li><Link to="/quienes-somos">{translate('nav_about') || 'Quiénes somos'}</Link></li>
             <li><Link to="/contact">{translate('contact') || 'Contacto'}</Link></li>

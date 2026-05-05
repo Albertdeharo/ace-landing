@@ -34,9 +34,14 @@ const Features = () => {
       step: 4,
     },
     {
-      title: translate('feature_5_title') || 'Máximo rendimiento',
-      description: translate('feature_5_desc') || 'Fórmula testada por profesionales para aguantar los partidos más exigentes sin dejar residuos pegajosos.',
+      title: translate('feature_5_title') || 'Fragancia deportiva fresca',
+      description: translate('feature_5_desc') || 'Olvídate de los fuertes olores químicos. ACE PRO GRIP deja un aroma fresco, agradable y estimulante en tus manos para que te sientas limpio y listo para el siguiente punto.',
       step: 5,
+    },
+    {
+      title: translate('feature_6_title') || 'Secado ultra rápido',
+      description: translate('feature_6_desc') || 'Su fórmula avanzada de evaporación actúa en menos de 5 segundos. Aplica el spray, siente el efecto seco casi de inmediato y vuelve al juego sin perder el ritmo.',
+      step: 6,
     },
   ];
 

@@ -47,36 +47,35 @@ const WhoWeAre = () => {
       {/* SECCIÓN ATRIBUTOS (TABLA) */}
       <section className="about-table section-padding">
         <div className="container">
-          <h2 className="section-title">{translate('table_title') || 'Atributos del Producto'}</h2>
           <div className="table-responsive">
             <table className="comparison-table">
               <thead>
                 <tr>
-                  <th>Característica</th>
+                  <th>{translate('table_feature')}</th>
                   <th className="highlight">ACE PRO GRIP</th>
-                  <th>Magnesio Líquido</th>
+                  <th>{translate('table_liquid_magnesium')}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Velocidad de Secado</td>
-                  <td><strong>Ultra Rápido (&lt; 5s)</strong></td>
-                  <td>Moderado (15-30s)</td>
+                  <td>{translate('table_drying_speed')}</td>
+                  <td><strong>{translate('table_drying_speed_ace')}</strong></td>
+                  <td>{translate('table_drying_speed_liquid_magnesium')}</td>
                 </tr>
                 <tr>
-                  <td>Residuos</td>
-                  <td><strong>Mínimo (Efecto Seco)</strong></td>
-                  <td>Alto (Polvo Blanco)</td>
+                  <td>{translate('table_residue')}</td>
+                  <td><strong>{translate('table_residue_ace')}</strong></td>
+                  <td>{translate('table_residue_liquid_magnesium')}</td>
                 </tr>
                 <tr>
-                  <td>Duración</td>
-                  <td><strong>Alta Duración</strong></td>
-                  <td>Media</td>
+                  <td>{translate('table_duration')}</td>
+                  <td><strong>{translate('table_duration_ace')}</strong></td>
+                  <td>{translate('table_duration_liquid_magnesium')}</td>
                 </tr>
                 <tr>
-                  <td>Tacto</td>
-                  <td><strong>Limpio y Preciso</strong></td>
-                  <td>Áspero / Seco</td>
+                  <td>{translate('table_touch')}</td>
+                  <td><strong>{translate('table_touch_ace')}</strong></td>
+                  <td>{translate('table_touch_liquid_magnesium')}</td>
                 </tr>
               </tbody>
             </table>
@@ -91,23 +90,23 @@ const WhoWeAre = () => {
           <div className="essence-grid">
             <div className="essence-item">
               <FaRocket className="essence-icon" />
-              <h3>Máximo Agarre</h3>
-              <p>Rinde con la confianza de un agarre profesional en cada punto.</p>
+              <h3>{translate('about_ess_1_title')}</h3>
+              <p>{translate('about_ess_1_text')}</p>
             </div>
             <div className="essence-item">
               <FaTintSlash className="essence-icon" />
-              <h3>Efecto Seco</h3>
-              <p>Control inmediato frente al sudor y la humedad más extrema.</p>
+              <h3>{translate('about_ess_2_title')}</h3>
+              <p>{translate('about_ess_2_text')}</p>
             </div>
             <div className="essence-item">
               <FaBolt className="essence-icon" />
-              <h3>Secado Rápido</h3>
-              <p>Fórmula de evaporación instantánea para no perder ni un segundo.</p>
+              <h3>{translate('about_ess_3_title')}</h3>
+              <p>{translate('about_ess_3_text')}</p>
             </div>
             <div className="essence-item">
               <FaHands className="essence-icon" />
-              <h3>Fácil Uso</h3>
-              <p>Aplicación limpia y sencilla diseñada para el fragor del juego.</p>
+              <h3>{translate('about_ess_4_title')}</h3>
+              <p>{translate('about_ess_4_text')}</p>
             </div>
           </div>
         </div>
@@ -118,11 +117,11 @@ const WhoWeAre = () => {
         <div className="container">
           <div className="commitment-flex">
             <div className="commitment-text">
-              <h2 className="accent-title">Nuestro Compromiso</h2>
-              <p>Crear soluciones deportivas eficaces que ayuden a mejorar la experiencia de agarre, aportando confianza, estabilidad y control en cada uso.</p>
+              <h2 className="accent-title">{translate('about_com_title')}</h2>
+              <p>{translate('about_com_text')}</p>
               <div className="made-in-spain">
                 <FaCheck className="check-icon" />
-                <span>Producto fabricado en España por Watermelon Designers, S.L.</span>
+                <span>{translate('about_com_madein')}</span>
               </div>
             </div>
           </div>

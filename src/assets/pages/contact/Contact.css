@@ -1,0 +1,297 @@
+/* =========================================
+   CONTENEDOR DE LA PÁGINA
+   ========================================= */
+.contact-page {
+  padding: 6rem 2rem;
+  background-color: var(--color-white);
+  min-height: calc(100vh - 80px); /* Ocupa el alto menos el navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Columna derecha (form) ligeramente más ancha */
+  gap: 4rem;
+  align-items: center;
+}
+
+/* =========================================
+   COLUMNA IZQUIERDA (INFO)
+   ========================================= */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-info .custom-main-title {
+  text-align: left; /* Sobrescribimos el centrado global para esta vista */
+  padding-bottom: 0.5rem;
+}
+
+.contact-info .custom-main-title::after {
+  /* Hacemos la línea de subrayado más corta */
+  width: 80px;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-gray);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: var(--color-gray-dark);
+  font-weight: 600;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--color-red);
+}
+
+.contact-social p {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-gray-dark);
+  color: var(--color-white);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.social-button:hover {
+  background-color: var(--color-red);
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   COLUMNA DERECHA (FORMULARIO)
+   ========================================= */
+.contact-form-wrapper {
+  background-color: var(--color-bg-light);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* NUEVO: Filas de 2 columnas para que el form no sea infinito */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 700;
+  color: var(--color-gray-dark);
+  font-size: 0.95rem;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid transparent;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--color-gray-dark);
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.input-group textarea {
+  resize: vertical; /* Permite redimensionar solo hacia abajo */
+}
+
+/* Estado Focus: Borde rojo deportivo */
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--color-red);
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 4px rgba(231, 24, 95, 0.1);
+}
+
+.input-group input:disabled,
+.input-group textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   CHECKBOX DE PRIVACIDAD (NUEVO)
+   ========================================= */
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: var(--color-red); /* Usa el rojo corporativo si el navegador lo soporta */
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 0.9rem;
+  color: var(--color-gray-dark);
+  line-height: 1.5;
+  cursor: pointer;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.privacy-link {
+  color: var(--color-red);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.privacy-link:hover {
+  color: var(--color-gray-dark);
+}
+
+/* =========================================
+   BOTÓN ENVIAR Y FEEDBACK
+   ========================================= */
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: var(--color-red-hover, #c81451);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(231, 24, 95, 0.3);
+}
+
+.submit-button:disabled {
+  background-color: var(--color-gray);
+  cursor: not-allowed;
+}
+
+.submit-icon {
+  font-size: 1.1rem;
+}
+
+/* Mensajes de éxito y error */
+.feedback-message {
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.feedback-message.success {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: #27ae60;
+  border: 1px solid rgba(46, 204, 113, 0.2);
+}
+
+.feedback-message.error {
+  background-color: rgba(231, 24, 95, 0.1);
+  color: var(--color-red);
+  border: 1px solid rgba(231, 24, 95, 0.2);
+}
+
+/* =========================================
+   MÓVILES Y TABLETS
+   ========================================= */
+@media (max-width: 992px) {
+  .contact-page {
+    padding: 3rem 1.5rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-info {
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-info .custom-main-title {
+    text-align: center;
+  }
+
+  .contact-info .custom-main-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .contact-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Móviles pequeños: Rompemos las 2 columnas del formulario */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr; /* Pasa a ser 1 columna */
+    gap: 1.5rem; /* Mantenemos el gap para que los inputs respiren */
+  }
+}
