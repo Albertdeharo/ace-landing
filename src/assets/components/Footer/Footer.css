@@ -43,20 +43,23 @@
 }
 
 .footer__logo-text {
-  font-family: 'Hype', sans-serif; /* Tu fuente principal */
+  font-family: 'Hype', sans-serif; 
   font-size: 2.5rem;
   letter-spacing: 2px;
-  line-height: 1;
   
-  /* Fallback y técnica de recorte para forzar el blanco */
-  color: #ffffff;
-  background: #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* TRUCO HYPE COLOR BLANCO */
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 0 #ffffff !important;
+  background: none !important;
+
+  /* FIX ANTI-RECORTE */
+  padding: 0.1em 0.2em;
+  line-height: 1.2;
+  display: inline-block;
 }
 
 .footer__logo-text .highlight-text {
-  /* Forzar el rojo corporativo en la palabra GRIP */
   color: var(--color-red, #e7185f);
   background: var(--color-red, #e7185f);
   -webkit-background-clip: text;

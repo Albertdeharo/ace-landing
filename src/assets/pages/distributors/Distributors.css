@@ -130,17 +130,13 @@
   font-size: 2.5rem;
   margin-bottom: 1rem;
   letter-spacing: 2px;
-
-  /* 1. Color base (por si acaso) */
-  color: #ffffff !important;
-
-  /* 2. El truco para forzar el blanco en fuentes rebeldes */
-  background: #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
-  /* Asegúrate de que no tenga filtros heredados */
-  filter: none !important;
+  color: transparent !important; 
+  -webkit-text-fill-color: transparent !important; 
+  text-shadow: 0 0 0 #ffffff !important; 
+  background: none !important;
+  padding: 0.1em 0.3em; 
+  line-height: 1.2; 
+  display: inline-block; 
 }
 
 .partner-link {
@@ -241,13 +237,16 @@
   transition: 0.3s ease;
 }
 
-/* Estilo para el texto redundante de la izquierda que se ve negro */
 .partner-logo-placeholder {
-  color: #ffffff; /* ¡Este es el fix clave! */
   font-family: 'Hype', sans-serif;
   font-size: 1rem;
   letter-spacing: 2px;
-  opacity: 0.5; /* Lo hacemos sutil */
+  opacity: 0.5; 
+
+  /* TRUCO HYPE COLOR BLANCO */
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: 0 0 0 #ffffff !important;
 }
 
 .partner-card:hover .partner-logo-placeholder {
