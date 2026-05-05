@@ -48,5 +48,8 @@
   "form_send": "Enviar missatge",
   "form_sending": "Enviant...",
   "form_success": "Missatge enviat amb èxit! Et respondrem aviat.",
-  "form_error": "Hi ha hagut un error en enviar el missatge. Si us plau, torna-ho a intentar."
+  "form_error": "Hi ha hagut un error en enviar el missatge. Si us plau, torna-ho a intentar.",
+  "nav_distributors": "Distribuïdors",
+  "nav_about": "Qui som",
+  "nav_contact": "Contacte"
 }

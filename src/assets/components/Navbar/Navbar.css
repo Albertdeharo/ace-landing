@@ -1,203 +1,226 @@
 /* =========================================
    ESTILOS BASE (DESKTOP)
    ========================================= */
-   .navbar {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    gap: 1rem;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1000;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-white, #ffffff);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar__left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar__center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+/* =========================================
+   ELEMENTOS INTERNOS
+   ========================================= */
+.brand-logo {
+  height: 90px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.menu-links__container {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: var(--color-gray-dark, #222222);
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  font-family: 'Antonio-Light';
+}
+
+.nav-item:hover, 
+.nav-item.active {
+  color: var(--color-red, #e7185f);
+}
+
+/* =========================================
+   SELECTOR DE IDIOMAS (DROPDOWN)
+   ========================================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.flag-icon {
+  width: 24px;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+  color: var(--color-gray-dark);
+}
+
+.dropdown-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--color-white, #ffffff);
+  list-style: none;
+  padding: 0.5rem;
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* =========================================
+   VISIBILIDAD DEL SELECTOR DE IDIOMAS
+   ========================================= */
+.mobile-lang {
+  display: none; 
+  margin-top: 2rem; 
+}
+
+.desktop-lang {
+  display: block; 
+}
+
+
+/* =========================================
+   TABLET Y MÓVIL (MÁXIMO 992px)
+   ========================================= */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 1rem 1.5rem;
   }
-  
-  /* Alineaciones del Grid */
-  .navbar__left {
-    justify-self: start;
-  }
-  .navbar__center {
-    justify-self: center;
-  }
-  .navbar__right {
-    justify-self: end;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Tamaños de las imágenes */
-  .brand-logo {
-    height: 40px; /* Ajusta según lo que necesites */
-    width: auto;
-    display: block;
-  }
-  
-  .brand-phrase {
-    height: 45px; /* Ajusta según necesites */
-    width: auto;
-    display: block;
-  }
-  
-  /* Ocultamos hamburguesa y elementos de menú móvil en escritorio */
-  .hamburger,
-  .mobile-only {
-    display: none;
-  }
-  
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .menu-links__container {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .nav-item {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-item:hover {
-    color: #ff5722; /* Un naranja deportivo para el pádel, cámbialo a tu color corporativo */
-  }
-  
-  /* --- Dropdown Idiomas --- */
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-toggle {
-    background: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-  }
-  
-  .flag-icon {
-    width: 24px;
-    height: auto;
-    border-radius: 3px;
-  }
-  
-  .dropdown-arrow {
-    transition: transform 0.3s ease;
-  }
-  
-  .dropdown-arrow.rotate {
-    transform: rotate(180deg);
-  }
-  
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: white;
-    list-style: none;
-    padding: 0.5rem;
-    margin: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
+
+  .hamburger {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .dropdown-menu button {
-    background: none;
-    border: none;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
     cursor: pointer;
+    z-index: 1001;
+  }
+
+  .hamburger .bar {
+    height: 3px;
     width: 100%;
-    padding: 0.2rem;
+    background-color: var(--color-gray-dark, #222222);
+    border-radius: 10px;
+    transition: all 0.3s ease;
   }
-  
-  /* =========================================
-     TABLET Y MÓVIL (MÁXIMO 768px)
-     ========================================= */
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 1rem;
-    }
-  
-    /* Mostramos y damos estilo a la hamburguesa */
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 30px;
-      height: 21px;
-      cursor: pointer;
-      z-index: 1001;
-    }
-  
-    .hamburger .bar {
-      height: 3px;
-      width: 100%;
-      background-color: #333;
-      border-radius: 10px;
-      transition: all 0.3s ease;
-    }
-  
-    /* Animación a la "X" */
-    .hamburger.open .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-    .hamburger.open .bar:nth-child(2) { opacity: 0; }
-    .hamburger.open .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-  
-    /* El contenedor de enlaces pasa a ser un menú overlay */
-    .nav-links {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 100%;
-      height: 100vh;
-      background-color: #ffffff;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: right 0.4s ease-in-out;
-      gap: 3rem;
-    }
-  
-    .nav-links.open {
-      right: 0;
-    }
-  
-    .mobile-only {
-      display: block;
-    }
-  
-    .logo-mobile img {
-      height: 60px;
-    }
-  
-    .menu-links__container {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      font-size: 1.5rem;
-    }
+
+  .hamburger.open .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+  .hamburger.open .bar:nth-child(2) { opacity: 0; }
+  .hamburger.open .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+  .navbar__center {
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-white, #ffffff);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.4s ease-in-out;
+    z-index: 999;
   }
-  
-  /* =========================================
-     MÓVIL MUY PEQUEÑO (MÁXIMO 480px)
-     ========================================= */
-  @media (max-width: 480px) {
-    /* Pasamos de Grid a Flex para tener solo dos bloques y que se empujen a los lados */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-    }
-    
-    /* Escondemos la frase del centro porque ya no cabe */
-    .navbar__center {
-      display: none;
-    }
+
+  .navbar__center.open {
+    left: 0;
   }
+
+  .menu-links__container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .nav-item {
+    font-size: 1.8rem; 
+  }
+.desktop-lang {
+    display: none; 
+  }
+
+  .mobile-lang {
+    display: block;
+  }
+  .mobile-lang .dropdown-toggle {
+    padding: 1rem;
+  }
+  .mobile-lang .flag-icon {
+    width: 45px; 
+  }
+  .mobile-lang .dropdown-arrow {
+    font-size: 1.5rem; 
+  }
+.mobile-lang .dropdown-menu {
+    top: 100%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    padding: 1rem; 
+    gap: 1rem; 
+  }
+  .mobile-lang .dropdown-menu button {
+    padding: 0.5rem; 
+  }
+}
