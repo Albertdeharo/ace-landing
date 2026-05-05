@@ -33,6 +33,11 @@ const Features = () => {
       description: translate('feature_4_desc') || 'Fórmula testada por profesionales para aguantar los partidos más exigentes sin dejar residuos pegajosos.',
       step: 4,
     },
+    {
+      title: translate('feature_5_title') || 'Máximo rendimiento',
+      description: translate('feature_5_desc') || 'Fórmula testada por profesionales para aguantar los partidos más exigentes sin dejar residuos pegajosos.',
+      step: 5,
+    },
   ];
 
   // Variantes para la animación en cascada de la lista

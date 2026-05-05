@@ -80,13 +80,20 @@ const Navbar = () => {
 
       <div className={`navbar__center ${isOpen ? 'open' : ''}`}>
         <div className="menu-links__container">
-          <NavLink to="/distribuidores" onClick={toggleMenu} className="nav-item">
+          {/* Cambiamos toggleMenu por () => setIsOpen(false) */}
+          <NavLink to="/" onClick={() => setIsOpen(false)} className="nav-item">
+            {translate('nav_home') || 'Inicio'}
+          </NavLink>
+          <NavLink to="/resellers" onClick={() => setIsOpen(false)} className="nav-item">
+            {translate('nav_resellers') || 'Resellers'}
+          </NavLink>
+          <NavLink to="/distribuidores" onClick={() => setIsOpen(false)} className="nav-item">
             {translate('nav_distributors') || 'Distribuidores'}
           </NavLink>
-          <NavLink to="/quienes-somos" onClick={toggleMenu} className="nav-item">
+          <NavLink to="/quienes-somos" onClick={() => setIsOpen(false)} className="nav-item">
             {translate('nav_about') || 'Quiénes somos'}
           </NavLink>
-          <NavLink to="/contact" onClick={toggleMenu} className="nav-item">
+          <NavLink to="/contact" onClick={() => setIsOpen(false)} className="nav-item">
             {translate('nav_contact') || 'Contacto'}
           </NavLink>
           
@@ -95,7 +102,6 @@ const Navbar = () => {
       </div>
 
       <div className="navbar__right">
-        
         {languageSelectorDropdown('desktop-lang')}
         <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <span className="bar"></span>

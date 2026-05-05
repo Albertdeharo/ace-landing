@@ -1,0 +1,178 @@
+.about-page {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+/* --- HERO --- */
+.about-hero {
+  background-color: #111;
+  padding: 8rem 0;
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-family: 'Hype', sans-serif;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  color: #ffffff; 
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title span {
+  color: var(--color-red, #e7185f); 
+  background: var(--color-red, #e7185f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #888;
+}
+
+/* --- PHILOSOPHY --- */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.accent-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #e7185f;
+  padding-left: 1.5rem;
+}
+
+.philosophy-card p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* --- QUOTE --- */
+.about-quote {
+  background-color: #e7185f;
+  color: white;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.main-quote {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.quote-sub {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* --- TABLE --- */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 3.5rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.comparison-table th, .comparison-table td {
+  padding: 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-table th {
+  background-color: #f8f8f8;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.comparison-table th.highlight {
+  background-color: #111;
+  color: #e7185f;
+}
+
+/* --- ESSENCE --- */
+.essence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.essence-item {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #fdfdfd;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.essence-item:hover {
+  border-color: #e7185f;
+  transform: translateY(-5px);
+}
+
+.essence-icon {
+  font-size: 3rem;
+  color: #e7185f;
+  margin-bottom: 1.5rem;
+}
+
+/* --- COMMITMENT --- */
+.about-commitment {
+  background-color: #111;
+  color: white;
+}
+
+.made-in-spain {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #e7185f;
+  font-weight: bold;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.8rem; }
+  .philosophy-grid { grid-template-columns: 1fr; }
+  .main-quote { font-size: 2rem; }
+  .section-padding { padding: 4rem 0; }
+}

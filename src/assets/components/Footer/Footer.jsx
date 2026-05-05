@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from './../../../TranslationContext'; 
-import { FaInstagram, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaInstagram, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaTiktok } from 'react-icons/fa';
 import './Footer.css';
-import logo from './../../../assets/images/logo_ace_transparente_prev_ui.png'; 
 
 const Footer = () => {
   const { translate } = useTranslation();
@@ -15,20 +14,24 @@ const Footer = () => {
       <div className="footer__container">
         {/* Columna 1: Marca y descripción */}
         <div className="footer__brand">
-          <Link to="/">
-            <img src={logo} alt="ACE PRO GRIP Logo" className="footer__logo" />
+          <Link to="/" className="footer__logo-text-link">
+            <span className="footer__logo-text">
+              ACE PRO <span className="highlight-text">GRIP</span>
+            </span>
           </Link>
           <p className="footer__description">
             {translate('footer_desc')}
           </p>
         </div>
 
-        {/* Columna 2: Enlaces rápidos */}
+        {/* Columna 2: Enlaces rápidos (Explora) */}
         <div className="footer__links">
-          <h4 className="footer__title">{translate('quick_links')}</h4>
+          <h4 className="footer__title">{translate('quick_links') || 'Explora'}</h4>
           <ul>
-            <li><Link to="/">{translate('home')}</Link></li>
-            <li><Link to="/contact">{translate('contact')}</Link></li>
+            <li><Link to="/">{translate('home') || 'Inicio'}</Link></li>
+            <li><Link to="/distribuidores">{translate('nav_distributors') || 'Distribuidores'}</Link></li>
+            <li><Link to="/quienes-somos">{translate('nav_about') || 'Quiénes somos'}</Link></li>
+            <li><Link to="/contact">{translate('contact') || 'Contacto'}</Link></li>
           </ul>
         </div>
 
@@ -38,7 +41,7 @@ const Footer = () => {
           <ul>
             <li>
               <FaEnvelope className="footer__icon" />
-              <a href="mailto:hello@aceprogrip.com">hello@aceprogrip.com</a>
+              <a href="mailto:contacto@aceprogrip.com">contacto@aceprogrip.com</a>
             </li>
             <li>
               <FaMapMarkerAlt className="footer__icon" />
@@ -54,6 +57,12 @@ const Footer = () => {
             <a href="https://www.instagram.com/aceprogrip/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram />
             </a>
+            <a href="https://www.linkedin.com/company/aceprogrip/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <FaLinkedin />
+            </a>
+            <a href="https://www.tiktok.com/@ace.pro.grip" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <FaTiktok />
+            </a>
           </div>
         </div>
       </div>
@@ -61,11 +70,6 @@ const Footer = () => {
       {/* Copyright y legales */}
       <div className="footer__bottom">
         <p>&copy; {currentYear} ACE PRO GRIP. All rights reserved.</p>
-        {/* <div className="footer__legal-links">
-          <Link to="/privacy">{translate('privacy')}</Link>
-          <span>|</span>
-          <Link to="/terms">{translate('terms')}</Link>
-        </div> */}
       </div>
     </footer>
   );

@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaChevronDown } from 'react-icons/fa';
-import { useTranslation } from './../../../TranslationContext'; // Ajusta la ruta a tu contexto
+import { useTranslation } from './../../../TranslationContext';
 import './FAQ.css';
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const { translate } = useTranslation();
 
-  // Cargamos los datos desde las traducciones
   const faqData = [
     { question: translate('faq_q1'), answer: translate('faq_a1') },
     { question: translate('faq_q2'), answer: translate('faq_a2') },
     { question: translate('faq_q3'), answer: translate('faq_a3') },
     { question: translate('faq_q4'), answer: translate('faq_a4') },
+    { question: translate('faq_q5'), answer: translate('faq_a5') },
   ];
 
   const toggleAnswer = (index) => {

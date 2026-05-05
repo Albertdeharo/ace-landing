@@ -1,37 +1,43 @@
 import './HowItWorks.css';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTranslation } from './../../../TranslationContext'; // Ajusta la ruta a tu contexto
+import { useTranslation } from './../../../TranslationContext'; 
 
-import clean from '../../images/icon-clean.png';
-import handGel from '../../images/icon-hand-gel.png';
-import dry from '../../images/icon-dry.png';
+// Usamos react-icons en lugar de imágenes PNG para los nuevos pasos
+import { FaArrowsAltV, FaSprayCan, FaHourglassHalf, FaHandRock } from 'react-icons/fa';
 
 const HowItWorks = () => {
   const { translate } = useTranslation();
   const { ref, inView } = useInView({
     threshold: 0.2,
-    triggerOnce: true, // Mejor true para que la animación solo ocurra una vez al hacer scroll
+    triggerOnce: true, 
   });
 
+  // Hemos pasado de 3 a 4 pasos
   const steps = [
     {
       id: 1,
-      icon: clean,
+      icon: <FaArrowsAltV className="step-svg-icon" />,
       title: translate('hiw_step1_title'),
       desc: translate('hiw_step1_desc'),
     },
     {
       id: 2,
-      icon: handGel,
+      icon: <FaSprayCan className="step-svg-icon" />,
       title: translate('hiw_step2_title'),
       desc: translate('hiw_step2_desc'),
     },
     {
       id: 3,
-      icon: dry,
+      icon: <FaHourglassHalf className="step-svg-icon" />,
       title: translate('hiw_step3_title'),
       desc: translate('hiw_step3_desc'),
+    },
+    {
+      id: 4,
+      icon: <FaHandRock className="step-svg-icon" />,
+      title: translate('hiw_step4_title'),
+      desc: translate('hiw_step4_desc'),
     }
   ];
 
@@ -40,7 +46,7 @@ const HowItWorks = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.3 }
+      transition: { staggerChildren: 0.2 } // Reducido un poco para que los 4 salgan más ágiles
     }
   };
 
@@ -66,15 +72,16 @@ const HowItWorks = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        {/* Línea conectora de fondo (solo visible en escritorio mediante CSS) */}
+        {/* Línea conectora de fondo */}
         <div className="how-it-works-line"></div>
 
         {steps.map((step) => (
           <motion.div key={step.id} className="how-it-works-card" variants={cardVariants}>
             <div className="step-badge">0{step.id}</div>
             
+            {/* Como ahora pasamos un componente SVG en lugar de una ruta de imagen, lo renderizamos directo */}
             <div className="icon-wrapper">
-              <img src={step.icon} alt={step.title} />
+              {step.icon}
             </div>
             
             <h3 className="step-title">{step.title}</h3>
