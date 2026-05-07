@@ -45,7 +45,6 @@ const Features = () => {
     },
   ];
 
-  // Variantes para la animación en cascada de la lista
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -63,7 +62,7 @@ const Features = () => {
     <section id="features" className="features" ref={ref}>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'black' }}>
 
-      <h1 className="hype-title">PRUEBA <span>ACE</span> PRO GRIP</h1>
+      <h1 className="hype-title">spray <span>ACE</span> PRO GRIP</h1>
       </div>
       {/* HEADER */}
       <motion.div
