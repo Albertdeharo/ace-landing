@@ -61,6 +61,10 @@ const Features = () => {
 
   return (
     <section id="features" className="features" ref={ref}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'black' }}>
+
+      <h1 className="hype-title">PRUEBA <span>ACE</span> PRO GRIP</h1>
+      </div>
       {/* HEADER */}
       <motion.div
         className="features-header"

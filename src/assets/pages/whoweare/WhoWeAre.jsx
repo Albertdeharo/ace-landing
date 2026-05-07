@@ -23,12 +23,12 @@ const WhoWeAre = () => {
         <div className="container">
           <div className="philosophy-grid">
             <div className="philosophy-card">
-              <h2 className="accent-title">{translate('philosophy_title_1') || 'La Filosofía ACE'}</h2>
-              <p>En <strong>ACE PRO GRIP</strong> creemos que el control empieza por el agarre. El éxito en el deporte se define por la precisión de cada movimiento.</p>
+              <h2 className="accent-title">{translate('philosophy_title_1')}</h2>
+              <p>{translate('philosophy_text_1')}</p>
             </div>
             <div className="philosophy-card">
-              <h2 className="accent-title">{translate('philosophy_title_2') || 'Máximo Rendimiento'}</h2>
-              <p>Desarrollamos soluciones pensadas para deportistas que buscan seguridad y confianza incluso en las condiciones más exigentes de sudor y humedad.</p>
+              <h2 className="accent-title">{translate('philosophy_title_2')}</h2>
+              <p>{translate('philosophy_text_2')}</p>
             </div>
           </div>
         </div>
@@ -41,45 +41,6 @@ const WhoWeAre = () => {
             "Feel Grip · Take Control"
           </blockquote>
           <p className="quote-sub">ACE representa una forma de competir con más seguridad, concentración y control.</p>
-        </div>
-      </section>
-
-      {/* SECCIÓN ATRIBUTOS (TABLA) */}
-      <section className="about-table section-padding">
-        <div className="container">
-          <div className="table-responsive">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>{translate('table_feature')}</th>
-                  <th className="highlight">ACE PRO GRIP</th>
-                  <th>{translate('table_liquid_magnesium')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>{translate('table_drying_speed')}</td>
-                  <td><strong>{translate('table_drying_speed_ace')}</strong></td>
-                  <td>{translate('table_drying_speed_liquid_magnesium')}</td>
-                </tr>
-                <tr>
-                  <td>{translate('table_residue')}</td>
-                  <td><strong>{translate('table_residue_ace')}</strong></td>
-                  <td>{translate('table_residue_liquid_magnesium')}</td>
-                </tr>
-                <tr>
-                  <td>{translate('table_duration')}</td>
-                  <td><strong>{translate('table_duration_ace')}</strong></td>
-                  <td>{translate('table_duration_liquid_magnesium')}</td>
-                </tr>
-                <tr>
-                  <td>{translate('table_touch')}</td>
-                  <td><strong>{translate('table_touch_ace')}</strong></td>
-                  <td>{translate('table_touch_liquid_magnesium')}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
       </section>
 

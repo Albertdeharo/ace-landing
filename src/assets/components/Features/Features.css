@@ -170,3 +170,26 @@
       align-items: center;
     }
   }
+
+  .hype-title {
+  font-family: 'Hype', sans-serif;
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  
+  /* 1. Hacemos la fuente original (que el iPhone lee como negra) 100% invisible */
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important; 
+  
+  /* 2. Proyectamos una "sombra" blanca sólida exactamente debajo, que hará de letra real */
+  text-shadow: 0 0 0 #ffffff !important; 
+  
+  background: none !important;
+}
+
+/* Y para la palabra roja (el span) */
+.hype-title span {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important; 
+  text-shadow: 0 0 0 var(--color-red, #e7185f) !important; 
+}

@@ -66,7 +66,7 @@ const Distributors = () => {
               </div>
               <div className="partner-content">
                 {/* Este es el título principal con el efecto glitch que haremos visible */}
-                <h3 className="partner-name">Celescala</h3>
+                <h3 className="partner-name">C. E. L'escala</h3>
                 <span className="partner-link">
                   {translate('dist_visit_web')} <FaExternalLinkAlt />
                 </span>
