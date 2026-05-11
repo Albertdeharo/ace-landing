@@ -4,17 +4,19 @@
 .contact-page {
   padding: 6rem 2rem;
   background-color: var(--color-white);
-  min-height: calc(100vh - 80px); /* Ocupa el alto menos el navbar */
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: 4px solid var(--color-red, #e7185f)
+
 }
 
 .contact-container {
   max-width: 1200px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1.2fr; /* Columna derecha (form) ligeramente más ancha */
+  grid-template-columns: 1fr 1.2fr;
   gap: 4rem;
   align-items: center;
 }
@@ -29,12 +31,11 @@
 }
 
 .contact-info .custom-main-title {
-  text-align: left; /* Sobrescribimos el centrado global para esta vista */
+  text-align: left;
   padding-bottom: 0.5rem;
 }
 
 .contact-info .custom-main-title::after {
-  /* Hacemos la línea de subrayado más corta */
   width: 80px;
 }
 
@@ -113,7 +114,6 @@
   gap: 1.5rem;
 }
 
-/* NUEVO: Filas de 2 columnas para que el form no sea infinito */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -147,10 +147,9 @@
 }
 
 .input-group textarea {
-  resize: vertical; /* Permite redimensionar solo hacia abajo */
+  resize: vertical;
 }
 
-/* Estado Focus: Borde rojo deportivo */
 .input-group input:focus,
 .input-group textarea:focus {
   outline: none;
@@ -166,7 +165,7 @@
 }
 
 /* =========================================
-   CHECKBOX DE PRIVACIDAD (NUEVO)
+   CHECKBOX DE PRIVACIDAD
    ========================================= */
 .checkbox-group {
   display: flex;
@@ -179,7 +178,7 @@
   width: 18px;
   height: 18px;
   margin-top: 3px;
-  accent-color: var(--color-red); /* Usa el rojo corporativo si el navegador lo soporta */
+  accent-color: var(--color-red);
   cursor: pointer;
 }
 
@@ -240,7 +239,6 @@
   font-size: 1.1rem;
 }
 
-/* Mensajes de éxito y error */
 .feedback-message {
   padding: 1rem;
   border-radius: 8px;
@@ -293,10 +291,9 @@
   }
 }
 
-/* Móviles pequeños: Rompemos las 2 columnas del formulario */
 @media (max-width: 768px) {
   .form-row {
-    grid-template-columns: 1fr; /* Pasa a ser 1 columna */
-    gap: 1.5rem; /* Mantenemos el gap para que los inputs respiren */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
