@@ -3,8 +3,17 @@
   width: 100%;
 }
 
+.react-parallax-bgimage {
+  object-fit: cover !important;
+}
+
 @media (max-width: 768px) {
+  
   .parallax-content {
-    height: 350px;
+    height: 350px !important;
+  }
+
+  .react-parallax .react-parallax-bgimage {
+    object-position: right center !important;
   }
 }
