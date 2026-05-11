@@ -1,110 +1,138 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =========================================
+   VARIABLES GLOBALES (PALETA DE COLORES)
+   ========================================= */
+   :root {
+    /* Marca */
+    --color-red: #e7185f;
+    --color-red-hover: #c4144e; 
+    
+    /* Grises y Neutros */
+    --color-dark: #111111; 
+    --color-gray-dark: #222222; 
+    --color-gray-light: #666666;
+    --color-gray: #878786;
+    --color-bg-light: #f9f9f9; 
+    --color-white: #ffffff;
+  }
+  
+  /* =========================================
+     LAYOUT BASE
+     ========================================= */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    color: var(--color-gray);
+  }
+  
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  /* =========================================
+     TITULARES GLOBALES
+     ========================================= */
+  .custom-main-title {
+    position: relative;
+    font-size: clamp(2.5rem, 5vw, 4.5rem); 
+    font-family: 'Hype', sans-serif;
+    text-align: center;
+    color: transparent;
+    background-image: linear-gradient(to right, var(--color-gray), var(--color-red));
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding-bottom: 1rem;
+  }
+  
+  .custom-main-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-gray), var(--color-red));
+    border-radius: 0.9375rem;
+  }
+  
+  .custom-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-family: 'Antonio-Light', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-dark);
+  }
+  
+  .custom-parallax-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-family: 'Hype', sans-serif;
+    text-align: center;
+  }
+  
+  .custom-subtitle {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-family: 'Antonio-Light', sans-serif;
+    text-align: center;
+    color: var(--color-gray-dark);
+  }
+  
+  .custom-description {
+    padding: 2rem;
+    color: var(--color-gray);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+
+  .hero-title {
+    font-family: 'Hype';
+    font-size: 4rem;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    color: var(--color-white);
+    text-transform: uppercase;
+  }
+
+  .hero-title span {
+    display: block;
+    font-size: 6rem;
+  }
+
+  @media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem; }
+  .hero-title span { font-size: 4rem; }
 }
 
-html,
-body {
-  height: 100%;
-  color: var(--color-gray);
-}
 
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  --color-red: #e7185f;
-  --color-gray: #878786;
-  --color-white: #ffffff;
-}
-
-.page-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.custom-main-title {
-  position: relative;
-  font-size: clamp(3rem, 3vw, 6rem);
-  font-family: Hype;
+/* --- HERO --- */
+.dist-hero {
+  background-color: #fff;
+  padding: 8rem 0;
   text-align: center;
-  color: transparent;
-  background-image: linear-gradient(
-    to right,
-    var(--color-gray),
-    var(--color-red)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
+  border-top: 4px solid var(--color-red, #e7185f);
 }
 
-.custom-main-title::after {
+.dist-hero::after{
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 4px;
+  width: 5px;
+  height: 100%;
   background: linear-gradient(to right, var(--color-gray), var(--color-red));
   border-radius: 0.9375rem;
-}
-
-.custom-title {
-  font-size: 4vw;
-  font-family: Antonio-Light;
-  text-align: center;
-  font-weight: bold;
-  color: #000;
-}
-
-@media (max-width: 768px) {
-  .custom-main-title {
-    font-size: 2rem;
-  }
-  .custom-title {
-    font-size: 1.5rem;
-  }
-}
-
-.custom-parallax-title {
-  font-size: 5vw;
-  font-family: Hype;
-  text-align: center;
-}
-
-.custom-subtitle {
-  font-size: 5vw;
-  font-family: Antonio-light;
-  text-align: center;
-  color: #333;
-}
-
-.custom-description {
-  padding: 2rem;
-  color: var(--color-gray);
-  font-family: Roboto-Regular;
-  font-size: 1.2rem;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
