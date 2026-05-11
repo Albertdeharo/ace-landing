@@ -24,6 +24,7 @@
   }
   
   .features-main-title {
+    margin: 0 auto;
     position: relative;
     font-size: clamp(2.5rem, 5vw, 4.5rem); 
     font-family: 'Hype', sans-serif;
@@ -53,7 +54,6 @@
     width: 100%;
   }
   
-  /* --- Izquierda: Descripción --- */
   .features-description-box {
     background-color: var(--color-bg-light);
     padding: 2rem;
@@ -70,7 +70,6 @@
     margin: 0;
   }
   
-  /* --- Centro: Imagen Flotante --- */
   .features-content-center {
     display: flex;
     flex-direction: column;
@@ -81,7 +80,7 @@
   
   .product-image {
     width: 100%;
-    max-width: 250px; /* Ajusta según lo ancho que sea tu PNG */
+    max-width: 300px;
     height: auto;
     z-index: 2;
     filter: drop-shadow(0px 20px 20px rgba(0,0,0,0.15));
@@ -95,7 +94,6 @@
     margin-top: 1rem;
   }
   
-  /* --- Derecha: Lista de características --- */
   .features-content-right {
     display: flex;
     flex-direction: column;
@@ -120,8 +118,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Círculo perfecto */
-    box-shadow: 0 8px 20px rgba(235, 10, 10, 0.2); /* Sombra naranja suave */
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(235, 10, 10, 0.2);
     border: 2px solid rgba(255, 87, 34, 0.1);
   }
   
@@ -130,9 +128,9 @@
   }
   
   .block-title {
+    color: var(--color-red);
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--color-gray-dark);
     margin: 0 0 0.4rem 0;
   }
   
@@ -149,18 +147,18 @@
      ========================================= */
   @media (max-width: 992px) {
     .features-columns {
-      grid-template-columns: 1fr; /* Todo en una sola columna */
+      grid-template-columns: 1fr;
       gap: 4rem;
     }
   
     .features-content-center {
-      order: -1; /* Forzamos a que la imagen salga ARRIBA del todo en móvil */
+      order: -1;
     }
   
     .features-description-box {
       text-align: center;
       border-left: none;
-      border-top: 4px solid var(--color-red); /* Cambiamos el borde a arriba */
+      border-top: 4px solid var(--color-red);
     }
   
     .content-block {
@@ -170,17 +168,3 @@
       align-items: center;
     }
   }
-
-  .hype-title {
-  font-family: 'Antonio-Light';
-  font-size: 5rem;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-  color: white;
- 
-}
-
-/* Y para la palabra roja (el span) */
-.hype-title span {
-  color: var(--color-red);
-}

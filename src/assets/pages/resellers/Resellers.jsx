@@ -14,7 +14,7 @@ const Resellers = () => {
   return (
     <div className="resellers-page">
       {/* SECCIÓN HERO */}
-      <section className="reseller-hero">
+      <section className="dist-hero">
         <div className="container">
           <h1 className="hero-title">
             {translate('reseller_hero_title')} <span>{translate('reseller_hero_subtitle')}</span>
@@ -63,7 +63,7 @@ const Resellers = () => {
       </section>
 
       {/* SECCIÓN PARTNERS (Con imágenes) */}
-      <section className="reseller-partners section-padding">
+      <section className="dist-current section-padding">
         <div className="container">
           <h2 className="section-title">{translate('dist_current_title')}</h2>
           
@@ -79,7 +79,7 @@ const Resellers = () => {
               </div>
               <div className="partner-content">
                 {/* Este es el título principal con el efecto glitch que haremos visible */}
-                <h3 className="partner-name">C. E. L'escala</h3>
+                <h3 className="partner-name">C. E. Lescala</h3>
                 <span className="partner-link">
                   {translate('dist_visit_web')} <FaExternalLinkAlt />
                 </span>

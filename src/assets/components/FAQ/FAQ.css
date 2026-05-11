@@ -10,6 +10,13 @@
   .faq-header {
     margin-bottom: 4rem;
     text-align: center;
+    width: 100%;
+  }
+
+    
+  .faq-header .custom-title{
+    color: var(--color-red);
+    text-align: left;
   }
   
   .faq-list {

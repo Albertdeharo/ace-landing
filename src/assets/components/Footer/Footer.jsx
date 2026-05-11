@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from './../../../TranslationContext'; 
 import { FaInstagram, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaTiktok } from 'react-icons/fa';
+import logo from './../../images/logo_ace_transparente_prev_ui.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -16,7 +17,7 @@ const Footer = () => {
         <div className="footer__brand">
           <Link to="/" className="footer__logo-text-link">
             <span className="footer__logo-text">
-              ACE PRO <span className="highlight-text">GRIP</span>
+              <img src={logo} alt="Logo ACE PRO GRIP" />
             </span>
           </Link>
           <p className="footer__description">

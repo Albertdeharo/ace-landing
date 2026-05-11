@@ -73,6 +73,11 @@
   letter-spacing: 1px;
 }
 
+.social-buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
 .social-button {
   display: inline-flex;
   align-items: center;

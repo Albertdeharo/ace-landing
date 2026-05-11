@@ -2,15 +2,15 @@
    VARIABLES Y CONTENEDOR PRINCIPAL
    ========================================= */
 .footer {
-  background-color: #111111;
-  color: #aaaaaa;
+  background-color: #fff;
+  color: #000;
   position: relative;
   overflow: hidden;
 }
 
 .footer__top-wave {
   height: 4px;
-  background: var(--color-red, #e7185f); /* Cambiado a tu color corporativo */
+  background: var(--color-red, #e7185f); 
   width: 100%;
 }
 
@@ -27,7 +27,7 @@
    COLUMNAS Y TEXTOS
    ========================================= */
 .footer__title {
-  color: #ffffff;
+  color: var(--color-red);
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -43,24 +43,15 @@
 }
 
 .footer__logo-text {
-  font-family: 'Hype', sans-serif; /* Tu fuente principal */
+  font-family: 'Antonio-Light';
   font-size: 2.5rem;
   letter-spacing: 2px;
   line-height: 1;
-  
-  /* Fallback y técnica de recorte para forzar el blanco */
   color: #ffffff;
-  background: #ffffff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .footer__logo-text .highlight-text {
-  /* Forzar el rojo corporativo en la palabra GRIP */
   color: var(--color-red, #e7185f);
-  background: var(--color-red, #e7185f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .footer__description {
@@ -85,7 +76,7 @@
 .footer__links a,
 .footer__contact a,
 .footer__contact span {
-  color: #aaaaaa;
+  color: #000;
   text-decoration: none;
   font-size: 0.95rem;
   transition: all 0.3s ease;

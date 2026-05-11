@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import { useTranslation } from '../../../TranslationContext';
-import { FaPaperPlane, FaEnvelope, FaMapMarkerAlt, FaInstagram } from 'react-icons/fa';
+import { FaPaperPlane, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import './Contact.css';
 
 const ContactForm = () => {
@@ -77,9 +77,7 @@ const ContactForm = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="custom-main-title">{translate('contact_page_title')}</h1>
-          <p className="contact-subtitle">
-            {translate('contact_page_subtitle')}
-          </p>
+          <p className="contact-subtitle" dangerouslySetInnerHTML={{ __html: translate('contact_page_subtitle') }} />
 
           <div className="contact-details">
             <div className="contact-detail-item">
@@ -94,9 +92,14 @@ const ContactForm = () => {
 
           <div className="contact-social">
             <p>{translate('follow_us') || 'Síguenos en redes:'}</p>
-            <a href="https://www.instagram.com/aceprogrip/" target="_blank" rel="noopener noreferrer" className="social-button">
-              <FaInstagram /> Instagram
-            </a>
+            <div className="social-buttons-container">
+              <a href="https://www.instagram.com/aceprogrip/" target="_blank" rel="noopener noreferrer" className="social-button">
+                <FaInstagram /> Instagram
+              </a>
+              <a href="https://www.linkedin.com/company/aceprogrip" target="_blank" rel="noopener noreferrer" className="social-button">
+                <FaLinkedin /> Linkedin
+              </a>
+            </div>
           </div>
         </motion.div>
 

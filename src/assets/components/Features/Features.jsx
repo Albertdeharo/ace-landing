@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { useTranslation } from './../../../TranslationContext'; // Ajusta la ruta
 import './Features.css';
 import product from './../../images/ENVASE.png'; // Ajusta la ruta
+import logo from './../../images/logo_ace_transparente_prev_ui.png';
 
 const Features = () => {
   const { translate } = useTranslation();
@@ -24,24 +25,14 @@ const Features = () => {
       step: 2,
     },
     {
-      title: translate('feature_3_title') || 'Fácil Aplicación',
-      description: translate('feature_3_desc') || 'Aplicación rápida y sencilla: basta con rociar y disfrutar de un agarre instantáneo y duradero.',
-      step: 3,
-    },
-    {
-      title: translate('feature_4_title') || 'Máximo rendimiento',
-      description: translate('feature_4_desc') || 'Fórmula testada por profesionales para aguantar los partidos más exigentes sin dejar residuos pegajosos.',
-      step: 4,
-    },
-    {
       title: translate('feature_5_title') || 'Fragancia deportiva fresca',
       description: translate('feature_5_desc') || 'Olvídate de los fuertes olores químicos. ACE PRO GRIP deja un aroma fresco, agradable y estimulante en tus manos para que te sientas limpio y listo para el siguiente punto.',
-      step: 5,
+      step: 3,
     },
     {
       title: translate('feature_6_title') || 'Secado ultra rápido',
       description: translate('feature_6_desc') || 'Su fórmula avanzada de evaporación actúa en menos de 5 segundos. Aplica el spray, siente el efecto seco casi de inmediato y vuelve al juego sin perder el ritmo.',
-      step: 6,
+      step: 4,
     },
   ];
 
@@ -60,10 +51,6 @@ const Features = () => {
 
   return (
     <section id="features" className="features" ref={ref}>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', backgroundColor: 'black' }}>
-
-      <h1 className="hype-title">spray <span>ACE</span> PRO GRIP</h1>
-      </div>
       {/* HEADER */}
       <motion.div
         className="features-header"
@@ -71,7 +58,9 @@ const Features = () => {
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <h2 className="features-main-title">ACE Pro Grip</h2>
+        <h2 className="features-main-title">
+          <img src={logo} alt="ACE Pro Grip" />
+        </h2>
         <h3 className="features-subtitle">
           {translate('features_subtitle') || 'El spray antideslizante definitivo'}
         </h3>

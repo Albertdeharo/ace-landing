@@ -14,7 +14,6 @@ const WhoWeAre = () => {
           <h1 className="hero-title">
             {translate('about_hero_1') || 'QUIÉNES'} <span>{translate('about_hero_2') || 'SOMOS'}</span>
           </h1>
-          <p className="hero-subtitle">Feel Grip · Take Control</p>
         </div>
       </section>
 
@@ -24,11 +23,11 @@ const WhoWeAre = () => {
           <div className="philosophy-grid">
             <div className="philosophy-card">
               <h2 className="accent-title">{translate('philosophy_title_1')}</h2>
-              <p>{translate('philosophy_text_1')}</p>
+              <p dangerouslySetInnerHTML={{ __html: translate('philosophy_text_1') }}></p>
             </div>
             <div className="philosophy-card">
               <h2 className="accent-title">{translate('philosophy_title_2')}</h2>
-              <p>{translate('philosophy_text_2')}</p>
+              <p dangerouslySetInnerHTML={{ __html: translate('philosophy_text_2') }}></p>
             </div>
           </div>
         </div>
