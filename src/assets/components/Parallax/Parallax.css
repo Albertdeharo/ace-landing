@@ -1,0 +1,10 @@
+.parallax-content {
+  height: 600px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .parallax-content {
+    height: 350px;
+  }
+}

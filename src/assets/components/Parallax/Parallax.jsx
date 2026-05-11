@@ -8,11 +8,12 @@ const ParallaxSection = () => {
     <Parallax 
       bgImage={parallaxImg} 
       strength={300}
-      bgImageStyle={{ objectFit: 'cover' }} // <-- ¡Aquí está la magia!
+      bgImageStyle={{ 
+        objectFit: 'cover', 
+        objectPosition: 'center center' 
+      }}
     >
-      <div style={{ height: 600 }}>
-        {/* Tu contenido aquí */}
-      </div>
+      <div className="parallax-content"></div>
     </Parallax>
   );
 };
