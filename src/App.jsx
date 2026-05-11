@@ -2,7 +2,7 @@ import "./App.css";
 import AppRoutes from "./Routes";
 
 function App() {
-  const MAINTENANCE = true;
+  const MAINTENANCE = false;
 
   if (MAINTENANCE) {
     return (
