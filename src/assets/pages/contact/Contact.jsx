@@ -9,25 +9,23 @@ import './Contact.css';
 const ContactForm = () => {
   const { translate } = useTranslation();
   
-  // 1. Ampliamos el estado inicial con los nuevos campos
   const [formState, setFormState] = useState({
     name: '',
     email: '',
     phone: '',
-    company: '',
+    company: '', 
     country: '',
     city: '',
     message: '',
-    privacyAccepted: false // El checkbox
+    privacyAccepted: false 
   });
 
   const [status, setStatus] = useState({
-    submitting: false,
-    success: false,
+    submitting: false, 
+    success: false, 
     error: false,
   });
 
-  // 2. Modificamos handleChange para que detecte si es un texto o un checkbox
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormState({
@@ -40,7 +38,6 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus({ submitting: true, success: false, error: false });
 
-    // Enviamos el estado completo a EmailJS
     emailjs.send(
       'service_aceprogrip',
       'template_5sfl9h8',
@@ -49,15 +46,11 @@ const ContactForm = () => {
     )
     .then(() => {
       setStatus({ submitting: false, success: true, error: false });
-      // Limpiamos el formulario tras el envío
       setFormState({ 
         name: '', email: '', phone: '', company: '', 
         country: '', city: '', message: '', privacyAccepted: false 
       });
-      
-      setTimeout(() => {
-        setStatus((prev) => ({ ...prev, success: false }));
-      }, 5000);
+      setTimeout(() => setStatus((prev) => ({ ...prev, success: false })), 5000);
     })
     .catch((err) => {
       console.error('Error al enviar el mensaje:', err);
@@ -66,44 +59,46 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="contact-page">
-      <div className="contact-container">
+    // Aplicamos las clases globales de Layout
+    <section className="contact-page section">
+      <div className="contact-container container">
         
-        {/* INFO LATERAL (Sin cambios importantes) */}
+        {/* INFO LATERAL */}
         <motion.div 
           className="contact-info"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="custom-main-title">{translate('contact_page_title')}</h1>
-          <p className="contact-subtitle" dangerouslySetInnerHTML={{ __html: translate('contact_page_subtitle') }} />
+          {/* SEO: H1 correcto */}
+          <h1 className="custom-main-title contact-main-title">{translate('contact_page_title')}</h1>
+          <p className="contact-subtitle custom-description p-0" dangerouslySetInnerHTML={{ __html: translate('contact_page_subtitle') }} />
 
           <div className="contact-details">
             <div className="contact-detail-item">
-              <FaEnvelope className="contact-icon" />
+              <FaEnvelope className="contact-icon" aria-hidden="true" />
               <span>contacto@aceprogrip.com</span>
             </div>
             <div className="contact-detail-item">
-              <FaMapMarkerAlt className="contact-icon" />
+              <FaMapMarkerAlt className="contact-icon" aria-hidden="true" />
               <span>Barcelona, Spain</span>
             </div>
           </div>
 
           <div className="contact-social">
-            <p>{translate('follow_us') || 'Síguenos en redes:'}</p>
+            <p className="social-label">{translate('follow_us') || 'Síguenos en redes:'}</p>
             <div className="social-buttons-container">
               <a href="https://www.instagram.com/aceprogrip/" target="_blank" rel="noopener noreferrer" className="social-button">
-                <FaInstagram /> Instagram
+                <FaInstagram aria-hidden="true" /> Instagram
               </a>
               <a href="https://www.linkedin.com/company/aceprogrip" target="_blank" rel="noopener noreferrer" className="social-button">
-                <FaLinkedin /> Linkedin
+                <FaLinkedin aria-hidden="true" /> Linkedin
               </a>
             </div>
           </div>
         </motion.div>
 
-        {/* FORMULARIO AMPLIADO */}
+        {/* FORMULARIO */}
         <motion.div 
           className="contact-form-wrapper"
           initial={{ opacity: 0, x: 50 }}
@@ -112,7 +107,7 @@ const ContactForm = () => {
         >
           <form onSubmit={handleSubmit} className="contact-form">
             
-            {/* Fila 1: Nombre y Email */}
+            {/* Fila 1 */}
             <div className="form-row">
               <div className="input-group">
                 <label htmlFor="name">{translate('form_name')}</label>
@@ -135,7 +130,7 @@ const ContactForm = () => {
               </div>
             </div>
 
-            {/* Fila 2: Teléfono y Empresa */}
+            {/* Fila 2 */}
             <div className="form-row">
               <div className="input-group">
                 <label htmlFor="phone">{translate('form_phone')}</label>
@@ -158,7 +153,7 @@ const ContactForm = () => {
               </div>
             </div>
 
-            {/* Fila 3: País y Ciudad */}
+            {/* Fila 3 */}
             <div className="form-row">
               <div className="input-group">
                 <label htmlFor="country">{translate('form_country')}</label>
@@ -192,13 +187,13 @@ const ContactForm = () => {
               />
             </div>
 
-            {/* Checkbox de Privacidad */}
+            {/* Checkbox Privacidad */}
             <div className="checkbox-group">
               <input 
                 type="checkbox" 
                 id="privacyAccepted" 
                 name="privacyAccepted" 
-                checked={formState.privacyAccepted}
+                checked={formState.privacyAccepted} 
                 onChange={handleChange}
                 required 
                 disabled={status.submitting}
@@ -208,25 +203,23 @@ const ContactForm = () => {
               </label>
             </div>
 
-            {/* Mensajes de feedback */}
-            {status.success && (
-              <div className="feedback-message success">
-                {translate('form_success')}
-              </div>
-            )}
-            {status.error && (
-              <div className="feedback-message error">
-                {translate('form_error')}
-              </div>
-            )}
+            {/* Feedback */}
+            {status.success && 
+            <div className="feedback-message success">
+              {translate('form_success')}
+            </div>}
+            {status.error && 
+            <div className="feedback-message error">
+              {translate('form_error')}
+            </div>}
 
             <button 
               type="submit" 
-              className={`submit-button ${status.submitting ? 'loading' : ''}`}
+              className={`btn-primary submit-button ${status.submitting ? 'loading' : ''}`}
               disabled={status.submitting}
             >
               {status.submitting ? translate('form_sending') : translate('form_send')}
-              {!status.submitting && <FaPaperPlane className="submit-icon" />}
+              {!status.submitting && <FaPaperPlane className="submit-icon" aria-hidden="true" />}
             </button>
             
           </form>

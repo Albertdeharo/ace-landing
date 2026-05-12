@@ -1,3 +1,92 @@
+/* =========================================
+   DESIGN TOKENS
+   ========================================= */
+:root {
+  /* Branding Colors */
+  --color-primary: #e7185f;
+  --color-primary-hover: #c4144e;
+  
+  /* Neutrals */
+  --color-dark: #111111; 
+  --color-gray-dark: #222222; 
+  --color-gray-light: #666666;
+  --color-gray: #878786;
+  --color-bg-light: #f9f9f9; 
+  --color-white: #ffffff;
+  
+  /* Typography */
+  --font-primary: 'Nunito', sans-serif;
+  --font-display: 'Hype', sans-serif;
+  --font-heading: 'Antonio-Light', sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Fluid / Responsive Typography Scale */
+  --font-size-fluid-h1: clamp(1.75rem, 5vw, 4.5rem); /* Móvil: ~28px -> PC: 72px */
+  --font-size-fluid-h2: clamp(1.5rem, 4vw, 3.5rem);  /* Móvil: 24px -> PC: 56px */
+  --font-size-fluid-h3: clamp(1.25rem, 3vw, 2.5rem); /* Móvil: 20px -> PC: 40px */
+  
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 1rem;
+  --spacing-4: 1.5rem;
+  --spacing-5: 2rem;
+  --spacing-6: 3rem;
+  --spacing-8: 4rem;
+  --spacing-12: 6rem;
+  --spacing-16: 8rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.3s ease-in-out;
+
+  /* Layout */
+  --max-width-lg: 1200px;
+  --max-width-md: 800px;
+  --section-padding-y: var(--spacing-6); 
+  --section-padding-x: var(--spacing-5);  
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 5px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 15px rgba(0,0,0,0.05);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.05);
+  --shadow-red: 0 8px 20px rgba(235, 10, 10, 0.2);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding-y: var(--spacing-3); 
+    --section-padding-x: var(--spacing-3); 
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-gray-dark);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   UTILITY CLASSES
+   ========================================= */
 .p1 {
     padding: 1rem;
 }
@@ -61,4 +150,76 @@
 .flex-center{
     display: flex;
     justify-content: center;
+}
+
+.text-white { 
+    color: var(--color-white); 
+}
+.text-gray { 
+    color: var(--color-gray) !important; 
+}
+.bg-dark { 
+    background-color: var(--color-dark); 
+}
+.bg-light { 
+    background-color: var(--color-bg-light); 
+}
+
+/* =========================================
+   CLASES DE LAYOUT
+   ========================================= */
+.section {
+  padding: var(--section-padding-y) var(--section-padding-x);
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width-lg);
+  margin: 0 auto;
+}
+
+.container-sm {
+  width: 100%;
+  max-width: var(--max-width-md);
+  margin: 0 auto;
+}
+
+/* =========================================
+   ACCESIBILIDAD
+   ========================================= */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: var(--spacing-3) var(--spacing-5);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }

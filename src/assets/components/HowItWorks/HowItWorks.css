@@ -3,20 +3,17 @@
    ========================================= */
    .how-it-works {
     text-align: center;
-    padding: 6rem 2rem;
     background-color: var(--color-bg-light);
   }
   
   .how-it-works-header {
-    margin-bottom: 5rem;
+    margin-bottom: var(--spacing-12);
   }
   
 .how-it-works-content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: var(--spacing-5);
   position: relative;
 }
   
@@ -26,7 +23,7 @@
   left: 12.5%;
   width: 75%;
   height: 3px;
-  background: linear-gradient(90deg, transparent, var(--color-red) 10%, var(--color-red) 90%, transparent);
+  background: linear-gradient(90deg, transparent, var(--color-primary) 10%, var(--color-primary) 90%, transparent);
   opacity: 0.3;
   z-index: 0;
 }
@@ -36,10 +33,10 @@
      ========================================= */
   .how-it-works-card {
     background: var(--color-white);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     padding: 2.5rem 1.5rem 1.5rem;
+    box-shadow: var(--shadow-sm);
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     position: relative;
     z-index: 1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -57,19 +54,19 @@
     left: -20px;
     width: 50px;
     height: 50px;
-    font-family: 'Hype', sans-serif;
+    font-family: var(--font-display);
     width: 3.5rem;
     height: 3.5rem;
     flex-shrink: 0;
-    background-color: #ffffff;
-    color: var(--color-red);
+    background-color: var(--color-white);
+    color: var(--color-primary);
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: var(--font-size-xl);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(235, 10, 10, 0.2);
+    box-shadow: var(--shadow-red);
     border: 2px solid rgba(255, 87, 34, 0.1);
   }
   
@@ -87,7 +84,7 @@
 
   .step-svg-icon {
     font-size: 3.5rem;
-    color: var(--color-red, #e7185f);
+    color: var(--color-primary);
   }
   
   .how-it-works-card img {
@@ -101,15 +98,15 @@
   }
   
   .step-title {
-    font-size: 1.3rem;
+    font-size: var(--font-size-xl);
     font-weight: 700;
     color: var(--color-gray-dark);
     margin-bottom: 1rem;
   }
   
   .step-desc {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
     line-height: 1.6;
     color: var(--color-gray);
     margin: 0;
@@ -119,6 +116,13 @@
      TABLET Y MÓVIL
      ========================================= */
   @media (max-width: 992px) {
+
+    .how-it-works {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
     .how-it-works-content {
       grid-template-columns: 1fr;
       max-width: 400px;
@@ -131,7 +135,7 @@
       transform: translateX(-50%);
       width: 3px;
       height: 90%;
-      background: linear-gradient(180deg, transparent, var(--color-red) 20%, var(--color-red) 80%, transparent);
+      background: linear-gradient(180deg, transparent, var(--color-primary) 20%, var(--color-primary) 80%, transparent);
     }
   
     .step-badge {

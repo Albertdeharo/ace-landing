@@ -1,18 +1,17 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { useTranslation } from './../../../TranslationContext'; // Ajusta la ruta
+import { useTranslation } from './../../../TranslationContext';
 import './Features.css';
-import product from './../../images/ENVASE.png'; // Ajusta la ruta
+import product from './../../images/ENVASE.png';
 import logo from './../../images/logo_ace_transparente_prev_ui.png';
 
 const Features = () => {
   const { translate } = useTranslation();
   const { ref, inView } = useInView({
     threshold: 0.2,
-    triggerOnce: true, // Mejor true para que no repita la animación al hacer scroll arriba/abajo
+    triggerOnce: true,
   });
 
-  // Idealmente, esto vendría de tu archivo JSON de idiomas. Te dejo textos por defecto.
   const detailFeatures = [
     {
       title: translate('feature_1_title') || 'Control total',
@@ -50,76 +49,70 @@ const Features = () => {
   };
 
   return (
-    <section id="features" className="features" ref={ref}>
-      {/* HEADER */}
-      <motion.div
-        className="features-header"
-        initial={{ opacity: 0, y: 30 }}
-        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <h2 className="features-main-title">
-          <img src={logo} alt="ACE Pro Grip" />
-        </h2>
-        <h3 className="features-subtitle">
-          {translate('features_subtitle') || 'El spray antideslizante definitivo'}
-        </h3>
-      </motion.div>
-
-      {/* COLUMNAS */}
-      <div className="features-columns">
-        
-        {/* IZQUIERDA: Descripción */}
+    <section id="features" className="features section" ref={ref}>
         <motion.div
-          className="features-content-left"
-          initial={{ opacity: 0, x: -50 }}
-          animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          className="features-header"
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="features-description-box">
-            <p className="features-description">
-              {translate('features_main_text') || 'Es el aliado definitivo para jugadores que buscan un control total sobre su pala, incluso en condiciones muy exigentes. Su fórmula avanzada combate eficazmente el sudor y la humedad, generando una fricción óptima que asegura un agarre firme y estable durante todo el juego.'}
-            </p>
-          </div>
+          <h2 className="flex-center">
+            <img src={logo} alt="ACE Pro Grip" />
+          </h2>
+          <h3 className="features-subtitle">
+            {translate('features_subtitle')}
+          </h3>
         </motion.div>
 
-        {/* CENTRO: Imagen (Con animación de flote infinito) */}
-        <motion.div
-          className="features-content-center"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
-          <motion.img 
-            src={product} 
-            alt="ACE Pro Grip Envase" 
-            className="product-image"
-            animate={{ y: [0, -15, 0] }} // Animación de flotar
-            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-          />
-          {/* Sombra debajo del producto para dar efecto 3D */}
-          <div className="product-shadow"></div>
-        </motion.div>
+        <div className="features-columns">
+          
+          <motion.div
+            className="features-content-left"
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="features-description-box">
+              <p className="features-description">
+                {translate('features_main_text') || 'Es el aliado definitivo para jugadores que buscan un control total sobre su pala, incluso en condiciones muy exigentes. Su fórmula avanzada combate eficazmente el sudor y la humedad, generando una fricción óptima que asegura un agarre firme y estable durante todo el juego.'}
+              </p>
+            </div>
+          </motion.div>
 
-        {/* DERECHA: Lista de Características (Cascada) */}
-        <motion.div
-          className="features-content-right"
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-        >
-          {detailFeatures.map((item) => (
-            <motion.div className="content-block" key={item.step} variants={itemVariants}>
-              <div className="block-number">{String(item.step).padStart(2, '0')}</div>
-              <div className="block-text">
-                <h4 className="block-title">{item.title}</h4>
-                <p className="block-description">{item.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+          <motion.div
+            className="features-content-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <motion.img 
+              src={product} 
+              alt="ACE Pro Grip Envase" 
+              className="product-image"
+              animate={{ y: [0, -15, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+            />
+            <div className="product-shadow"></div>
+          </motion.div>
 
-      </div>
+          <motion.div
+            className="features-content-right"
+            variants={containerVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+          >
+            {detailFeatures.map((item) => (
+              <motion.div className="content-block" key={item.step} variants={itemVariants}>
+                <div className="block-number">{String(item.step).padStart(2, '0')}</div>
+                <div className="block-text">
+                  <h4 className="block-title">{item.title}</h4>
+                  <p className="block-description">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+        </div>
     </section>
   );
 };

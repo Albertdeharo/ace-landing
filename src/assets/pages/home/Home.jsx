@@ -6,13 +6,13 @@ import Parallax from '../../components/Parallax/Parallax';
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Banner />
       <Features />
       <Parallax />
       <HowItWorks />
       <FAQ />
-    </div>
+    </>
   );
 };
 

@@ -2,37 +2,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 6rem 2rem;
     background-color: var(--color-white);
     color: var(--color-gray-dark);
   }
   
   .faq-header {
-    margin-bottom: 4rem;
+    margin-bottom: var(--spacing-8);
     text-align: center;
     width: 100%;
-  }
-
-    
-  .faq-header .custom-title{
-    color: var(--color-red);
-    text-align: left;
   }
   
   .faq-list {
     width: 100%;
-    max-width: 800px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--spacing-3);
   }
   
   .faq-item {
     background-color: var(--color-bg-light);
-    border-radius: 12px;
-    overflow: hidden;
+    border-radius: var(--radius-md);
     border: 1px solid rgba(0,0,0,0.03);
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: var(--transition-base);
   }
   
   .faq-item:hover {
@@ -46,13 +37,16 @@
   }
   
   .faq-question {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: var(--spacing-4);
     cursor: pointer;
     background-color: transparent;
-    transition: background-color 0.3s ease;
+    border: none;
+    text-align: left;
+    transition: var(--transition-base);
   }
   
   .faq-question:hover {
@@ -69,7 +63,7 @@
   }
   
   .faq-item.active .faq-question h3 {
-    color: var(--color-red);
+    color: var(--color-primary);
   }
   
   .faq-icon-wrapper {
@@ -90,7 +84,7 @@
   }
   
   .faq-item.active .faq-icon {
-    color: var(--color-red);
+    color: var(--color-primary);
   }
   
   .faq-answer-content {
@@ -98,9 +92,9 @@
   }
   
   .faq-answer-content p {
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--font-primary);
     margin: 0;
-    font-size: 1.05rem;
+    font-size: var(--font-size-lg);
     line-height: 1.6;
     color: var(--color-gray);
   }

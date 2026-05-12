@@ -10,7 +10,6 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <div className="footer__top-wave"></div>
       
       <div className="footer__container">
         {/* Columna 1: Marca y descripción */}

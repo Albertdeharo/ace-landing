@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from './../../../TranslationContext'; 
 
-// Usamos react-icons en lugar de imágenes PNG para los nuevos pasos
 import { FaArrowsAltV, FaSprayCan, FaHourglassHalf, FaHandRock } from 'react-icons/fa';
 
 const HowItWorks = () => {
@@ -13,40 +12,38 @@ const HowItWorks = () => {
     triggerOnce: true, 
   });
 
-  // Hemos pasado de 3 a 4 pasos
   const steps = [
     {
       id: 1,
-      icon: <FaArrowsAltV className="step-svg-icon" />,
+      icon: <FaArrowsAltV className="step-svg-icon" aria-hidden="true" />,
       title: translate('hiw_step1_title'),
       desc: translate('hiw_step1_desc'),
     },
     {
       id: 2,
-      icon: <FaSprayCan className="step-svg-icon" />,
+      icon: <FaSprayCan className="step-svg-icon" aria-hidden="true" />,
       title: translate('hiw_step2_title'),
       desc: translate('hiw_step2_desc'),
     },
     {
       id: 3,
-      icon: <FaHourglassHalf className="step-svg-icon" />,
+      icon: <FaHourglassHalf className="step-svg-icon" aria-hidden="true" />,
       title: translate('hiw_step3_title'),
       desc: translate('hiw_step3_desc'),
     },
     {
       id: 4,
-      icon: <FaHandRock className="step-svg-icon" />,
+      icon: <FaHandRock className="step-svg-icon" aria-hidden="true" />,
       title: translate('hiw_step4_title'),
       desc: translate('hiw_step4_desc'),
     }
   ];
 
-  // Variantes de animación
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2 } // Reducido un poco para que los 4 salgan más ágiles
+      transition: { staggerChildren: 0.2 }
     }
   };
 
@@ -56,7 +53,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <section ref={ref} className="how-it-works">
+    <section ref={ref} className="how-it-works section">
       <motion.div
         className="how-it-works-header"
         initial={{ opacity: 0, y: 20 }}
@@ -72,14 +69,12 @@ const HowItWorks = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
-        {/* Línea conectora de fondo */}
         <div className="how-it-works-line"></div>
 
         {steps.map((step) => (
           <motion.div key={step.id} className="how-it-works-card" variants={cardVariants}>
             <div className="step-badge">0{step.id}</div>
             
-            {/* Como ahora pasamos un componente SVG en lugar de una ruta de imagen, lo renderizamos directo */}
             <div className="icon-wrapper">
               {step.icon}
             </div>

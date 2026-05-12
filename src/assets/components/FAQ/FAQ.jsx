@@ -22,12 +22,12 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq">
+    <section className="faq section">
       <div className="faq-header">
         <h2 className="custom-title">{translate('faq_title')}</h2>
       </div>
       
-      <div className="faq-list">
+      <div className="faq-list container-sm">
         {faqData.map((item, index) => {
           const isActive = activeIndex === index;
 
@@ -36,9 +36,11 @@ const FAQ = () => {
               className={`faq-item ${isActive ? 'active' : ''}`}
               key={index}
             >
-              <div 
+              <button 
                 className="faq-question" 
                 onClick={() => toggleAnswer(index)}
+                aria-expanded={isActive}
+                aria-controls={`faq-answer-${index}`}
               >
                 <h3>{item.question}</h3>
                 <motion.div
@@ -48,7 +50,7 @@ const FAQ = () => {
                 >
                   <FaChevronDown className="faq-icon" />
                 </motion.div>
-              </div>
+              </button>
 
               <AnimatePresence initial={false}>
                 {isActive && (
@@ -58,6 +60,7 @@ const FAQ = () => {
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
+                    id={`faq-answer-${index}`}
                   >
                     <div className="faq-answer-content">
                       <p>{item.answer}</p>
