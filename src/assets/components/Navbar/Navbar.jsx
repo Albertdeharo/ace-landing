@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useTranslation } from './../../../TranslationContext';
 import './Navbar.css';
 
-import logoCombined from './../../../assets/images/logo-phrase.png';
+import logoCombined from './../../../assets/images/logo_img_transparente.png';
 import flagCat from './../../../assets/svgs/catalonia.svg';
 import flagEs from './../../../assets/svgs/spain.svg';
 import flagEn from './../../../assets/svgs/united-kingdom.svg';

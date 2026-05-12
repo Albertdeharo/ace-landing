@@ -139,6 +139,22 @@ body {
     margin-bottom: 4rem;
 }
 
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
 .no-scroll {
     overflow: hidden;
 }

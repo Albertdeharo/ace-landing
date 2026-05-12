@@ -3,7 +3,6 @@ import { useInView } from 'react-intersection-observer';
 import { useTranslation } from './../../../TranslationContext';
 import './Features.css';
 import product from './../../images/ENVASE.png';
-import logo from './../../images/logo_ace_transparente_prev_ui.png';
 
 const Features = () => {
   const { translate } = useTranslation();
@@ -56,10 +55,7 @@ const Features = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h2 className="flex-center">
-            <img src={logo} alt="ACE Pro Grip" />
-          </h2>
-          <h3 className="features-subtitle">
+          <h3 className="features-subtitle mt-2">
             {translate('features_subtitle')}
           </h3>
         </motion.div>
