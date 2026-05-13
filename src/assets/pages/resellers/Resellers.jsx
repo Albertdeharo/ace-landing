@@ -99,7 +99,7 @@ const Resellers = () => {
           </a>
 
           {/* Padel Cañaveral */}
-          <a href="https://www.instagram.com/padelelcanaveral/" target="_blank" rel="noopener noreferrer" className="partner-card">
+          <a href="https://padelcanaveral.shop/products/ace-pro-grip-spray" target="_blank" rel="noopener noreferrer" className="partner-card">
             <div className="partner-image-container">
               <img src={logoPadelCañaveral} alt="Padel Cañaveral Logo" className="partner-logo" />
             </div>
