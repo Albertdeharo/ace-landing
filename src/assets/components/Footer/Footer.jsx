@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from './../../../TranslationContext'; 
 import { FaInstagram, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaTiktok } from 'react-icons/fa';
-import logo from './../../images/logo_ace_transparente_prev_ui.png';
+import logo from './../../images/logo-phrase.png';
 import './Footer.css';
 
 const Footer = () => {
