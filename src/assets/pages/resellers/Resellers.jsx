@@ -106,7 +106,7 @@ const Resellers = () => {
             <div className="partner-content">
               <h3 className="partner-name">Padel Cañaveral</h3>
               <span className="partner-link">
-                {translate('dist_visit_instagram')} <FaExternalLinkAlt aria-hidden="true" />
+                {translate('dist_visit_shop')} <FaExternalLinkAlt aria-hidden="true" />
               </span>
             </div>
           </a>
