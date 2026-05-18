@@ -9,6 +9,7 @@ import logoCelescala from './../../../assets/images/partners/celescala-logo.jpg'
 import logoMaresmePadelClub from './../../../assets/images/partners/maresme-padel-club.jpg';
 import logoOnePadelValencia from './../../../assets/images/partners/one-padel-valencia.jpg';
 import logoPadelCañaveral from './../../../assets/images/partners/padel-cañaveral.jpg';
+import logoCatalunyaPadelClub from './../../../assets/images/partners/catalunya-padel-club.jpeg';
 
 const Resellers = () => {
   const { translate } = useTranslation();
@@ -107,6 +108,18 @@ const Resellers = () => {
               <h3 className="partner-name">Padel Cañaveral</h3>
               <span className="partner-link">
                 {translate('dist_visit_shop')} <FaExternalLinkAlt aria-hidden="true" />
+              </span>
+            </div>
+          </a>
+          {/* Catalunya Padel club */}
+          <a href="https://www.instagram.com/catalunyapadelclub/" target="_blank" rel="noopener noreferrer" className="partner-card">
+            <div className="partner-image-container">
+              <img src={logoCatalunyaPadelClub} alt="Catalunya Padel Club Logo" className="partner-logo" />
+            </div>
+            <div className="partner-content">
+              <h3 className="partner-name">Catalunya Padel Club</h3>
+              <span className="partner-link">
+                {translate('dist_visit_instagram')} <FaExternalLinkAlt aria-hidden="true" />
               </span>
             </div>
           </a>
