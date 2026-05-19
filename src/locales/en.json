@@ -95,7 +95,7 @@
   "about_ess_4_text": "Clean and simple application designed for the heat of the game.",
   "about_com_title": "Our Commitment",
   "about_com_text": "At ACE PRO GRIP our commitment is to offer effective solutions that help improve grip, safety, and confidence in every use. We work to create practical, easy-to-apply products oriented towards real performance, designed for athletes and professionals who need to maintain control even in demanding conditions of sweat, humidity, or high intensity. We are committed to quality, applied innovation, and continuous improvement, developing products that provide a simple, useful, and reliable experience. We also believe in responsible, clear, and safe use of our products, which is why we emphasize information, application instructions, and user confidence. Our goal is clear: to help you feel more grip, more stability, and more control when you need it most.",
-  "about_com_madein": "Product manufactured in Spain by Watermelon Designers, S.L.",
+  "about_com_madein": "Product manufactured in Spain by ACE PRO GRIP, S.L.",
   "philosophy_title_1": "The ACE Philosophy",
   "philosophy_text_1": "At <strong style='color: #e7185f; font-weight: 700;'>ACE PRO GRIP</strong>, we believe that performance begins with confidence. When grip fails, control is lost; that’s why we create solutions designed to help every athlete focus on what matters: playing, training, and competing with safety. Our philosophy is based on a simple idea: feeling the grip means taking control. We want every application to provide stability, precision, and peace of mind, even in conditions of sweat, humidity, or maximum demand. <strong style='color: #e7185f; font-weight: 700;'>ACE</strong> was created to support athletes who don’t settle, who pay attention to every detail, and who understand that a small improvement can make a difference in every movement, every shot, and every point. We believe in practical, effective, and easy-to-use products, designed to offer a real experience of control without complications. More grip. More confidence. More control.",
   "philosophy_title_2": "Maximum Performance",
@@ -156,7 +156,7 @@
   "privacy_title": "Privacy Policy",
   "privacy_updated": "Last updated: May 2026",
   "privacy_h2_1": "1. Data Controller",
-  "privacy_p_1": "The data controller for the information collected through this website is Watermelon Designers, S.L. (owner of the ACE PRO GRIP brand), located in Barcelona, Spain. You can contact us directly via email at: contacto@aceprogrip.com.",
+  "privacy_p_1": "The data controller for the information collected through this website is ACE PRO GRIP, S.L. (owner of the ACE PRO GRIP brand), located in Barcelona, Spain. You can contact us directly via email at: contacto@aceprogrip.com.",
   "privacy_h2_2": "2. Purpose of collected data and consent",
   "privacy_p_2_1": "The personal data provided through our contact form (name, email, phone, company, city, country) will be used exclusively for the following purposes:",
   "privacy_li_2_1": "To respond to inquiries, doubts, or requests for information raised by the user.",
@@ -177,5 +177,7 @@
   "privacy_li_6_4": "Right of opposition and limitation: to object to us processing your data for specific purposes.",
   "privacy_p_6_2": "To exercise these rights, you just have to send us an email to contacto@aceprogrip.com indicating the right you wish to exercise and attaching a copy of your ID or equivalent document to verify your identity.",
   "privacy_h2_7": "7. Changes to the Privacy Policy",
-  "privacy_p_7": "ACE PRO GRIP reserves the right to modify this policy to adapt it to new legislation or jurisprudence. In such cases, we will announce the changes introduced on this page reasonably in advance of their implementation."
+  "privacy_p_7": "ACE PRO GRIP reserves the right to modify this policy to adapt it to new legislation or jurisprudence. In such cases, we will announce the changes introduced on this page reasonably in advance of their implementation.",
+  "privacy_h2_8": "8. Use of local storage (Technical cookies)",
+  "privacy_p_8": "This website uses the browser's local storage (localStorage) exclusively to remember the user's selected language preference. This is a technical storage strictly necessary to ensure the correct display and functioning of the interface, and therefore, in accordance with current regulations, does not require the user's express consent. We do not use this storage for tracking, analysis, or advertising purposes."
 }

@@ -1,12 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTranslation } from './../../../TranslationContext';
+import ReactCountryFlag from 'react-country-flag';
 import './Navbar.css';
 
 import logoCombined from './../../../assets/images/logo_img_transparente.png';
 import flagCat from './../../../assets/svgs/catalonia.svg';
-import flagEs from './../../../assets/svgs/spain.svg';
-import flagEn from './../../../assets/svgs/united-kingdom.svg';
 import { FaChevronDown } from 'react-icons/fa';
 
 const Navbar = () => {
@@ -14,12 +13,7 @@ const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { translate, currentLanguage, setCurrentLanguage } = useTranslation();
 
-  const flags = { en: flagEn, es: flagEs, cat: flagCat };
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+  const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
   const changeLanguage = (lang) => {
@@ -46,32 +40,48 @@ const Navbar = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  const renderFlag = (lang) => {
+    if (lang === 'cat') {
+      return <img src={flagCat} alt="Català" className="flag-icon custom-svg-flag" />;
+    }
+    const countryCodes = { en: 'GB', es: 'ES', de: 'DE', it: 'IT', fr: 'FR' };
+    return (
+      <ReactCountryFlag 
+        countryCode={countryCodes[lang]} 
+        svg 
+        style={{
+          width: '1.5em', height: '1.5em',
+          borderRadius: '50%', objectFit: 'cover'
+        }} 
+        title={lang}
+      />
+    );
+  };
+
   const languageSelectorDropdown = (isMobileClass) => (
     <div className={`dropdown ${isMobileClass}`}>
-      <button onClick={toggleDropdown} className="dropdown-toggle">
-        <img src={flags[currentLanguage]} alt="Selected language" className="flag-icon" />
+      <button onClick={toggleDropdown} className="dropdown-toggle" aria-expanded={isDropdownOpen}>
+        {renderFlag(currentLanguage)}
         <FaChevronDown className={`dropdown-arrow ${isDropdownOpen ? 'rotate' : ''}`} />
       </button>
       
-      {isDropdownOpen && (
-        <ul className="dropdown-menu">
-          {Object.keys(flags)
-            .filter((lang) => lang !== currentLanguage)
-            .map((lang) => (
-              <li key={lang}>
-                <button onClick={() => changeLanguage(lang)}>
-                  <img src={flags[lang]} alt={`${lang} flag`} className="flag-icon" />
-                </button>
-              </li>
-            ))}
-        </ul>
-      )}
+      <ul className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
+        {['es', 'en', 'cat', 'de', 'it', 'fr']
+          .filter((lang) => lang !== currentLanguage)
+          .map((lang) => (
+            <li key={lang} style={{ width: '100%' }}>
+              <button onClick={() => changeLanguage(lang)} className="dropdown-item">
+                {renderFlag(lang)}
+                <span className="lang-text">{lang.toUpperCase()}</span>
+              </button>
+            </li>
+          ))}
+      </ul>
     </div>
   );
 
   return (
     <nav className="navbar">
-      
       <div className="navbar__left">
         <NavLink to="/" onClick={() => setIsOpen(false)}>
           <img src={logoCombined} alt="Ace Pro Grip Logo" className="brand-logo" />
@@ -80,7 +90,6 @@ const Navbar = () => {
 
       <div className={`navbar__center ${isOpen ? 'open' : ''}`}>
         <div className="menu-links__container">
-          {/* Cambiamos toggleMenu por () => setIsOpen(false) */}
           <NavLink to="/" onClick={() => setIsOpen(false)} className="nav-item">
             {translate('nav_home') || 'Inicio'}
           </NavLink>
@@ -109,7 +118,6 @@ const Navbar = () => {
           <span className="bar"></span>
         </div>
       </div>
-
     </nav>
   );
 };

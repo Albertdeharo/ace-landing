@@ -67,10 +67,12 @@
 }
 
 /* =========================================
-   SELECTOR DE IDIOMAS (DROPDOWN)
+   SELECTOR DE IDIOMAS (ESTRUCTURA GENERAL)
    ========================================= */
 .dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-toggle {
@@ -81,65 +83,102 @@
   gap: 0.5rem;
   cursor: pointer;
   padding: 0.5rem;
-}
-
-.flag-icon {
-  width: 24px;
-  height: auto;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  color: var(--color-gray-dark, #222222);
 }
 
 .dropdown-arrow {
   transition: transform 0.3s ease;
-  color: var(--color-gray-dark);
+  color: var(--color-gray-dark, #222222);
 }
 
 .dropdown-arrow.rotate {
   transform: rotate(180deg);
 }
 
-.dropdown-menu {
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--color-bg-light, #f9f9f9);
+}
+
+.lang-text {
+  font-weight: 700;
+  color: var(--color-gray-dark, #222222);
+  font-size: 0.95rem;
+  font-family: 'Antonio-Light', sans-serif;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   BANDERAS (REDONDAS Y ALINEADAS)
+   ========================================= */
+.dropdown .flag-icon, 
+.dropdown .custom-svg-flag,
+.dropdown img {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: cover !important;
+  border-radius: 50% !important;
+  display: block;
+  margin: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   COMPORTAMIENTO EN ESCRITORIO
+   ========================================= */
+.desktop-lang {
+  display: flex;
+}
+
+.desktop-lang .dropdown-menu {
   position: absolute;
   top: 100%;
   right: 0;
   background: var(--color-white, #ffffff);
   list-style: none;
-  padding: 0.5rem;
   margin: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
+  min-width: 140px;
+  z-index: 100;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  
+  /* Animación Suave Escritorio */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.dropdown-menu button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  padding: 0.2rem;
-  display: flex;
-  justify-content: center;
+.desktop-lang .dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  padding: 0.5rem 0;
+}
+
+.mobile-lang {
+  display: none;
 }
 
 .hamburger {
   display: none;
 }
-
-/* =========================================
-   VISIBILIDAD DEL SELECTOR DE IDIOMAS
-   ========================================= */
-.mobile-lang {
-  display: none; 
-  margin-top: 2rem; 
-}
-
-.desktop-lang {
-  display: block; 
-}
-
 
 /* =========================================
    TABLET Y MÓVIL (MÁXIMO 992px)
@@ -170,6 +209,8 @@
   .hamburger.open .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
   .hamburger.open .bar:nth-child(2) { opacity: 0; }
   .hamburger.open .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+  
+  /* MENÚ LATERAL DESLIZANTE MÓVIL */
   .navbar__center {
     position: fixed;
     top: 0;
@@ -182,6 +223,8 @@
     align-items: center;
     transition: left 0.4s ease-in-out;
     z-index: 999;
+    overflow-y: auto; 
+    padding: 2rem 0;
   }
 
   .navbar__center.open {
@@ -196,42 +239,51 @@
   .nav-item {
     font-size: 1.8rem; 
   }
-.desktop-lang {
+  
+  .desktop-lang {
     display: none; 
   }
 
- .mobile-lang {
-    display: block;
+  /* SELECTOR DE IDIOMAS MÓVIL */
+  .mobile-lang {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     margin-top: auto; 
     margin-bottom: 2rem; 
   }
 
   .mobile-lang .dropdown-toggle {
+    justify-content: center;
     padding: 1rem;
   }
 
-  .mobile-lang .flag-icon {
-    width: 45px; 
-  }
-
-  .mobile-lang .dropdown-arrow {
-    font-size: 1.5rem; 
-  }
-
   .mobile-lang .dropdown-menu {
-    top: auto; 
-    bottom: 100%; 
-    margin-bottom: 0.5rem; 
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
-    padding: 1rem; 
-    gap: 1rem; 
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15); 
+    position: static; 
+    width: 100%;
+    max-width: 300px;
+    background-color: transparent; 
+    box-shadow: none; 
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 1rem; 
+    transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
   }
 
-  .mobile-lang .dropdown-menu button {
+  .mobile-lang .dropdown-menu.open {
+    max-height: 500px; 
+    opacity: 1;
+    padding: 1rem; 
+  }
+
+  .mobile-lang .dropdown-item {
+    justify-content: flex-start;
     padding: 0.5rem; 
   }
 }

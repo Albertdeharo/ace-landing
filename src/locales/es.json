@@ -99,7 +99,7 @@
   "about_ess_4_text": "Aplicación limpia y sencilla diseñada para el fragor del juego.",
   "about_com_title": "Nuestro Compromiso",
   "about_com_text": "En ACE PRO GRIP nuestro compromiso es ofrecer soluciones eficaces que ayuden a mejorar el agarre, la seguridad y la confianza en cada uso. Trabajamos para crear productos prácticos, fáciles de aplicar y orientados al rendimiento real, pensados para deportistas y profesionales que necesitan mantener el control incluso en condiciones exigentes de sudor, humedad o alta intensidad. Nos comprometemos con la calidad, la innovación aplicada y la mejora continua, desarrollando productos que aporten una experiencia sencilla, útil y fiable. También creemos en un uso responsable, claro y seguro de nuestros productos, por eso damos importancia a la información, las instrucciones de aplicación y la confianza del usuario. Nuestro objetivo es claro: ayudarte a sentir más agarre, más estabilidad y más control cuando más lo necesitas.",
-  "about_com_madein": "Producto fabricado en España por Watermelon Designers, S.L.",
+  "about_com_madein": "Producto fabricado en España por ACE PRO GRIP, S.L.",
   "philosophy_title_1": "La Filosofía ACE",
   "philosophy_text_1": "En <strong style='color: #e7185f; font-weight: 700;'>ACE PRO GRIP</strong> creemos que el rendimiento empieza en la confianza. Cuando el agarre falla, el control se pierde; por eso creamos soluciones pensadas para que cada deportista pueda concentrarse en lo importante: jugar, entrenar y competir con seguridad. Nuestra filosofía se basa en una idea simple: sentir el agarre es tomar el control. Queremos que cada aplicación aporte estabilidad, precisión y tranquilidad, incluso en condiciones de sudor, humedad o máxima exigencia. <strong style='color: #e7185f; font-weight: 700;'>ACE</strong> nace para acompañar a deportistas que no se conforman, que cuidan cada detalle y que entienden que una pequeña mejora puede marcar la diferencia en cada movimiento, cada golpe y cada punto. Creemos en productos prácticos, eficaces y fáciles de usar, diseñados para ofrecer una experiencia real de control sin complicaciones. Más agarre. Más confianza. Más control.",
   "philosophy_title_2": "Máximo Rendimiento",
@@ -160,7 +160,7 @@
   "privacy_title": "Política de Privacidad",
   "privacy_updated": "Última actualización: Mayo de 2026",
   "privacy_h2_1": "1. Responsable del Tratamiento",
-  "privacy_p_1": "El responsable del tratamiento de los datos recabados a través de este sitio web es Watermelon Designers, S.L. (propietaria de la marca ACE PRO GRIP), con domicilio en Barcelona, España. Puedes contactar con nosotros directamente a través del correo electrónico: contacto@aceprogrip.com.",
+  "privacy_p_1": "El responsable del tratamiento de los datos recabados a través de este sitio web es ACE PRO GRIP, S.L. (propietaria de la marca ACE PRO GRIP), con domicilio en Barcelona, España. Puedes contactar con nosotros directamente a través del correo electrónico: contacto@aceprogrip.com.",
   "privacy_h2_2": "2. Finalidad de los datos recabados y consentimiento",
   "privacy_p_2_1": "Los datos personales facilitados a través de nuestro formulario de contacto (nombre, correo electrónico, teléfono, empresa, ciudad, país) se utilizarán exclusivamente para las siguientes finalidades:",
   "privacy_li_2_1": "Responder a las consultas, dudas o solicitudes de información planteadas por el usuario.",
@@ -181,5 +181,7 @@
   "privacy_li_6_4": "Derecho de oposición y limitación: oponerte a que tratemos tus datos para fines concretos.",
   "privacy_p_6_2": "Para ejercer estos derechos, solo tienes que enviarnos un correo electrónico a contacto@aceprogrip.com indicando el derecho que deseas ejercer y adjuntando una copia de tu DNI o documento equivalente para verificar tu identidad.",
   "privacy_h2_7": "7. Cambios en la Política de Privacidad",
-  "privacy_p_7": "ACE PRO GRIP se reserva el derecho a modificar la presente política para adaptarla a novedades legislativas o jurisprudenciales. En dichos supuestos, anunciaremos en esta página los cambios introducidos con razonable antelación a su puesta en práctica."
+  "privacy_p_7": "ACE PRO GRIP se reserva el derecho a modificar la presente política para adaptarla a novedades legislativas o jurisprudenciales. En dichos supuestos, anunciaremos en esta página los cambios introducidos con razonable antelación a su puesta en práctica.",
+  "privacy_h2_8": "8. Uso de almacenamiento local (Cookies técnicas)",
+  "privacy_p_8": "Este sitio web utiliza el almacenamiento local del navegador (localStorage) de forma exclusiva para recordar la preferencia de idioma seleccionada por el usuario. Se trata de un almacenamiento de carácter técnico y estrictamente necesario para garantizar la correcta visualización y funcionamiento de la interfaz, por lo que, de acuerdo con la normativa vigente, no requiere del consentimiento expreso del usuario. No utilizamos este almacenamiento para rastreo, análisis ni fines publicitarios."
 }

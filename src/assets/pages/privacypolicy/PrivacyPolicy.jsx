@@ -44,6 +44,9 @@ const PrivacyPolicy = () => {
 
           <h2>{translate('privacy_h2_7')}</h2>
           <p>{translate('privacy_p_7')}</p>
+
+          <h2>{translate('privacy_h2_8')}</h2>
+          <p>{translate('privacy_p_8')}</p>
         </div>
       </div>
     </div>
