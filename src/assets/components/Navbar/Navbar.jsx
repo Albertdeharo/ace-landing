@@ -44,7 +44,7 @@ const Navbar = () => {
     if (lang === 'cat') {
       return <img src={flagCat} alt="Català" className="flag-icon custom-svg-flag" />;
     }
-    const countryCodes = { en: 'GB', es: 'ES', de: 'DE', it: 'IT', fr: 'FR' };
+    const countryCodes = { en: 'GB', es: 'ES', de: 'DE', it: 'IT', fr: 'FR', pt: 'PT' };
     return (
       <ReactCountryFlag 
         countryCode={countryCodes[lang]} 
@@ -66,7 +66,7 @@ const Navbar = () => {
       </button>
       
       <ul className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
-        {['es', 'en', 'cat', 'de', 'it', 'fr']
+        {['es', 'en', 'cat', 'de', 'it', 'fr', 'pt']
           .filter((lang) => lang !== currentLanguage)
           .map((lang) => (
             <li key={lang} style={{ width: '100%' }}>

@@ -5,8 +5,9 @@ import cat from './locales/cat.json';
 import de from './locales/de.json';
 import it from './locales/it.json';
 import fr from './locales/fr.json';
+import pt from './locales/pt.json';
 
-const translations = { en, es, cat, de, it, fr };
+const translations = { en, es, cat, de, it, fr, pt };
 
 const TranslationContext = createContext();
 
