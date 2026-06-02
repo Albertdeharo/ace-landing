@@ -183,5 +183,18 @@
   "privacy_h2_7": "7. Modifications de la Politique de Confidentialité",
   "privacy_p_7": "ACE PRO GRIP se réserve le droit de modifier cette politique pour l'adapter aux nouvelles lois ou jurisprudences. Dans de tels cas, nous annoncerons les changements introduits sur cette page avec un préavis raisonnable avant leur mise en œuvre.",
   "privacy_h2_8": "8. Utilisation du stockage local (Cookies techniques)",
-  "privacy_p_8": "Ce site web utilise le stockage local du navigateur (localStorage) exclusivement pour mémoriser la préférence de langue sélectionnée par l'utilisateur. Il s'agit d'un stockage technique strictement nécessaire pour garantir l'affichage et le fonctionnement corrects de l'interface, c'est pourquoi, conformément à la réglementation en vigueur, il ne nécessite pas le consentement exprès de l'utilisateur. Nous n'utilisons pas ce stockage à des fins de suivi, d'analyse ou de publicité."
+  "privacy_p_8": "Ce site web utilise le stockage local du navigateur (localStorage) exclusivement pour mémoriser la préférence de langue sélectionnée par l'utilisateur. Il s'agit d'un stockage technique strictement nécessaire pour garantir l'affichage et le fonctionnement corrects de l'interface, c'est pourquoi, conformément à la réglementation en vigueur, il ne nécessite pas le consentement exprès de l'utilisateur. Nous n'utilisons pas ce stockage à des fins de suivi, d'analyse ou de publicité.",
+  "nav_buy": "Acheter",
+  "product_title": "Choisissez votre format idéal",
+  "product_subtitle": "Le spray antidérapant ultime pour un contrôle total.",
+  "product_image_alt": "ACE Pro Grip Flacon",
+  "product_unit_1": "1 Unité",
+  "product_benefit_control": "Contrôle total",
+  "product_benefit_grip": "Adhérence maximale",
+  "product_buy_1": "Acheter 1 Unité",
+  "product_badge_free_shipping": "Livraison Gratuite",
+  "product_pack_title": "Pack Éco x2",
+  "product_benefit_shipping": "Livraison gratuite incluse",
+  "product_buy_pack": "Acheter Pack",
+  "product_secure_payment": "Paiements 100% sécurisés et cryptés avec Stripe"
 }

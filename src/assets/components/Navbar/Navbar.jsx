@@ -105,6 +105,9 @@ const Navbar = () => {
           <NavLink to="/contact" onClick={() => setIsOpen(false)} className="nav-item">
             {translate('nav_contact') || 'Contacto'}
           </NavLink>
+          <NavLink to="/comprar" onClick={() => setIsOpen(false)} className="nav-item" style={{ color: '#e7185f', fontWeight: 'bold' }}>
+            {translate('nav_buy') || 'Comprar'}
+          </NavLink>
           
           {languageSelectorDropdown('mobile-lang')}
         </div>

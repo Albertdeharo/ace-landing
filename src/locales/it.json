@@ -183,5 +183,18 @@
   "privacy_h2_7": "7. Modifiche all'Informativa sulla Privacy",
   "privacy_p_7": "ACE PRO GRIP si riserva il diritto di modificare la presente politica per adattarla alla nuova legislazione o giurisprudenza. In tali casi, annunceremo le modifiche apportate su questa pagina con ragionevole preavviso rispetto alla loro implementazione.",
   "privacy_h2_8": "8. Uso dell'archiviazione locale (Cookie tecnici)",
-  "privacy_p_8": "Questo sito web utilizza l'archiviazione locale del browser (localStorage) esclusivamente per ricordare la preferenza di lingua selezionata dall'utente. Si tratta di un'archiviazione tecnica strettamente necessaria per garantire la corretta visualizzazione e il funzionamento dell'interfaccia, pertanto, in conformità con le normative vigenti, non richiede il consenso espresso dell'utente. Non utilizziamo questa archiviazione per scopi di tracciamento, analisi o pubblicitari."
+  "privacy_p_8": "Questo sito web utilizza l'archiviazione locale del browser (localStorage) esclusivamente per ricordare la preferenza di lingua selezionata dall'utente. Si tratta di un'archiviazione tecnica strettamente necessaria per garantire la corretta visualizzazione e il funzionamento dell'interfaccia, pertanto, in conformità con le normative vigenti, non richiede il consenso espresso dell'utente. Non utilizziamo questa archiviazione per scopi di tracciamento, analisi o pubblicitari.",
+  "nav_buy": "Acquista",
+  "product_title": "Scegli il tuo formato ideale",
+  "product_subtitle": "Lo spray antiscivolo definitivo per un controllo totale.",
+  "product_image_alt": "ACE Pro Grip Flacone",
+  "product_unit_1": "1 Unità",
+  "product_benefit_control": "Controllo totale",
+  "product_benefit_grip": "Massima presa",
+  "product_buy_1": "Acquista 1 Pz",
+  "product_badge_free_shipping": "Spedizione Gratuita",
+  "product_pack_title": "Pack Risparmio x2",
+  "product_benefit_shipping": "Spedizione gratuita inclusa",
+  "product_buy_pack": "Acquista Pack",
+  "product_secure_payment": "Pagamenti sicuri e crittografati al 100% con Stripe"
 }

@@ -179,5 +179,18 @@
   "privacy_h2_7": "7. Changes to the Privacy Policy",
   "privacy_p_7": "ACE PRO GRIP reserves the right to modify this policy to adapt it to new legislation or jurisprudence. In such cases, we will announce the changes introduced on this page reasonably in advance of their implementation.",
   "privacy_h2_8": "8. Use of local storage (Technical cookies)",
-  "privacy_p_8": "This website uses the browser's local storage (localStorage) exclusively to remember the user's selected language preference. This is a technical storage strictly necessary to ensure the correct display and functioning of the interface, and therefore, in accordance with current regulations, does not require the user's express consent. We do not use this storage for tracking, analysis, or advertising purposes."
+  "privacy_p_8": "This website uses the browser's local storage (localStorage) exclusively to remember the user's selected language preference. This is a technical storage strictly necessary to ensure the correct display and functioning of the interface, and therefore, in accordance with current regulations, does not require the user's express consent. We do not use this storage for tracking, analysis, or advertising purposes.",
+  "nav_buy": "Buy",
+  "product_title": "Choose your ideal format",
+  "product_subtitle": "The ultimate anti-slip spray for total control.",
+  "product_image_alt": "ACE Pro Grip Bottle",
+  "product_unit_1": "1 Unit",
+  "product_benefit_control": "Total control",
+  "product_benefit_grip": "Maximum grip",
+  "product_buy_1": "Buy 1 Unit",
+  "product_badge_free_shipping": "Free Shipping",
+  "product_pack_title": "Saver Pack x2",
+  "product_benefit_shipping": "Free shipping included",
+  "product_buy_pack": "Buy Pack",
+  "product_secure_payment": "100% secure encrypted payments with Stripe"
 }

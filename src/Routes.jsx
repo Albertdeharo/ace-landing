@@ -7,6 +7,7 @@ import WhoWeAre from "./assets/pages/whoweare/WhoWeAre";
 import Distributors from "./assets/pages/distributors/Distributors";
 import Resellers from "./assets/pages/resellers/Resellers";
 import PrivacyPolicy from "./assets/pages/privacypolicy/PrivacyPolicy";
+import Product from "./assets/pages/product/Product";
 import ScrollToTop from "./assets/components/ScrollToTop/ScrollToTop";
 
 const AppRoutes = () => {
@@ -22,6 +23,7 @@ const AppRoutes = () => {
           <Route path="/distribuidores" element={<Distributors />} />
           <Route path="/resellers" element={<Resellers />} />
           <Route path="/politica-privacidad" element={<PrivacyPolicy />} />
+          <Route path="/comprar" element={<Product />} />
         </Routes>
       </div>
       <Footer />

@@ -183,5 +183,18 @@
   "privacy_h2_7": "7. Cambios en la Política de Privacidad",
   "privacy_p_7": "ACE PRO GRIP se reserva el derecho a modificar la presente política para adaptarla a novedades legislativas o jurisprudenciales. En dichos supuestos, anunciaremos en esta página los cambios introducidos con razonable antelación a su puesta en práctica.",
   "privacy_h2_8": "8. Uso de almacenamiento local (Cookies técnicas)",
-  "privacy_p_8": "Este sitio web utiliza el almacenamiento local del navegador (localStorage) de forma exclusiva para recordar la preferencia de idioma seleccionada por el usuario. Se trata de un almacenamiento de carácter técnico y estrictamente necesario para garantizar la correcta visualización y funcionamiento de la interfaz, por lo que, de acuerdo con la normativa vigente, no requiere del consentimiento expreso del usuario. No utilizamos este almacenamiento para rastreo, análisis ni fines publicitarios."
+  "privacy_p_8": "Este sitio web utiliza el almacenamiento local del navegador (localStorage) de forma exclusiva para recordar la preferencia de idioma seleccionada por el usuario. Se trata de un almacenamiento de carácter técnico y estrictamente necesario para garantizar la correcta visualización y funcionamiento de la interfaz, por lo que, de acuerdo con la normativa vigente, no requiere del consentimiento expreso del usuario. No utilizamos este almacenamiento para rastreo, análisis ni fines publicitarios.",
+  "nav_buy": "Comprar",
+  "product_title": "Elige tu formato ideal",
+  "product_subtitle": "El spray antideslizante definitivo para un control total.",
+  "product_image_alt": "ACE Pro Grip Envase",
+  "product_unit_1": "1 Unidad",
+  "product_benefit_control": "Control total",
+  "product_benefit_grip": "Máximo agarre",
+  "product_buy_1": "Comprar 1 Ud",
+  "product_badge_free_shipping": "Envío Gratis",
+  "product_pack_title": "Pack Ahorro x2",
+  "product_benefit_shipping": "Envío gratis incluido",
+  "product_buy_pack": "Comprar Pack",
+  "product_secure_payment": "Pagos seguros 100% encriptados con Stripe"
 }

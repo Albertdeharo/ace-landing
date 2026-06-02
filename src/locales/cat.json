@@ -179,5 +179,18 @@
   "privacy_h2_7": "7. Canvis en la Política de Privacitat",
   "privacy_p_7": "ACE PRO GRIP es reserva el dret a modificar la present política per adaptar-la a novetats legislatives o jurisprudencials. En aquests supòsits, anunciarem en aquesta pàgina els canvis introduïts amb raonable antelació a la seva posada en pràctica.",
   "privacy_h2_8": "8. Ús d'emmagatzematge local (Galetes tècniques)",
-  "privacy_p_8": "Aquest lloc web utilitza l'emmagatzematge local del navegador (localStorage) de manera exclusiva per recordar la preferència d'idioma seleccionada per l'usuari. Es tracta d'un emmagatzematge de caràcter tècnic i estrictament necessari per garantir la correcta visualització i funcionament de la interfície, per la qual cosa, d'acord amb la normativa vigent, no requereix el consentiment exprés de l'usuari. No utilitzem aquest emmagatzematge per a rastreig, anàlisi ni finalitats publicitàries."
+  "privacy_p_8": "Aquest lloc web utilitza l'emmagatzematge local del navegador (localStorage) de manera exclusiva per recordar la preferència d'idioma seleccionada per l'usuari. Es tracta d'un emmagatzematge de caràcter tècnic i estrictament necessari per garantir la correcta visualització i funcionament de la interfície, per la qual cosa, d'acord amb la normativa vigent, no requereix el consentiment exprés de l'usuari. No utilitzem aquest emmagatzematge per a rastreig, anàlisi ni finalitats publicitàries.",
+  "nav_buy": "Comprar",
+  "product_title": "Tria el teu format ideal",
+  "product_subtitle": "L'esprai antilliscant definitiu per a un control total.",
+  "product_image_alt": "ACE Pro Grip Envàs",
+  "product_unit_1": "1 Unitat",
+  "product_benefit_control": "Control total",
+  "product_benefit_grip": "Màxima adherència",
+  "product_buy_1": "Comprar 1 Ut",
+  "product_badge_free_shipping": "Enviament Gratuït",
+  "product_pack_title": "Pack Estalvi x2",
+  "product_benefit_shipping": "Enviament gratuït inclòs",
+  "product_buy_pack": "Comprar Pack",
+  "product_secure_payment": "Pagaments segurs 100% encriptats amb Stripe"
 }

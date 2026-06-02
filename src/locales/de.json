@@ -183,5 +183,18 @@
   "privacy_h2_7": "7. Änderungen der Datenschutzerklärung",
   "privacy_p_7": "ACE PRO GRIP behält sich das Recht vor, diese Richtlinie zu ändern, um sie an neue Gesetze oder Rechtsprechung anzupassen. In solchen Fällen werden wir die vorgenommenen Änderungen auf dieser Seite rechtzeitig vor ihrer Umsetzung ankündigen.",
   "privacy_h2_8": "8. Verwendung von lokalem Speicher (Technische Cookies)",
-  "privacy_p_8": "Diese Website verwendet den lokalen Speicher des Browsers (localStorage) ausschließlich, um die vom Benutzer gewählte Spracheinstellung zu speichern. Es handelt sich um einen technischen Speicher, der für die korrekte Anzeige und Funktion der Benutzeroberfläche unbedingt erforderlich ist und daher gemäß den geltenden Vorschriften keine ausdrückliche Zustimmung des Benutzers erfordert. Wir verwenden diesen Speicher nicht für Tracking-, Analyse- oder Werbezwecke."
+  "privacy_p_8": "Diese Website verwendet den lokalen Speicher des Browsers (localStorage) ausschließlich, um die vom Benutzer gewählte Spracheinstellung zu speichern. Es handelt sich um einen technischen Speicher, der für die korrekte Anzeige und Funktion der Benutzeroberfläche unbedingt erforderlich ist und daher gemäß den geltenden Vorschriften keine ausdrückliche Zustimmung des Benutzers erfordert. Wir verwenden diesen Speicher nicht für Tracking-, Analyse- oder Werbezwecke.",
+  "nav_buy": "Kaufen",
+  "product_title": "Wähle dein ideales Format",
+  "product_subtitle": "Das ultimative Anti-Rutsch-Spray für volle Kontrolle.",
+  "product_image_alt": "ACE Pro Grip Flasche",
+  "product_unit_1": "1 Einheit",
+  "product_benefit_control": "Volle Kontrolle",
+  "product_benefit_grip": "Maximaler Grip",
+  "product_buy_1": "1 Stk kaufen",
+  "product_badge_free_shipping": "Kostenloser Versand",
+  "product_pack_title": "Sparpack x2",
+  "product_benefit_shipping": "Kostenloser Versand inklusive",
+  "product_buy_pack": "Pack kaufen",
+  "product_secure_payment": "100% sichere, verschlüsselte Zahlungen mit Stripe"
 }
