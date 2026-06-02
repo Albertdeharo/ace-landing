@@ -9,6 +9,7 @@ import Resellers from "./assets/pages/resellers/Resellers";
 import PrivacyPolicy from "./assets/pages/privacypolicy/PrivacyPolicy";
 import Product from "./assets/pages/product/Product";
 import ScrollToTop from "./assets/components/ScrollToTop/ScrollToTop";
+import Success from './assets/pages/success/Success';
 
 const AppRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const AppRoutes = () => {
           <Route path="/resellers" element={<Resellers />} />
           <Route path="/politica-privacidad" element={<PrivacyPolicy />} />
           <Route path="/comprar" element={<Product />} />
+          <Route path="/gracias" element={<Success />} />
         </Routes>
       </div>
       <Footer />

@@ -196,5 +196,8 @@
   "product_pack_title": "Sparpack x2",
   "product_benefit_shipping": "Kostenloser Versand inklusive",
   "product_buy_pack": "Pack kaufen",
-  "product_secure_payment": "100% sichere, verschlüsselte Zahlungen mit Stripe"
+  "product_secure_payment": "100% sichere, verschlüsselte Zahlungen mit Stripe",
+  "success_title": "Vielen Dank für deinen Einkauf!",
+  "success_message": "Wir haben deine Bestellung erfolgreich erhalten. In Kürze erhältst du eine Bestätigungs-E-Mail mit den Details und der Sendungsverfolgung.",
+  "success_btn_home": "Zurück zur Startseite"
 }

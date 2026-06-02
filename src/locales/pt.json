@@ -196,5 +196,8 @@
   "product_pack_title": "Pack Poupança x2",
   "product_benefit_shipping": "Envio grátis incluído",
   "product_buy_pack": "Comprar Pack",
-  "product_secure_payment": "Pagamentos seguros 100% encriptados com Stripe"
+  "product_secure_payment": "Pagamentos seguros 100% encriptados com Stripe",
+  "success_title": "Obrigado pela tua compra!",
+  "success_message": "Recebemos a tua encomenda com sucesso. Em breve receberás um e-mail de confirmação com os detalhes e o rastreio do teu envio.",
+  "success_btn_home": "Voltar ao início"
 }

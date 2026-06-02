@@ -192,5 +192,8 @@
   "product_pack_title": "Saver Pack x2",
   "product_benefit_shipping": "Free shipping included",
   "product_buy_pack": "Buy Pack",
-  "product_secure_payment": "100% secure encrypted payments with Stripe"
+  "product_secure_payment": "100% secure encrypted payments with Stripe",
+  "success_title": "Thank you for your purchase!",
+  "success_message": "We have successfully received your order. You will shortly receive a confirmation email with the details and tracking information for your shipment.",
+  "success_btn_home": "Back to home"
 }

@@ -196,5 +196,8 @@
   "product_pack_title": "Pack Éco x2",
   "product_benefit_shipping": "Livraison gratuite incluse",
   "product_buy_pack": "Acheter Pack",
-  "product_secure_payment": "Paiements 100% sécurisés et cryptés avec Stripe"
+  "product_secure_payment": "Paiements 100% sécurisés et cryptés avec Stripe",
+  "success_title": "Merci pour votre achat !",
+  "success_message": "Nous avons bien reçu votre commande. Vous recevrez sous peu un e-mail de confirmation avec les détails et le suivi de votre expédition.",
+  "success_btn_home": "Retour à l'accueil"
 }
