@@ -10,6 +10,8 @@ import logoMaresmePadelClub from './../../../assets/images/partners/maresme-pade
 import logoOnePadelValencia from './../../../assets/images/partners/one-padel-valencia.jpg';
 import logoPadelCañaveral from './../../../assets/images/partners/padel-cañaveral.jpg';
 import logoCatalunyaPadelClub from './../../../assets/images/partners/catalunya-padel-club.jpeg';
+import logoPadelMotril from './../../../assets/images/partners/padel-motril.jpeg';
+import logoIniestaSportCenter from './../../../assets/images/partners/padel-iniesta.jpeg';
 
 const Resellers = () => {
   const { translate } = useTranslation();
@@ -118,6 +120,32 @@ const Resellers = () => {
             </div>
             <div className="partner-content">
               <h3 className="partner-name">Catalunya Padel Club</h3>
+              <span className="partner-link">
+                {translate('dist_visit_instagram')} <FaExternalLinkAlt aria-hidden="true" />
+              </span>
+            </div>
+          </a>
+
+
+          {/* Padel Motril */}
+          <a href="https://www.instagram.com/padelmotril?igsh=MWo1dmVqd2ZscjlzdQ==" target="_blank" rel="noopener noreferrer" className="partner-card">
+            <div className="partner-image-container">
+              <img src={logoPadelMotril} alt="Padel Motril Logo" className="partner-logo" />
+            </div>
+            <div className="partner-content">
+              <h3 className="partner-name">Padel Motril</h3>
+              <span className="partner-link">
+                {translate('dist_visit_instagram')} <FaExternalLinkAlt aria-hidden="true" />
+              </span>
+            </div>
+          </a>
+          {/* Iniesta Sport Center */}
+          <a href="https://www.instagram.com/iniestasportcenter?igsh=MWozOGx6cnhvOXQ3NQ==" target="_blank" rel="noopener noreferrer" className="partner-card">
+            <div className="partner-image-container">
+              <img src={logoIniestaSportCenter} alt="Iniesta Sport Center Logo" className="partner-logo" />
+            </div>
+            <div className="partner-content">
+              <h3 className="partner-name">Iniesta Sport Center</h3>
               <span className="partner-link">
                 {translate('dist_visit_instagram')} <FaExternalLinkAlt aria-hidden="true" />
               </span>
