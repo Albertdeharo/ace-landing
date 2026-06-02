@@ -33,6 +33,7 @@ const Footer = () => {
             <li><Link to="/distribuidores">{translate('nav_distributors') || 'Distribuidores'}</Link></li>
             <li><Link to="/quienes-somos">{translate('nav_about') || 'Quiénes somos'}</Link></li>
             <li><Link to="/contact">{translate('contact') || 'Contacto'}</Link></li>
+            <li><Link to="/comprar">{translate('nav_buy') || 'Comprar'}</Link></li>
           </ul>
         </div>
 

@@ -52,7 +52,7 @@ const Product = () => {
                   <li><FaCheckCircle className="benefit-icon" /> {translate('product_benefit_control')}</li>
                   <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip')}</li>
                 </ul>
-                <a href="https://buy.stripe.com/3cI8wQ2eS3FWbCd2b50oM02" className="cta-stripe-button">
+                <a href="https://buy.stripe.com/00wfZi2eS2BSbCdg1V0oM00" className="cta-stripe-button">
                   <FaShoppingCart className="button-icon" /> {translate('product_buy_1')}
                 </a>
               </div>
