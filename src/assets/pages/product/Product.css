@@ -179,6 +179,67 @@
   margin-top: 1rem;
 }
 
+.card-volume {
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.pricing-card.coming-soon {
+  grid-column: 1 / -1; 
+  opacity: 0.85;
+  background-color: #f5f5f5;
+  border: 2px dashed #ddd;
+  box-shadow: none;
+  padding: 1.5rem;
+}
+
+.pricing-card.coming-soon:hover {
+  transform: none;
+}
+
+.badge.badge-gray {
+  background-color: #777;
+  color: white;
+}
+
+.coming-soon-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.coming-soon-info {
+  text-align: left;
+}
+
+.coming-soon-info .card-title {
+  text-align: left;
+  margin-bottom: 0.2rem;
+}
+
+.coming-soon-info .card-volume {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.btn-disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  max-width: 200px;
+  box-shadow: none;
+}
+
+.btn-disabled:hover {
+  background-color: #ccc;
+}
+
 /* =========================================
    RESPONSIVO MÓVIL
    ========================================= */
@@ -210,5 +271,20 @@
   
   .card-benefits li {
     justify-content: center;
+  }
+    
+  .coming-soon-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .coming-soon-info {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .coming-soon-info .card-title,
+  .coming-soon-info .card-volume {
+    text-align: center;
   }
 }

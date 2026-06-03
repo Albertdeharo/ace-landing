@@ -195,5 +195,8 @@
   "product_secure_payment": "Pagaments segurs 100% encriptats amb Stripe",
   "success_title": "Gràcies per la teva compra!",
   "success_message": "Hem rebut la teva comanda correctament. En breu rebràs un correu electrònic de confirmació amb els detalls i el seguiment de l'enviament.",
-  "success_btn_home": "Tornar a l'inici"
+  "success_btn_home": "Tornar a l'inici",
+  "product_badge_soon": "Pròximament",
+  "product_unit_travel": "Format Viatge",
+  "product_btn_soon": "Molt aviat"
 }

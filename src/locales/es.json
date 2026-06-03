@@ -199,5 +199,8 @@
   "product_secure_payment": "Pagos seguros 100% encriptados con Stripe",
   "success_title": "¡Gracias por tu compra!",
   "success_message": "Hemos recibido tu pedido correctamente. En breve recibirás un correo electrónico de confirmación con los detalles y el seguimiento de tu envío.",
-  "success_btn_home": "Volver al inicio"
+  "success_btn_home": "Volver al inicio",
+  "product_badge_soon": "Próximamente",
+  "product_unit_travel": "Formato Viaje",
+  "product_btn_soon": "Muy pronto"
 }
