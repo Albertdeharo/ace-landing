@@ -1,0 +1,58 @@
+/* =========================================
+   BARRA DE CONFIANZA (TOP BAR)
+   ========================================= */
+.trust-bar-wrapper {
+  background-color: var(--color-gray-dark, #1a1a1a);
+  color: #ffffff;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  font-family: 'Antonio-Light', sans-serif, system-ui;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--color-red, #e7185f);
+}
+
+.trust-bar-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trust-icon {
+  color: var(--color-red, #e7185f);
+  font-size: 1.1rem;
+}
+
+.star-icon {
+  color: #FFD700; 
+}
+
+/* =========================================
+   RESPONSIVO MÓVIL
+   ========================================= */
+@media (max-width: 768px) {
+  .trust-bar-wrapper {
+    font-size: 0.7rem; 
+    padding: 0.5rem;
+  }
+  
+  .trust-bar-content {
+    justify-content: center;
+    gap: 0.8rem 1.5rem; 
+  }
+  
+  .trust-icon {
+    font-size: 0.9rem;
+  }
+}

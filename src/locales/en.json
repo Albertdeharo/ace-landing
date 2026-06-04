@@ -198,5 +198,8 @@
   "success_btn_home": "Back to home",
   "product_badge_soon": "Coming Soon",
   "product_unit_travel": "Travel Size",
-  "product_btn_soon": "Available soon"
+  "product_btn_soon": "Available soon",
+  "topbar_shipping": "24/48h Shipping (ES)",
+  "topbar_reviews": "5/5 Star Ratings",
+  "topbar_b2b": "25+ B2B Clients"
 }
