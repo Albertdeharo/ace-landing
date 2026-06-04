@@ -1,5 +1,5 @@
 import { useTranslation } from '../../../TranslationContext';
-import { FaTruck, FaStar, FaBuilding } from 'react-icons/fa';
+import { FaTruck, FaStar, FaLock } from 'react-icons/fa';
 import './TrustBar.css';
 
 const TrustBar = () => {
@@ -20,8 +20,8 @@ const TrustBar = () => {
         </div>
         
         <div className="trust-item">
-          <FaBuilding className="trust-icon" aria-hidden="true" />
-          <span>{translate('topbar_b2b') || '+25 Clientes B2B'}</span>
+          <FaLock className="trust-icon" aria-hidden="true" />
+          <span>{translate('topbar_secure_payment') || 'Pago 100% seguro'}</span>
         </div>
 
       </div>
