@@ -14,7 +14,7 @@ const HomePricing = () => {
             
             {/* TARJETA 1: 200ml */}
             <div className="pricing-card">
-              <h3 className="card-title">{translate('product_unit_1') || '1 Unidad'}</h3>
+              <h3 className="card-title">{translate('product_unit_1') || 'Unidades sueltas'}</h3>
               <p className="card-volume">200 ml</p>
               <div className="product-price">
                 <span className="price-currency">€</span>
@@ -26,7 +26,7 @@ const HomePricing = () => {
                 <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
               </ul>
               <a href="https://buy.stripe.com/00wfZi2eS2BSbCdg1V0oM00" className="cta-stripe-button">
-                <FaShoppingCart className="button-icon" /> {translate('product_buy_1') || 'Comprar 1 Ud'}
+                <FaShoppingCart className="button-icon" /> {translate('product_buy_1') || 'Comprar'}
               </a>
             </div>
 
