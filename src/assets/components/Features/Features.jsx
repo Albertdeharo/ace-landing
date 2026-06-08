@@ -32,6 +32,11 @@ const Features = () => {
       description: translate('feature_6_desc') || 'Su fórmula avanzada de evaporación actúa en menos de 5 segundos. Aplica el spray, siente el efecto seco casi de inmediato y vuelve al juego sin perder el ritmo.',
       step: 4,
     },
+    {
+      title: translate('feature_7_title'),
+      description: translate('feature_7_desc'),
+      step: 5,
+    },
   ];
 
   const containerVariants = {
@@ -55,9 +60,6 @@ const Features = () => {
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h3 className="features-subtitle mt-2">
-            {translate('features_subtitle')}
-          </h3>
         </motion.div>
 
         <div className="features-columns">

@@ -8,6 +8,10 @@ const HomePricing = () => {
   return (
     <section className="home-pricing-wrapper">
       <div className="container">
+
+        <h3 className="features-subtitle mt- mb-4">
+            {translate('features_subtitle')}
+          </h3>
         
         <div className="product-pricing-section">
           <div className="cards-grid-home">
