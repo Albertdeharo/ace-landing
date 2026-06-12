@@ -5,10 +5,14 @@ import "./index.css";
 import "./reset.css";
 import { TranslationProvider } from "./TranslationContext.jsx";
 
+import { HelmetProvider } from "react-helmet-async";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <TranslationProvider>
-      <App />
-    </TranslationProvider>
-  </StrictMode>
+    <HelmetProvider>
+      <TranslationProvider>
+        <App />
+      </TranslationProvider>
+    </HelmetProvider>
+  </StrictMode>,
 );

@@ -1,28 +1,35 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import emailjs from 'emailjs-com';
-import { motion } from 'framer-motion';
-import { useTranslation } from '../../../TranslationContext';
-import { FaPaperPlane, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import './Contact.css';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
+import { useTranslation } from "../../../TranslationContext";
+import {
+  FaPaperPlane,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
+import SEO from "../../components/SEO/SEO";
+import "./Contact.css";
 
 const ContactForm = () => {
   const { translate } = useTranslation();
-  
+
   const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '', 
-    country: '',
-    city: '',
-    message: '',
-    privacyAccepted: false 
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    country: "",
+    city: "",
+    message: "",
+    privacyAccepted: false,
   });
 
   const [status, setStatus] = useState({
-    submitting: false, 
-    success: false, 
+    submitting: false,
+    success: false,
     error: false,
   });
 
@@ -30,7 +37,7 @@ const ContactForm = () => {
     const { name, value, type, checked } = e.target;
     setFormState({
       ...formState,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
@@ -38,41 +45,63 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus({ submitting: true, success: false, error: false });
 
-    emailjs.send(
-      'service_aceprogrip',
-      'template_5sfl9h8',
-      formState,
-      '8lN1MphoBhmFeeNu3'
-    )
-    .then(() => {
-      setStatus({ submitting: false, success: true, error: false });
-      setFormState({ 
-        name: '', email: '', phone: '', company: '', 
-        country: '', city: '', message: '', privacyAccepted: false 
+    emailjs
+      .send(
+        "service_aceprogrip",
+        "template_5sfl9h8",
+        formState,
+        "8lN1MphoBhmFeeNu3",
+      )
+      .then(() => {
+        setStatus({ submitting: false, success: true, error: false });
+        setFormState({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          country: "",
+          city: "",
+          message: "",
+          privacyAccepted: false,
+        });
+        setTimeout(
+          () => setStatus((prev) => ({ ...prev, success: false })),
+          5000,
+        );
+      })
+      .catch((err) => {
+        console.error("Error al enviar el mensaje:", err);
+        setStatus({ submitting: false, success: false, error: true });
       });
-      setTimeout(() => setStatus((prev) => ({ ...prev, success: false })), 5000);
-    })
-    .catch((err) => {
-      console.error('Error al enviar el mensaje:', err);
-      setStatus({ submitting: false, success: false, error: true });
-    });
   };
 
   return (
     // Aplicamos las clases globales de Layout
     <section className="contact-page section">
+      <SEO
+        title="Contacto"
+        description={
+          translate("contact_page_subtitle") || "Contacta con Ace Pro Grip"
+        }
+      />
       <div className="contact-container container">
-        
         {/* INFO LATERAL */}
-        <motion.div 
+        <motion.div
           className="contact-info"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* SEO: H1 correcto */}
-          <h1 className="custom-main-title contact-main-title">{translate('contact_page_title')}</h1>
-          <p className="contact-subtitle custom-description p-0" dangerouslySetInnerHTML={{ __html: translate('contact_page_subtitle') }} />
+          <h1 className="custom-main-title contact-main-title">
+            {translate("contact_page_title")}
+          </h1>
+          <p
+            className="contact-subtitle custom-description p-0"
+            dangerouslySetInnerHTML={{
+              __html: translate("contact_page_subtitle"),
+            }}
+          />
 
           <div className="contact-details">
             <div className="contact-detail-item">
@@ -86,12 +115,24 @@ const ContactForm = () => {
           </div>
 
           <div className="contact-social">
-            <p className="social-label">{translate('follow_us') || 'Síguenos en redes:'}</p>
+            <p className="social-label">
+              {translate("follow_us") || "Síguenos en redes:"}
+            </p>
             <div className="social-buttons-container">
-              <a href="https://www.instagram.com/aceprogrip/" target="_blank" rel="noopener noreferrer" className="social-button">
+              <a
+                href="https://www.instagram.com/aceprogrip/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-button"
+              >
                 <FaInstagram aria-hidden="true" /> Instagram
               </a>
-              <a href="https://www.linkedin.com/company/aceprogrip" target="_blank" rel="noopener noreferrer" className="social-button">
+              <a
+                href="https://www.linkedin.com/company/aceprogrip"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-button"
+              >
                 <FaLinkedin aria-hidden="true" /> Linkedin
               </a>
             </div>
@@ -99,33 +140,42 @@ const ContactForm = () => {
         </motion.div>
 
         {/* FORMULARIO */}
-        <motion.div 
+        <motion.div
           className="contact-form-wrapper"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           <form onSubmit={handleSubmit} className="contact-form">
-            
             {/* Fila 1 */}
             <div className="form-row">
               <div className="input-group">
-                <label htmlFor="name">{translate('form_name')}</label>
-                <input 
-                  type="text" id="name" name="name"
-                  placeholder={translate('form_name_ph')}
-                  value={formState.name} onChange={handleChange} 
-                  required autoComplete="name" disabled={status.submitting}
+                <label htmlFor="name">{translate("form_name")}</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder={translate("form_name_ph")}
+                  value={formState.name}
+                  onChange={handleChange}
+                  required
+                  autoComplete="name"
+                  disabled={status.submitting}
                 />
               </div>
 
               <div className="input-group">
-                <label htmlFor="email">{translate('form_email')}</label>
-                <input 
-                  type="email" id="email" name="email" 
-                  placeholder={translate('form_email_ph')}
-                  value={formState.email} onChange={handleChange} 
-                  required autoComplete="email" disabled={status.submitting}
+                <label htmlFor="email">{translate("form_email")}</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder={translate("form_email_ph")}
+                  value={formState.email}
+                  onChange={handleChange}
+                  required
+                  autoComplete="email"
+                  disabled={status.submitting}
                 />
               </div>
             </div>
@@ -133,22 +183,30 @@ const ContactForm = () => {
             {/* Fila 2 */}
             <div className="form-row">
               <div className="input-group">
-                <label htmlFor="phone">{translate('form_phone')}</label>
-                <input 
-                  type="tel" id="phone" name="phone"
-                  placeholder={translate('form_phone_ph')}
-                  value={formState.phone} onChange={handleChange} 
-                  autoComplete="tel" disabled={status.submitting}
+                <label htmlFor="phone">{translate("form_phone")}</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder={translate("form_phone_ph")}
+                  value={formState.phone}
+                  onChange={handleChange}
+                  autoComplete="tel"
+                  disabled={status.submitting}
                 />
               </div>
 
               <div className="input-group">
-                <label htmlFor="company">{translate('form_company')}</label>
-                <input 
-                  type="text" id="company" name="company" 
-                  placeholder={translate('form_company_ph')}
-                  value={formState.company} onChange={handleChange} 
-                  autoComplete="organization" disabled={status.submitting}
+                <label htmlFor="company">{translate("form_company")}</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  placeholder={translate("form_company_ph")}
+                  value={formState.company}
+                  onChange={handleChange}
+                  autoComplete="organization"
+                  disabled={status.submitting}
                 />
               </div>
             </div>
@@ -156,75 +214,101 @@ const ContactForm = () => {
             {/* Fila 3 */}
             <div className="form-row">
               <div className="input-group">
-                <label htmlFor="country">{translate('form_country')}</label>
-                <input 
-                  type="text" id="country" name="country"
-                  placeholder={translate('form_country_ph')}
-                  value={formState.country} onChange={handleChange} 
-                  required autoComplete="country-name" disabled={status.submitting}
+                <label htmlFor="country">{translate("form_country")}</label>
+                <input
+                  type="text"
+                  id="country"
+                  name="country"
+                  placeholder={translate("form_country_ph")}
+                  value={formState.country}
+                  onChange={handleChange}
+                  required
+                  autoComplete="country-name"
+                  disabled={status.submitting}
                 />
               </div>
 
               <div className="input-group">
-                <label htmlFor="city">{translate('form_city')}</label>
-                <input 
-                  type="text" id="city" name="city" 
-                  placeholder={translate('form_city_ph')}
-                  value={formState.city} onChange={handleChange} 
-                  required autoComplete="address-level2" disabled={status.submitting}
+                <label htmlFor="city">{translate("form_city")}</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder={translate("form_city_ph")}
+                  value={formState.city}
+                  onChange={handleChange}
+                  required
+                  autoComplete="address-level2"
+                  disabled={status.submitting}
                 />
               </div>
             </div>
-              
+
             {/* Mensaje */}
             <div className="input-group">
-              <label htmlFor="message">{translate('form_message')}</label>
-              <textarea 
-                id="message" name="message"
-                placeholder={translate('form_message_ph')}
-                value={formState.message} onChange={handleChange} 
-                required rows="4" disabled={status.submitting}
+              <label htmlFor="message">{translate("form_message")}</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder={translate("form_message_ph")}
+                value={formState.message}
+                onChange={handleChange}
+                required
+                rows="4"
+                disabled={status.submitting}
               />
             </div>
 
             {/* Checkbox Privacidad */}
             <div className="checkbox-group">
-              <input 
-                type="checkbox" 
-                id="privacyAccepted" 
-                name="privacyAccepted" 
-                checked={formState.privacyAccepted} 
+              <input
+                type="checkbox"
+                id="privacyAccepted"
+                name="privacyAccepted"
+                checked={formState.privacyAccepted}
                 onChange={handleChange}
-                required 
+                required
                 disabled={status.submitting}
               />
               <label htmlFor="privacyAccepted">
-                {translate('form_privacy')} <Link to="/politica-privacidad" className="privacy-link" target="_blank">{translate('form_privacy_link')}</Link>.
+                {translate("form_privacy")}{" "}
+                <Link
+                  to="/politica-privacidad"
+                  className="privacy-link"
+                  target="_blank"
+                >
+                  {translate("form_privacy_link")}
+                </Link>
+                .
               </label>
             </div>
 
             {/* Feedback */}
-            {status.success && 
-            <div className="feedback-message success">
-              {translate('form_success')}
-            </div>}
-            {status.error && 
-            <div className="feedback-message error">
-              {translate('form_error')}
-            </div>}
+            {status.success && (
+              <div className="feedback-message success">
+                {translate("form_success")}
+              </div>
+            )}
+            {status.error && (
+              <div className="feedback-message error">
+                {translate("form_error")}
+              </div>
+            )}
 
-            <button 
-              type="submit" 
-              className={`btn-primary submit-button ${status.submitting ? 'loading' : ''}`}
+            <button
+              type="submit"
+              className={`btn-primary submit-button ${status.submitting ? "loading" : ""}`}
               disabled={status.submitting}
             >
-              {status.submitting ? translate('form_sending') : translate('form_send')}
-              {!status.submitting && <FaPaperPlane className="submit-icon" aria-hidden="true" />}
+              {status.submitting
+                ? translate("form_sending")
+                : translate("form_send")}
+              {!status.submitting && (
+                <FaPaperPlane className="submit-icon" aria-hidden="true" />
+              )}
             </button>
-            
           </form>
         </motion.div>
-
       </div>
     </section>
   );

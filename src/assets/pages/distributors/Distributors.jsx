@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "./../../../TranslationContext";
 import { FaHandshake, FaStoreAlt, FaGlobe } from "react-icons/fa";
+import SEO from "../../components/SEO/SEO";
 import "./Distributors.css";
 
 const Distributors = () => {
@@ -8,6 +9,7 @@ const Distributors = () => {
 
   return (
     <div className="distributors-page">
+      <SEO title={translate("dist_hero_title") || "Distribuidores"} />
       {/* SECCIÓN HERO (Reutilizando clase genérica) */}
       <section className="dist-hero section">
         <h1 className="hero-title custom-title">

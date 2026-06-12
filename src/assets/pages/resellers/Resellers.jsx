@@ -6,6 +6,7 @@ import {
   FaUsers,
   FaExternalLinkAlt,
 } from "react-icons/fa";
+import SEO from "../../components/SEO/SEO";
 
 import "../distributors/Distributors.css";
 import "./Resellers.css";
@@ -26,6 +27,7 @@ const Resellers = () => {
 
   return (
     <div className="resellers-page">
+      <SEO title={translate("reseller_hero_title") || "Resellers"} />
       <section className="dist-hero section">
         <h1 className="hero-title custom-title">
           {translate("reseller_hero_title")}{" "}
@@ -96,7 +98,7 @@ const Resellers = () => {
               />
             </div>
             <div className="partner-content">
-              <h3 className="partner-name">C. E. L'escala</h3>
+              <h3 className="partner-name">C. E. L&apos;escala</h3>
               <span className="partner-link">
                 {translate("dist_visit_web")}{" "}
                 <FaExternalLinkAlt aria-hidden="true" />
