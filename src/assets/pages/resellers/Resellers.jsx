@@ -11,16 +11,7 @@ import SEO from "../../components/SEO/SEO";
 import "../distributors/Distributors.css";
 import "./Resellers.css";
 
-import logoCelescala from "./../../../assets/images/partners/celescala-logo.jpg";
-import logoMaresmePadelClub from "./../../../assets/images/partners/maresme-padel-club.jpg";
-import logoOnePadelValencia from "./../../../assets/images/partners/one-padel-valencia.jpg";
-import logoPadelCañaveral from "./../../../assets/images/partners/padel-cañaveral.jpg";
-import logoCatalunyaPadelClub from "./../../../assets/images/partners/catalunya-padel-club.jpeg";
-import logoPadelMotril from "./../../../assets/images/partners/padel-motril.jpeg";
-import logoIniestaSportCenter from "./../../../assets/images/partners/padel-iniesta.jpeg";
-import logoPadelEstany from "./../../../assets/images/partners/padel-estany.jpeg";
-import logoIfAcademy from "./../../../assets/images/partners/if-academy.jpeg";
-import logoIndoorPadelBarcelona from "./../../../assets/images/partners/indoor-padel-bacelona.jpeg";
+import resellersData from "./resellersData";
 
 const Resellers = () => {
   const { translate } = useTranslation();
@@ -83,230 +74,30 @@ const Resellers = () => {
         </h2>
 
         <div className="partners-grid">
-          {/* CE L'escala */}
-          <a
-            href="https://celescala.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partner-card"
-          >
-            <div className="partner-image-container">
-              <img
-                src={logoCelescala}
-                alt="C. E. L'escala Logo"
-                className="partner-logo"
-              />
-            </div>
-            <div className="partner-content">
-              <h3 className="partner-name">C. E. L&apos;escala</h3>
-              <span className="partner-link">
-                {translate("dist_visit_web")}{" "}
-                <FaExternalLinkAlt aria-hidden="true" />
-              </span>
-            </div>
-          </a>
-
-          {/* Maresme padel club */}
-          <a
-            href="https://www.instagram.com/maresmepadelclub/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partner-card"
-          >
-            <div className="partner-image-container">
-              <img
-                src={logoMaresmePadelClub}
-                alt="Maresme Padel Club Logo"
-                className="partner-logo"
-              />
-            </div>
-            <div className="partner-content">
-              <h3 className="partner-name">Maresme Padel Club</h3>
-              <span className="partner-link">
-                {translate("dist_visit_instagram")}{" "}
-                <FaExternalLinkAlt aria-hidden="true" />
-              </span>
-            </div>
-          </a>
-
-          {/* One Padel Valencia */}
-          <a
-            href="https://www.instagram.com/onepadelvalencia/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partner-card"
-          >
-            <div className="partner-image-container">
-              <img
-                src={logoOnePadelValencia}
-                alt="One Padel Valencia Logo"
-                className="partner-logo"
-              />
-            </div>
-            <div className="partner-content">
-              <h3 className="partner-name">One Padel Valencia</h3>
-              <span className="partner-link">
-                {translate("dist_visit_instagram")}{" "}
-                <FaExternalLinkAlt aria-hidden="true" />
-              </span>
-            </div>
-          </a>
-
-          {/* Padel Cañaveral */}
-          <a
-            href="https://www.instagram.com/padelelcanaveral?igsh=MXVzaGdqcG5xY3Voeg=="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partner-card"
-          >
-            <div className="partner-image-container">
-              <img
-                src={logoPadelCañaveral}
-                alt="Padel Cañaveral Logo"
-                className="partner-logo"
-              />
-            </div>
-            <div className="partner-content">
-              <h3 className="partner-name">Padel Cañaveral</h3>
-              <span className="partner-link">
-                {translate("dist_visit_instagram")}{" "}
-                <FaExternalLinkAlt aria-hidden="true" />
-              </span>
-            </div>
-          </a>
-          {/* Catalunya Padel club */}
-          <a
-            href="https://www.instagram.com/catalunyapadelclub/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partner-card"
-          >
-            <div className="partner-image-container">
-              <img
-                src={logoCatalunyaPadelClub}
-                alt="Catalunya Padel Club Logo"
-                className="partner-logo"
-              />
-            </div>
-            <div className="partner-content">
-              <h3 className="partner-name">Catalunya Padel Club</h3>
-              <span className="partner-link">
-                {translate("dist_visit_instagram")}{" "}
-                <FaExternalLinkAlt aria-hidden="true" />
-              </span>
-            </div>
-          </a>
-
-          {/* Padel Motril */}
-          <a
-            href="https://www.instagram.com/padelmotril?igsh=MWo1dmVqd2ZscjlzdQ=="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partner-card"
-          >
-            <div className="partner-image-container">
-              <img
-                src={logoPadelMotril}
-                alt="Padel Motril Logo"
-                className="partner-logo"
-              />
-            </div>
-            <div className="partner-content">
-              <h3 className="partner-name">Padel Motril</h3>
-              <span className="partner-link">
-                {translate("dist_visit_instagram")}{" "}
-                <FaExternalLinkAlt aria-hidden="true" />
-              </span>
-            </div>
-          </a>
-          {/* Iniesta Sport Center */}
-          <a
-            href="https://www.instagram.com/iniestasportcenter?igsh=MWozOGx6cnhvOXQ3NQ=="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partner-card"
-          >
-            <div className="partner-image-container">
-              <img
-                src={logoIniestaSportCenter}
-                alt="Iniesta Sport Center Logo"
-                className="partner-logo"
-              />
-            </div>
-            <div className="partner-content">
-              <h3 className="partner-name">Iniesta Sport Center</h3>
-              <span className="partner-link">
-                {translate("dist_visit_instagram")}{" "}
-                <FaExternalLinkAlt aria-hidden="true" />
-              </span>
-            </div>
-          </a>
-          {/* Padel estany */}
-          <a
-            href="https://www.instagram.com/padel.estany?igsh=dW4wNjM3aXJsd2x6"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partner-card"
-          >
-            <div className="partner-image-container">
-              <img
-                src={logoPadelEstany}
-                alt="Padel Estany Logo"
-                className="partner-logo"
-              />
-            </div>
-            <div className="partner-content">
-              <h3 className="partner-name">Padel Estany</h3>
-              <span className="partner-link">
-                {translate("dist_visit_instagram")}{" "}
-                <FaExternalLinkAlt aria-hidden="true" />
-              </span>
-            </div>
-          </a>
-          {/* If Academy */}
-          <a
-            href="https://www.instagram.com/if_academy_padel?igsh=MWR2ajJneXBkaW1sMQ=="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partner-card"
-          >
-            <div className="partner-image-container">
-              <img
-                src={logoIfAcademy}
-                alt="If Academy Logo"
-                className="partner-logo"
-              />
-            </div>
-            <div className="partner-content">
-              <h3 className="partner-name">If Academy</h3>
-              <span className="partner-link">
-                {translate("dist_visit_instagram")}{" "}
-                <FaExternalLinkAlt aria-hidden="true" />
-              </span>
-            </div>
-          </a>
-          {/* indoor Padel Barcelona */}
-          <a
-            href="https://www.instagram.com/ipadelbarcelona?igsh=MWZ6bmpuNTY4NGt2dA=="
-            target="_blank"
-            rel="noopener noreferrer"
-            className="partner-card"
-          >
-            <div className="partner-image-container">
-              <img
-                src={logoIndoorPadelBarcelona}
-                alt="Indoor Padel Barcelona Logo"
-                className="partner-logo"
-              />
-            </div>
-            <div className="partner-content">
-              <h3 className="partner-name">Indoor Padel Barcelona</h3>
-              <span className="partner-link">
-                {translate("dist_visit_instagram")}{" "}
-                <FaExternalLinkAlt aria-hidden="true" />
-              </span>
-            </div>
-          </a>
+          {resellersData.map((partner, index) => (
+            <a
+              key={index}
+              href={partner.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="partner-card"
+            >
+              <div className="partner-image-container">
+                <img
+                  src={partner.logo}
+                  alt={`${partner.name} Logo`}
+                  className="partner-logo"
+                />
+              </div>
+              <div className="partner-content">
+                <h3 className="partner-name">{partner.name}</h3>
+                <span className="partner-link">
+                  {translate(partner.linkTranslationKey)}{" "}
+                  <FaExternalLinkAlt aria-hidden="true" />
+                </span>
+              </div>
+            </a>
+          ))}
         </div>
       </section>
     </div>
