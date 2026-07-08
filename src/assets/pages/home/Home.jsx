@@ -7,6 +7,7 @@ import HomePricing from "../../components/HomePricing/HomePricing";
 import TrustBar from "../../components/TrustBar/TrustBar";
 import Sports from "../../components/Sports/Sports";
 import SEO from "../../components/SEO/SEO";
+import Reviews from "../../components/Reviews/Reviews";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Sports />
       <Parallax />
       <HowItWorks />
+      <Reviews />
       <FAQ />
     </>
   );

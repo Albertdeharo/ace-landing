@@ -1,0 +1,128 @@
+.reviews-section {
+  padding: 4rem 1rem;
+  background-color: transparent;
+  text-align: center;
+}
+
+.reviews-header {
+  margin-bottom: 2rem;
+}
+
+.reviews-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.review-card-wrapper {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.review-card {
+  background: #29292c;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  min-height: 12rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  text-align: left;
+  border: 1px solid #18181b;
+  box-sizing: border-box;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  border-color: var(--color-primary);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid var(--color-primary);
+}
+
+.review-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-name {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.review-ig-link {
+  color: #99999d;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  transition: color 0.2s ease;
+  display: inline-flex;
+}
+
+.review-ig-link:hover {
+  color: #E1306C;
+}
+
+.review-body p {
+  color: #99999d;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+/* Slick overrides */
+.reviews-container .slick-prev:before, .reviews-container .slick-next:before {
+  color: var(--color-primary);
+}
+
+.reviews-container .slick-dots li button:before {
+  color: #99999d;
+}
+
+.reviews-container .slick-dots li.slick-active button:before {
+  color: var(--color-primary);
+}
+
+.reviews-container .slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+.reviews-container .slick-slide {
+  float: none;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .reviews-container .slick-prev, .reviews-container .slick-next {
+    display: none !important; 
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 2rem 0;
+  }
+  .reviews-container {
+    padding: 0;
+  }
+}
