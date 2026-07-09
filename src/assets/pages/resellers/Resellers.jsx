@@ -4,14 +4,14 @@ import {
   FaStoreAlt,
   FaDumbbell,
   FaUsers,
-  FaExternalLinkAlt,
+  //FaExternalLinkAlt,
 } from "react-icons/fa";
 import SEO from "../../components/SEO/SEO";
 
 import "../distributors/Distributors.css";
 import "./Resellers.css";
 
-import resellersData from "./resellersData";
+//import resellersData from "./resellersData";
 
 const Resellers = () => {
   const { translate } = useTranslation();
@@ -68,7 +68,7 @@ const Resellers = () => {
         </Link>
       </section>
 
-      <section className="dist-current section bg-dark">
+      {/* <section className="dist-current section bg-dark">
         <h2 className="custom-title mb-4 text-white">
           {translate("reseller_current_title")}
         </h2>
@@ -99,7 +99,7 @@ const Resellers = () => {
             </a>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
