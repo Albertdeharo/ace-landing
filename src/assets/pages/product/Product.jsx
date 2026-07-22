@@ -8,7 +8,7 @@ import {
   FaCheckCircle,
   FaShieldAlt,
   FaTruck,
-  FaClock,
+  /* FaClock, */
 } from "react-icons/fa";
 
 import productImg from "./../../images/ENVASE.png";
@@ -120,8 +120,48 @@ const Product = () => {
                 </a>
               </div>
 
-              {/* TARJETA 3: 100ml (PRÓXIMAMENTE) */}
-              <div className="pricing-card coming-soon">
+              {/* TARJETA 3: Pack 100ml */}
+            <div className="pricing-card highlight">
+              <div className="badge">{translate('product_badge_free_shipping') || 'Envío Gratis'}</div>
+              <h3 className="card-title">{translate('product_pack_title') || 'Pack Ahorro x2'}</h3>
+              <p className="card-volume">2x 100 ml</p>
+              <div className="product-price">
+                <span className="price-currency">€</span>
+                <span className="price-value">29</span>
+                <span className="price-decimals">,95</span>
+              </div>
+              <ul className="card-benefits">
+                <li><FaCheckCircle className="benefit-icon" /> {translate('product_benefit_control') || 'Control total'}</li>
+                <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
+                <li><FaTruck className="benefit-icon" /> {translate('product_benefit_shipping') || 'Envío gratis incluido'}</li>
+              </ul>
+              <a href="https://buy.stripe.com/7sYfZi7zc6S88q102X0oM03" className="cta-stripe-button highlight-btn">
+                <FaShoppingCart className="button-icon" /> {translate('product_buy_pack') || 'Comprar Pack'}
+              </a>
+            </div>
+
+            {/* TARJETA 4: Pack 100ml + 200ml */}
+            <div className="pricing-card highlight">
+              <div className="badge">{translate('product_badge_free_shipping') || 'Envío Gratis'}</div>
+              <h3 className="card-title">{translate('product_pack_title') || 'Pack Ahorro x2'}</h3>
+              <p className="card-volume">100 ml + 200 ml</p>
+              <div className="product-price">
+                <span className="price-currency">€</span>
+                <span className="price-value">32</span>
+                <span className="price-decimals">,45</span>
+              </div>
+              <ul className="card-benefits">
+                <li><FaCheckCircle className="benefit-icon" /> {translate('product_benefit_control') || 'Control total'}</li>
+                <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
+                <li><FaTruck className="benefit-icon" /> {translate('product_benefit_shipping') || 'Envío gratis incluido'}</li>
+              </ul>
+              <a href="https://buy.stripe.com/00wbJ2dXA5O45dP6rl0oM04" className="cta-stripe-button highlight-btn">
+                <FaShoppingCart className="button-icon" /> {translate('product_buy_pack') || 'Comprar Pack'}
+              </a>
+            </div>
+
+              {/* TARJETA : 100ml (PRÓXIMAMENTE) */}
+              {/* <div className="pricing-card coming-soon">
                 <div className="badge badge-gray">
                   {translate("product_badge_soon") || "Próximamente"}
                 </div>
@@ -137,7 +177,7 @@ const Product = () => {
                     {translate("product_btn_soon") || "Muy pronto"}
                   </button>
                 </div>
-              </div>
+              </div> */}
             </div>
             <p className="secure-checkout-text">
               {translate("product_secure_payment") ||

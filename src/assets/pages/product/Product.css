@@ -266,7 +266,7 @@
   }
 
   .cards-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   
   .card-benefits li {
@@ -286,5 +286,11 @@
   .coming-soon-info .card-title,
   .coming-soon-info .card-volume {
     text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
   }
 }

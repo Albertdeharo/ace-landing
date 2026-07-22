@@ -7,9 +7,9 @@
 
 .cards-grid-home {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto 1.5rem auto;
 }
 
@@ -125,6 +125,17 @@
 /* =========================================
    RESPONSIVO MÓVIL
    ========================================= */
+@media (max-width: 1024px) {
+  .cards-grid-home {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  
+  .home-pricing-wrapper {
+    padding: 3rem 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .cards-grid-home {
     grid-template-columns: 1fr;
