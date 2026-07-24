@@ -28,7 +28,7 @@ const Reviews = () => {
   return (
     <section className="reviews-section section">
       <div className="reviews-header">
-        <h2 className="custom-title">{translate('reviews_title') || 'Opiniones de nuestros clientes'}</h2>
+        <h2 className="custom-title">{translate('reviews_title') || 'Reseñas jugadores PRO'}</h2>
       </div>
       <div className="reviews-container container-sm">
         <Slider {...settings}>
