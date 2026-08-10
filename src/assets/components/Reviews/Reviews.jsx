@@ -35,8 +35,12 @@ const Reviews = () => {
           {reviewsData.map((review) => (
             <div className="review-card-wrapper" key={review.id}>
               <div className="review-card">
-                <div className="review-header">
+                
+                <div className="review-avatar-container">
                   <img src={review.avatar} alt={review.name} className="review-avatar" />
+                </div>
+
+                <div className="review-content">
                   <div className="review-info">
                     <h3 className="review-name">{review.name}</h3>
                     {review.instagram && (
@@ -45,10 +49,11 @@ const Reviews = () => {
                       </a>
                     )}
                   </div>
+                  <div className="review-body">
+                    <p>&quot;{review.comment}&quot;</p>
+                  </div>
                 </div>
-                <div className="review-body">
-                  <p>&quot;{review.comment}&quot;</p>
-                </div>
+
               </div>
             </div>
           ))}

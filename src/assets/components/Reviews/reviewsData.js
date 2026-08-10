@@ -4,6 +4,15 @@ import franAvatar from './images/fran_ramirez.jpg';
 import ainiizeAvatar from './images/aiiniize.jpg';
 import mariaPortilloAvatar from './images/maria_portillo.jpg';
 import albertCarmonaAvatar from './images/albert_carmona.jpg';
+import jaimeMenendezAvatar from './images/jaime_menendez.jpg';
+import sandraBellverAvatar from './images/sandra_bellver.jpg';
+import exeMouriñoAvatar from './images/exe_mourino.jpg';
+import albaGalanAvatar from './images/alba_galan.jpg';
+import pauClementeAvatar from './images/pau_clemente.jpg';
+import pabloSanchezAvatar from './images/pablo_sanchez.jpg';
+import pabloLijoAvatar from './images/pablo_lijo.jpg';
+import marcQuilezAvatar from './images/marc_quilez.jpg';
+import gonzaOubinaAvatar from './images/gonza_oubina.jpg';
 
 const reviewsData = [
   {
@@ -47,6 +56,69 @@ const reviewsData = [
     "avatar": albertCarmonaAvatar,
     "comment": "Lo he incorporado a mi rutina antes de jugar. Agito, aplico un poco sobre el grip y en segundos tengo una sensación de agarre muy buena. No necesito aplicar demasiado y eso hace que el tacto siga siendo natural, sin exceso de pegajosidad.",
     "instagram": "https://www.instagram.com/albert_carmona"
+  },
+  {
+    "id": 7,
+    "name": "Jaime Menendez",
+    "avatar": jaimeMenendezAvatar,
+    "comment": "Agarre perfecto sin sensación excesivamente pegajosa. Me da seguridad y puedo seguir cambiando la empuñadura con naturalidad.",
+    "instagram": "https://www.instagram.com/jaimemenendez22/"
+  },
+  {
+    "id": 8,
+    "name": "Sandra Bellver",
+    "avatar": sandraBellverAvatar,
+    "comment": "Lo uso antes de cada partido. Me ayuda mucho con el sudor y mantiene la pala estable en la mano.",
+    "instagram": "https://www.instagram.com/sandrabellverf/"
+  },
+  {
+    "id": 9,
+    "name": "Exe Mouriño",
+    "avatar": exeMouriñoAvatar,
+    "comment": "Papá! Excelente el producto. Desde el primer momento me ayudó mucho ya que tiene un gran agarre pero no es extremadamente pegajoso lo que permite ir variando la empuñadura. Es muy práctico porque tienen envases pequeños y grandes y se pueden llevar en avión. Desde ya 100% recomendable.",
+    "instagram": "https://www.instagram.com/exemourino/"
+  },
+  {
+    "id": 10,
+    "name": "Alba Galán",
+    "avatar": albaGalanAvatar,
+    "comment": "Lo uso antes de cada partido y se nota desde la primera aplicación. Seca rápido, huele bien y deja el grip con una sensación firme, cómoda y muy natural.",
+    "instagram": "https://www.instagram.com/albagalan92/"
+  },
+  {
+    "id": 11,
+    "name": "Pau Clemente",
+    "avatar": pauClementeAvatar,
+    "comment": "En partidos largos me ayuda muchísimo con el sudor. La pala se mantiene estable en la mano y no tengo esa sensación de que se me pueda escapar en los puntos importantes.",
+    "instagram": "https://www.instagram.com/pauclemente01/"
+  },
+  {
+    "id": 12,
+    "name": "Pablo Sanchez",
+    "avatar": pabloSanchezAvatar,
+    "comment": "Lo que más me gusta es que no bloquea la mano. Aporta agarre y confianza, pero permite mover la empuñadura cuando necesitas ajustar golpes como bandejas, voleas o remates.",
+    "instagram": "https://www.instagram.com/pablo.sanchhez/"
+  },
+  {
+    "id": 13,
+    "name": "Pablo Lijo",
+    "avatar": pabloLijoAvatar,
+    "comment": "Tiene una pegajosidad muy bien equilibrada. No es excesiva ni incómoda, simplemente notas que el grip responde mejor y que tienes más control en cada golpe.",
+    "instagram": "https://www.instagram.com/pablolijooficial/"
+  },
+  {
+    "id": 14,
+    "name": "Marc Quilez",
+    "avatar": marcQuilezAvatar,
+    "comment": "Me sorprendió el olor, porque esperaba algo más fuerte. Es agradable, se aplica de forma limpia y deja una sensación de agarre muy cómoda en la mano.",
+    "instagram": "https://www.instagram.com/marcquilez/"
+  },
+  {
+    "id": 15,
+    "name": "Gonza Oubina",
+    "avatar": gonzaOubinaAvatar,
+    "comment": "Me sorprendió desde el primer momento. El agarre de la pala tras utilizar el producto es muy bueno. Además, el olor es agradable, cosa que parece un detalle menor, pero lo hace diferencial con respecto a otros sprays de diferentes marcas. Lo recomiendo muchísimo tanto para jugadores avanzados, como para jugadores de iniciación. Es excelente para evitar el sudor y que la pala se resbale. Sin dudas muy recomendable!",
+    "instagram": "https://www.instagram.com/gonzaoubina/"
   }
 ]
 

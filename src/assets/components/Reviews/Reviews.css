@@ -23,14 +23,15 @@
 .review-card {
   background: #29292c;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 2rem;
   min-height: 12rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  text-align: left;
   border: 1px solid #18181b;
   box-sizing: border-box;
 }
@@ -41,30 +42,35 @@
   border-color: var(--color-primary);
 }
 
-.review-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
+.review-avatar-container {
+  flex-shrink: 0;
 }
 
 .review-avatar {
-  width: 50px;
-  height: 50px;
+  width: 120px; 
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 1rem;
-  border: 2px solid var(--color-primary);
+  border: 3px solid var(--color-primary);
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-align: left;
 }
 
 .review-info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .review-name {
   color: var(--color-primary);
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   margin: 0;
   font-weight: 500;
 }
@@ -72,9 +78,9 @@
 .review-ig-link {
   color: #99999d;
   font-size: 1.2rem;
-  margin-top: 0.2rem;
   transition: color 0.2s ease;
-  display: inline-flex;
+  display: flex;
+  align-items: center;
 }
 
 .review-ig-link:hover {
@@ -84,9 +90,9 @@
 .review-body p {
   color: #99999d;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 /* Slick overrides */
@@ -124,5 +130,25 @@
   }
   .reviews-container {
     padding: 0;
+  }
+  
+  .review-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .review-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .review-content, .review-body p {
+    text-align: center;
+  }
+
+  .review-info {
+    justify-content: center;
   }
 }
