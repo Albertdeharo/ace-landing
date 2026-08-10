@@ -7,12 +7,24 @@ import bannerImage2 from '../../images/fondo_2.jpg';
 import bannerImage3 from '../../images/fondo_3.jpg';
 import bannerImage4 from '../../images/fondo_4.jpg';
 import bannerImage5 from '../../images/fondo_5.jpg';
+
+import bannerImageV2_1 from '../../images/fondo_v2_1.jpg';
+import bannerImageV2_2 from '../../images/fondo_v2_2.jpg';
+import bannerImageV2_3 from '../../images/fondo_v2_3.jpg';
+import bannerImageV2_4 from '../../images/fondo_v2_4.jpg';
+import bannerImageV2_5 from '../../images/fondo_v2_5.jpg';
+
 const slides = [
     { id: 1, src: bannerImage1, alt: "ACE PRO GRIP - El grip definitivo para tu pala" },
-    { id: 2, src: bannerImage2, alt: "Siente el agarre, toma el control" },
-    { id: 3, src: bannerImage3, alt: "Mejora tu rendimiento en la pista" },
-    { id: 4, src: bannerImage4, alt: "Jugador de pádel aplicando el spray antideslizante en su pala" },
-    { id: 5, src: bannerImage5, alt: "Olvídate del sudor y asegura la máxima firmeza en cada golpe" },
+    { id: 2, src: bannerImageV2_1, alt: "ACE PRO GRIP - El grip definitivo para tu pala" },
+    { id: 3, src: bannerImage2, alt: "Siente el agarre, toma el control" },
+    { id: 4, src: bannerImageV2_2, alt: "Siente el agarre, toma el control" },
+    { id: 5, src: bannerImage3, alt: "Mejora tu rendimiento en la pista" },
+    { id: 6, src: bannerImageV2_3, alt: "Mejora tu rendimiento en la pista" },
+    { id: 7, src: bannerImage4, alt: "Jugador de pádel aplicando el spray antideslizante en su pala" },
+    { id: 8, src: bannerImageV2_4, alt: "Jugador de pádel aplicando el spray antideslizante en su pala" },
+    { id: 9, src: bannerImage5, alt: "Olvídate del sudor y asegura la máxima firmeza en cada golpe" },
+    { id: 10, src: bannerImageV2_5, alt: "Olvídate del sudor y asegura la máxima firmeza en cada golpe" },
   ];
 
 const Banner = () => {
