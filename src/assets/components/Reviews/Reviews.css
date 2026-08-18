@@ -47,8 +47,8 @@
 }
 
 .review-avatar {
-  width: 120px; 
-  height: 120px;
+  width: 300px; 
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--color-primary);
@@ -140,8 +140,8 @@
   }
   
   .review-avatar {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
 
   .review-content, .review-body p {

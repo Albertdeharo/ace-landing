@@ -43,7 +43,7 @@ const Footer = () => {
           <ul>
             <li>
               <FaEnvelope className="footer__icon" />
-              <a href="mailto:contacto@aceprogrip.com">contacto@aceprogrip.com</a>
+              <a href="mailto:contacto@aceprogrip.es">contacto@aceprogrip.es</a>
             </li>
             <li>
               <FaMapMarkerAlt className="footer__icon" />

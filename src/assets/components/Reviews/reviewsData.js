@@ -13,6 +13,8 @@ import pabloSanchezAvatar from './images/pablo_sanchez.jpg';
 import pabloLijoAvatar from './images/pablo_lijo.jpg';
 import marcQuilezAvatar from './images/marc_quilez.jpg';
 import gonzaOubinaAvatar from './images/gonza_oubina.jpg';
+import jessicaCastelloAvatar from './images/jessica_castello.jpg';
+import lorenaRufoAvatar from './images/lorena_rufo.jpg';
 
 const reviewsData = [
   {
@@ -119,6 +121,20 @@ const reviewsData = [
     "avatar": gonzaOubinaAvatar,
     "comment": "Me sorprendió desde el primer momento. El agarre de la pala tras utilizar el producto es muy bueno. Además, el olor es agradable, cosa que parece un detalle menor, pero lo hace diferencial con respecto a otros sprays de diferentes marcas. Lo recomiendo muchísimo tanto para jugadores avanzados, como para jugadores de iniciación. Es excelente para evitar el sudor y que la pala se resbale. Sin dudas muy recomendable!",
     "instagram": "https://www.instagram.com/gonzaoubina/"
+  },
+  {
+    "id": 16,
+    "name": "Jessica Castelló",
+    "avatar": jessicaCastelloAvatar,
+    "comment": "La verdad que va muy bien, me gusta mucho. Pega muy bien y permite cambiar empuñadura sin problema! La textura es ideal. Estoy encantada con él y por poder colaborar con vosotros. Os felicito porque es un gran producto!",
+    "instagram": "https://www.instagram.com/jess.castello"
+  },
+  {
+    "id": 17,
+    "name": "Lorena Rufo",
+    "avatar": lorenaRufoAvatar,
+    "comment": "Me aporta confianza antes de competir. Tiene buen olor, seca rápido y deja una sensación de agarre firme sin ser excesivamente pegajosa.",
+    "instagram": "https://www.instagram.com/lorerufo03"
   }
 ]
 

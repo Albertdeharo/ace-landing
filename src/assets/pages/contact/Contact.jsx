@@ -106,7 +106,7 @@ const ContactForm = () => {
           <div className="contact-details">
             <div className="contact-detail-item">
               <FaEnvelope className="contact-icon" aria-hidden="true" />
-              <span>contacto@aceprogrip.com</span>
+              <span>contacto@aceprogrip.es</span>
             </div>
             <div className="contact-detail-item">
               <FaMapMarkerAlt className="contact-icon" aria-hidden="true" />
