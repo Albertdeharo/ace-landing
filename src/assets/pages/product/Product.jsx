@@ -13,6 +13,12 @@ import {
 
 import productImg from "./../../images/ENVASE.png";
 
+// Importación de las imágenes de producto (en formato PNG sin fondo)
+import singleProductImg from '../../../assets/images/products/single-product.png';
+import double200ProductImg from '../../../assets/images/products/double-200-product.png';
+import double100ProductImg from '../../../assets/images/products/double-100-product.png';
+import mixed100200ProductImg from '../../../assets/images/products/mixed-100-200-product.png';
+
 const Product = () => {
   const { translate } = useTranslation();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -52,6 +58,7 @@ const Product = () => {
 
           <div className="product-pricing-section">
             <div className="cards-grid">
+              
               {/* TARJETA 1: 200ml */}
               <div className="pricing-card">
                 <h3 className="card-title">
@@ -73,6 +80,12 @@ const Product = () => {
                     {translate("product_benefit_grip") || "Máximo agarre"}
                   </li>
                 </ul>
+                
+                {/* IMAGEN INTEGRADA */}
+                <div className="card-image-container">
+                  <img src={singleProductImg} alt="Producto 200ml" className="card-inline-image" />
+                </div>
+
                 <a
                   href="https://buy.stripe.com/00wfZi2eS2BSbCdg1V0oM00"
                   className="cta-stripe-button"
@@ -111,6 +124,12 @@ const Product = () => {
                       "Envío gratis incluido"}
                   </li>
                 </ul>
+                
+                {/* IMAGEN INTEGRADA */}
+                <div className="card-image-container">
+                  <img src={double200ProductImg} alt="Pack 2x 200ml" className="card-inline-image" />
+                </div>
+
                 <a
                   href="https://buy.stripe.com/eVqbJ2g5I90g8q16rl0oM01"
                   className="cta-stripe-button highlight-btn"
@@ -121,44 +140,56 @@ const Product = () => {
               </div>
 
               {/* TARJETA 3: Pack 100ml */}
-            <div className="pricing-card highlight">
-              <div className="badge">{translate('product_badge_free_shipping') || 'Envío Gratis'}</div>
-              <h3 className="card-title">{translate('product_pack_title') || 'Pack Ahorro x2'}</h3>
-              <p className="card-volume">2x 100 ml</p>
-              <div className="product-price">
-                <span className="price-currency">€</span>
-                <span className="price-value">29</span>
-                <span className="price-decimals">,95</span>
-              </div>
-              <ul className="card-benefits">
-                <li><FaCheckCircle className="benefit-icon" /> {translate('product_benefit_control') || 'Control total'}</li>
-                <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
-                <li><FaTruck className="benefit-icon" /> {translate('product_benefit_shipping') || 'Envío gratis incluido'}</li>
-              </ul>
-              <a href="https://buy.stripe.com/7sYfZi7zc6S88q102X0oM03" className="cta-stripe-button highlight-btn">
-                <FaShoppingCart className="button-icon" /> {translate('product_buy_pack') || 'Comprar Pack'}
-              </a>
-            </div>
+              <div className="pricing-card highlight">
+                <div className="badge">{translate('product_badge_free_shipping') || 'Envío Gratis'}</div>
+                <h3 className="card-title">{translate('product_pack_title') || 'Pack Ahorro x2'}</h3>
+                <p className="card-volume">2x 100 ml</p>
+                <div className="product-price">
+                  <span className="price-currency">€</span>
+                  <span className="price-value">29</span>
+                  <span className="price-decimals">,95</span>
+                </div>
+                <ul className="card-benefits">
+                  <li><FaCheckCircle className="benefit-icon" /> {translate('product_benefit_control') || 'Control total'}</li>
+                  <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
+                  <li><FaTruck className="benefit-icon" /> {translate('product_benefit_shipping') || 'Envío gratis incluido'}</li>
+                </ul>
 
-            {/* TARJETA 4: Pack 100ml + 200ml */}
-            <div className="pricing-card highlight">
-              <div className="badge">{translate('product_badge_free_shipping') || 'Envío Gratis'}</div>
-              <h3 className="card-title">{translate('product_pack_title') || 'Pack Ahorro x2'}</h3>
-              <p className="card-volume">100 ml + 200 ml</p>
-              <div className="product-price">
-                <span className="price-currency">€</span>
-                <span className="price-value">32</span>
-                <span className="price-decimals">,45</span>
+                {/* IMAGEN INTEGRADA */}
+                <div className="card-image-container">
+                  <img src={double100ProductImg} alt="Pack 2x 100ml" className="card-inline-image" />
+                </div>
+
+                <a href="https://buy.stripe.com/7sYfZi7zc6S88q102X0oM03" className="cta-stripe-button highlight-btn">
+                  <FaShoppingCart className="button-icon" /> {translate('product_buy_pack') || 'Comprar Pack'}
+                </a>
               </div>
-              <ul className="card-benefits">
-                <li><FaCheckCircle className="benefit-icon" /> {translate('product_benefit_control') || 'Control total'}</li>
-                <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
-                <li><FaTruck className="benefit-icon" /> {translate('product_benefit_shipping') || 'Envío gratis incluido'}</li>
-              </ul>
-              <a href="https://buy.stripe.com/00wbJ2dXA5O45dP6rl0oM04" className="cta-stripe-button highlight-btn">
-                <FaShoppingCart className="button-icon" /> {translate('product_buy_pack') || 'Comprar Pack'}
-              </a>
-            </div>
+
+              {/* TARJETA 4: Pack 100ml + 200ml */}
+              <div className="pricing-card highlight">
+                <div className="badge">{translate('product_badge_free_shipping') || 'Envío Gratis'}</div>
+                <h3 className="card-title">{translate('product_pack_title') || 'Pack Ahorro x2'}</h3>
+                <p className="card-volume">100 ml + 200 ml</p>
+                <div className="product-price">
+                  <span className="price-currency">€</span>
+                  <span className="price-value">32</span>
+                  <span className="price-decimals">,45</span>
+                </div>
+                <ul className="card-benefits">
+                  <li><FaCheckCircle className="benefit-icon" /> {translate('product_benefit_control') || 'Control total'}</li>
+                  <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
+                  <li><FaTruck className="benefit-icon" /> {translate('product_benefit_shipping') || 'Envío gratis incluido'}</li>
+                </ul>
+
+                {/* IMAGEN INTEGRADA */}
+                <div className="card-image-container">
+                  <img src={mixed100200ProductImg} alt="Pack 100ml + 200ml" className="card-inline-image" />
+                </div>
+
+                <a href="https://buy.stripe.com/00wbJ2dXA5O45dP6rl0oM04" className="cta-stripe-button highlight-btn">
+                  <FaShoppingCart className="button-icon" /> {translate('product_buy_pack') || 'Comprar Pack'}
+                </a>
+              </div>
 
               {/* TARJETA : 100ml (PRÓXIMAMENTE) */}
               {/* <div className="pricing-card coming-soon">
@@ -178,6 +209,7 @@ const Product = () => {
                   </button>
                 </div>
               </div> */}
+
             </div>
             <p className="secure-checkout-text">
               {translate("product_secure_payment") ||

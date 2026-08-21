@@ -2,6 +2,12 @@ import { useTranslation } from '../../../TranslationContext';
 import { FaShoppingCart, FaCheckCircle, FaShieldAlt, FaTruck } from 'react-icons/fa';
 import './HomePricing.css';
 
+// Importación de las imágenes de producto
+import singleProductImg from '../../../assets/images/products/single-product.png';
+import double200ProductImg from '../../../assets/images/products/double-200-product.png';
+import double100ProductImg from '../../../assets/images/products/double-100-product.png';
+import mixed100200ProductImg from '../../../assets/images/products/mixed-100-200-product.png';
+
 const HomePricing = () => {
   const { translate } = useTranslation();
 
@@ -10,8 +16,8 @@ const HomePricing = () => {
       <div className="container">
 
         <h3 className="features-subtitle mt- mb-4">
-            {translate('features_subtitle')}
-          </h3>
+          {translate('features_subtitle')}
+        </h3>
         
         <div className="product-pricing-section">
           <div className="cards-grid-home">
@@ -29,6 +35,12 @@ const HomePricing = () => {
                 <li><FaCheckCircle className="benefit-icon" /> {translate('product_benefit_control') || 'Control total'}</li>
                 <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
               </ul>
+              
+              {/* IMAGEN INTEGRADA */}
+              <div className="card-image-container">
+                <img src={singleProductImg} alt="Producto 200ml" className="card-inline-image" />
+              </div>
+
               <a href="https://buy.stripe.com/00wfZi2eS2BSbCdg1V0oM00" className="cta-stripe-button">
                 <FaShoppingCart className="button-icon" /> {translate('product_buy_1') || 'Comprar'}
               </a>
@@ -49,6 +61,12 @@ const HomePricing = () => {
                 <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
                 <li><FaTruck className="benefit-icon" /> {translate('product_benefit_shipping') || 'Envío gratis incluido'}</li>
               </ul>
+
+              {/* IMAGEN INTEGRADA */}
+              <div className="card-image-container">
+                <img src={double200ProductImg} alt="Pack 2x 200ml" className="card-inline-image" />
+              </div>
+
               <a href="https://buy.stripe.com/eVqbJ2g5I90g8q16rl0oM01" className="cta-stripe-button highlight-btn">
                 <FaShoppingCart className="button-icon" /> {translate('product_buy_pack') || 'Comprar Pack'}
               </a>
@@ -69,6 +87,12 @@ const HomePricing = () => {
                 <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
                 <li><FaTruck className="benefit-icon" /> {translate('product_benefit_shipping') || 'Envío gratis incluido'}</li>
               </ul>
+
+              {/* IMAGEN INTEGRADA */}
+              <div className="card-image-container">
+                <img src={double100ProductImg} alt="Pack 2x 100ml" className="card-inline-image" />
+              </div>
+
               <a href="https://buy.stripe.com/7sYfZi7zc6S88q102X0oM03" className="cta-stripe-button highlight-btn">
                 <FaShoppingCart className="button-icon" /> {translate('product_buy_pack') || 'Comprar Pack'}
               </a>
@@ -89,6 +113,12 @@ const HomePricing = () => {
                 <li><FaShieldAlt className="benefit-icon" /> {translate('product_benefit_grip') || 'Máximo agarre'}</li>
                 <li><FaTruck className="benefit-icon" /> {translate('product_benefit_shipping') || 'Envío gratis incluido'}</li>
               </ul>
+
+              {/* IMAGEN INTEGRADA */}
+              <div className="card-image-container">
+                <img src={mixed100200ProductImg} alt="Pack 100ml + 200ml" className="card-inline-image" />
+              </div>
+
               <a href="https://buy.stripe.com/00wbJ2dXA5O45dP6rl0oM04" className="cta-stripe-button highlight-btn">
                 <FaShoppingCart className="button-icon" /> {translate('product_buy_pack') || 'Comprar Pack'}
               </a>
