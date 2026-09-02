@@ -62,7 +62,7 @@ const Footer = () => {
             <a href="https://www.linkedin.com/company/aceprogrip/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
-            <a href="https://www.tiktok.com/@ace.pro.grip" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@aceprogrip" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
               <FaTiktok />
             </a>
           </div>
