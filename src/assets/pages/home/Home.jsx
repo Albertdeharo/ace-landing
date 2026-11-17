@@ -4,6 +4,7 @@ import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import FAQ from "../../components/FAQ/FAQ";
 import Parallax from "../../components/Parallax/Parallax";
 import HomePricing from "../../components/HomePricing/HomePricing";
+import BlackFridayBar from "../../components/BlackFridayBar/BlackFridayBar";
 import TrustBar from "../../components/TrustBar/TrustBar";
 import Sports from "../../components/Sports/Sports";
 import SEO from "../../components/SEO/SEO";
@@ -13,6 +14,7 @@ const Home = () => {
   return (
     <>
       <SEO title="Mejora tu agarre" />
+      <BlackFridayBar />
       <TrustBar />
       <Banner />
       <HomePricing />

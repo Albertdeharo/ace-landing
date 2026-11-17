@@ -1,0 +1,70 @@
+.bf-bar {
+  --bf-gold: #ffd60a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding: 0.7rem 1rem;
+  background:
+    linear-gradient(110deg, transparent 40%, rgba(255, 214, 10, 0.12) 50%, transparent 60%) 0 0 / 250% 100%,
+    #0a0a0a;
+  color: #fff;
+  font-family: var(--font-heading, sans-serif);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  border-bottom: 2px solid var(--bf-gold);
+  animation: bf-shine 4s linear infinite;
+}
+
+.bf-badge {
+  background: var(--bf-gold);
+  color: #0a0a0a;
+  padding: 0.15rem 0.7rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%);
+}
+
+.bf-text {
+  font-size: 1.1rem;
+}
+
+.bf-coupon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: transparent;
+  color: var(--bf-gold);
+  border: 2px dashed var(--bf-gold);
+  border-radius: var(--radius-sm, 0.25rem);
+  padding: 0.2rem 0.8rem;
+  font: inherit;
+  font-size: 1.05rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background var(--transition-fast, 0.15s), color var(--transition-fast, 0.15s);
+}
+
+.bf-coupon:hover,
+.bf-coupon:focus-visible {
+  background: var(--bf-gold);
+  color: #0a0a0a;
+}
+
+@keyframes bf-shine {
+  from { background-position: 150% 0, 0 0; }
+  to { background-position: -50% 0, 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bf-bar { animation: none; }
+}
+
+@media (max-width: 768px) {
+  .bf-badge { font-size: 0.8rem; }
+  .bf-text { font-size: 0.85rem; }
+  .bf-coupon { font-size: 0.9rem; }
+}
